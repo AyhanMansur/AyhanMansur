@@ -1,69 +1,69 @@
 <h1 align="center">Ayhan Mansur</h1>
-<h3 align="center">Software Developer</h3>
 
 <p align="center">
-  Building scalable solutions with Python, Java, and Web Technologies.
+  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=Software+Developer;Python+%7C+Java+%7C+HTML;Building+Scalable+Solutions;Future+Full+Stack+Engineer" />
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&color=blueviolet&style=flat-square">
 </p>
 
 ---
 
-## 👨‍💻 Professional Summary
+## 🧠 Tech Stack
 
-Passionate and disciplined developer with strong foundations in software development.
-Experienced in object-oriented programming, problem-solving, and building structured applications.
-Focused on writing clean, efficient, and maintainable code.
-
----
-
-## 🛠 Tech Stack
-
-### 💻 Languages
-- Python
-- Java
-- HTML
-
-### 🔧 Tools & Technologies
-- Git & GitHub
-- VS Code
-- Object-Oriented Programming (OOP)
-- Data Structures Fundamentals
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,java,html,git,github,vscode" />
+</p>
 
 ---
 
-## 🚀 Projects
+## 📊 GitHub Analytics
 
-- 🔹 Python Automation Scripts  
-- 🔹 Java Console Applications  
-- 🔹 Responsive HTML Web Pages  
-
-*(More projects coming soon…)*
-
----
-
-## 📊 GitHub Stats
-
-![Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=AyhanMansur&show_icons=true&theme=tokyonight&hide_border=true" height="165">
+  <img src="https://streak-stats.demolab.com?user=&theme=tokyonight&hide_border=true" height="165">
+</p>
 
 ---
 
-## 🧠 Core Strengths
+## 🏆 Achievements
 
-- Logical Thinking  
-- Clean Code Practices  
-- Fast Learner  
-- Strong Debugging Skills  
+- 🚀 Completed multiple programming foundations  
+- 🧠 Strong understanding of OOP principles  
+- 🛠 Built console-based applications  
+- 🌐 Developed structured HTML web pages  
+- 📚 Self-driven learner  
 
 ---
 
-## 🎯 Future Goals
+## 🌐 Portfolio Preview
+
+> Coming Soon: Personal Developer Portfolio Website
+
+Planned features:
+- Project showcase
+- Clean UI design
+- Contact section
+- Resume download
+
+---
+
+## 🎯 Current Focus
 
 - Backend Development
-- Full-Stack Engineering
-- Open Source Contributions
-- Advanced System Design
+- Data Structures & Algorithms
+- Advanced Java Concepts
+- Real-world project building
 
 ---
 
-## 📫 Connect
+## 💼 Professional Mindset
 
-GitHub: https://github.com/YOUR_USERNAME
+Clean Code • Logical Thinking • Continuous Improvement • Discipline
+
+---
+
+<p align="center">
+  <i>“Code. Improve. Repeat.”</i>
+</p>
