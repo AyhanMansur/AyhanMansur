@@ -49,7 +49,7 @@ Duplicate the block above and replace `REPO_NAME` with your best repositories.
 ## 🌍 Live Portfolio
 
 <p align="center">
-  🌐 <a href="https://AyhanMansur.github.io/">Visit My Portfolio</a>
+  🌐 <a href="https://ayhanmansur.github.io/AyhanMansur-AyhanMansur.github.io/">Visit My Portfolio</a>
 </p>
 
 (Only works after enabling GitHub Pages.)
