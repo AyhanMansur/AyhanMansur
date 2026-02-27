@@ -37,15 +37,6 @@
 
 ---
 
-## 🌐 Portfolio Preview
-
-> Coming Soon: Personal Developer Portfolio Website
-
-Planned features:
-- Project showcase  
-- Clean UI design  
-- Contact section  
-- Resume download  
 
 ---
 
