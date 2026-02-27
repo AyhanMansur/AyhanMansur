@@ -26,4 +26,39 @@
 
 ---
 
-## 📈 Contribution Snake Animation
+## 📈 Contribution Activity
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AyhanMansur/AyhanMansur/output/github-contribution-grid-snake.svg" />
+</p>
+
+---
+
+## 🏆 Achievements
+
+- 🚀 Completed Python, Java, and HTML foundations  
+- 🧠 Strong understanding of OOP principles  
+- 🛠 Built structured console applications  
+- 🌐 Developed responsive HTML web pages  
+- 📚 Self-driven learner  
+
+---
+
+## 🎯 Current Focus
+
+- Backend Development  
+- Data Structures & Algorithms  
+- Advanced Java Concepts  
+- Real-world project building  
+
+---
+
+## 💼 Professional Mindset
+
+Clean Code • Logical Thinking • Continuous Improvement • Discipline  
+
+---
+
+<p align="center">
+  <i>Build. Improve. Scale.</i>
+</p>
