@@ -34,16 +34,6 @@
 
 ---
 
-## 🏅 LeetCode Stats
-
-<p align="center">
-  <img src="https://leetcard.jacoblin.cool/AyhanMansur?theme=dark&font=Nunito&ext=contest" />
-</p>
-
-(If your LeetCode username is different, replace AyhanMansur with the correct one.)
-
----
-
 ## 🧑‍💻 Featured Projects
 
 <p align="center">
