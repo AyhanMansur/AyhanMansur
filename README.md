@@ -1,6 +1,6 @@
-<!-- 🖤 Neon Glow Header -->
+<!-- 🖤 Animated Gradient Header -->
 <h1 align="center">
-  <span style="color:#00F0FF;">AYHAN MANSUR</span>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Ayhan%20Mansur&fontSize=50&fontColor=00F0FF&animation=fadeIn" />
 </h1>
 
 <p align="center">
@@ -34,22 +34,35 @@
 
 ---
 
-## 🏆 Achievements
+## 🏅 LeetCode Stats
 
-- 🚀 Completed Python, Java, and HTML foundations  
-- 🧠 Strong understanding of OOP principles  
-- 🛠 Built structured console applications  
-- 🌐 Developed responsive HTML web pages  
-- 📚 Self-driven learner  
+<p align="center">
+  <img src="https://leetcard.jacoblin.cool/AyhanMansur?theme=dark&font=Nunito&ext=contest" />
+</p>
+
+(If your LeetCode username is different, replace AyhanMansur with the correct one.)
 
 ---
 
-## 🎯 Current Focus
+## 🧑‍💻 Featured Projects
 
-- Backend Development  
-- Data Structures & Algorithms  
-- Advanced Java Concepts  
-- Real-world project building  
+<p align="center">
+  <a href="https://github.com/AyhanMansur/REPO_NAME">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=AyhanMansur&repo=REPO_NAME&theme=tokyonight&hide_border=true" />
+  </a>
+</p>
+
+Duplicate the block above and replace `REPO_NAME` with your best repositories.
+
+---
+
+## 🌍 Live Portfolio
+
+<p align="center">
+  🌐 <a href="https://AyhanMansur.github.io/">Visit My Portfolio</a>
+</p>
+
+(Only works after enabling GitHub Pages.)
 
 ---
 
@@ -60,5 +73,5 @@ Clean Code • Logical Thinking • Continuous Improvement • Discipline
 ---
 
 <p align="center">
-  <i>Build. Improve. Scale.</i>
+  <i>Build. Scale. Innovate.</i>
 </p>
