@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Ayhan Mansur&color=blueviolet&style=flat-square">
+  <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square">
 </p>
 
 ---
@@ -22,7 +22,7 @@
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=AyhanMansur&show_icons=true&theme=tokyonight&hide_border=true" height="165">
-  <img src="https://streak-stats.demolab.com?user=&theme=tokyonight&hide_border=true" height="165">
+  <img src="https://streak-stats.demolab.com?user=AyhanMansur&theme=tokyonight&hide_border=true" height="165">
 </p>
 
 ---
@@ -42,25 +42,25 @@
 > Coming Soon: Personal Developer Portfolio Website
 
 Planned features:
-- Project showcase
-- Clean UI design
-- Contact section
-- Resume download
+- Project showcase  
+- Clean UI design  
+- Contact section  
+- Resume download  
 
 ---
 
 ## 🎯 Current Focus
 
-- Backend Development
-- Data Structures & Algorithms
-- Advanced Java Concepts
-- Real-world project building
+- Backend Development  
+- Data Structures & Algorithms  
+- Advanced Java Concepts  
+- Real-world project building  
 
 ---
 
 ## 💼 Professional Mindset
 
-Clean Code • Logical Thinking • Continuous Improvement • Discipline
+Clean Code • Logical Thinking • Continuous Improvement • Discipline  
 
 ---
 
