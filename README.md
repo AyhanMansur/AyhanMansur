@@ -1,10 +1,11 @@
-<!-- 🖤 Animated Gradient Header -->
-<h1 align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Ayhan%20Mansur&fontSize=50&fontColor=00F0FF&animation=fadeIn" />
-</h1>
+<h1 align="center">Ayhan Mansur</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=26&center=true&vCenter=true&width=700&lines=Software+Developer;Python+%7C+Java+%7C+HTML;Building+High-Performance+Systems;Future+Full+Stack+Engineer" />
+  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=Software+Developer;Python+%7C+Java+%7C+HTML;Building+Scalable+Solutions;Future+Full+Stack+Engineer" />
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square">
 </p>
 
 ---
@@ -26,33 +27,25 @@
 
 ---
 
-## 📈 Contribution Activity
+## 🏆 Achievements
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/AyhanMansur/AyhanMansur/output/github-contribution-grid-snake.svg" />
-</p>
-
----
-
-## 🧑‍💻 Featured Projects
-
-<p align="center">
-  <a href="https://github.com/AyhanMansur/REPO_NAME">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=AyhanMansur&repo=REPO_NAME&theme=tokyonight&hide_border=true" />
-  </a>
-</p>
-
-Duplicate the block above and replace `REPO_NAME` with your best repositories.
+- 🚀 Completed multiple programming foundations  
+- 🧠 Strong understanding of OOP principles  
+- 🛠 Built console-based applications  
+- 🌐 Developed structured HTML web pages  
+- 📚 Self-driven learner  
 
 ---
 
-## 🌍 Live Portfolio
 
-<p align="center">
-  🌐 <a href="https://ayhanmansur.github.io/AyhanMansur-AyhanMansur.github.io/">Visit My Portfolio</a>
-</p>
+---
 
-(Only works after enabling GitHub Pages.)
+## 🎯 Current Focus
+
+- Backend Development  
+- Data Structures & Algorithms  
+- Advanced Java Concepts  
+- Real-world project building  
 
 ---
 
@@ -63,5 +56,5 @@ Clean Code • Logical Thinking • Continuous Improvement • Discipline
 ---
 
 <p align="center">
-  <i>Build. Scale. Innovate.</i>
+  <i>“Code. Improve. Repeat.”</i>
 </p>
