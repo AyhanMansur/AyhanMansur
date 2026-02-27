@@ -1,11 +1,10 @@
-<h1 align="center">Ayhan Mansur</h1>
+<!-- 🖤 Neon Glow Header -->
+<h1 align="center">
+  <span style="color:#00F0FF;">AYHAN MANSUR</span>
+</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=Software+Developer;Python+%7C+Java+%7C+HTML;Building+Scalable+Solutions;Future+Full+Stack+Engineer" />
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square">
+  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=26&center=true&vCenter=true&width=700&lines=Software+Developer;Python+%7C+Java+%7C+HTML;Building+High-Performance+Systems;Future+Full+Stack+Engineer" />
 </p>
 
 ---
@@ -21,40 +20,37 @@
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AyhanMansur&show_icons=true&theme=tokyonight&hide_border=true" height="165">
-  <img src="https://streak-stats.demolab.com?user=AyhanMansur&theme=tokyonight&hide_border=true" height="165">
+  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true" height="165">
+  <img src="https://streak-stats.demolab.com?user=YOUR_USERNAME&theme=tokyonight&hide_border=true" height="165">
 </p>
 
 ---
 
-## 🏆 Achievements
+## 📈 Contribution Snake Animation
 
-- 🚀 Completed multiple programming foundations  
-- 🧠 Strong understanding of OOP principles  
-- 🛠 Built console-based applications  
-- 🌐 Developed structured HTML web pages  
-- 📚 Self-driven learner  
+```yaml
+# Add this as a GitHub Action file:
+# .github/workflows/snake.yml
+name: Generate Snake
 
----
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
-
----
-
-## 🎯 Current Focus
-
-- Backend Development  
-- Data Structures & Algorithms  
-- Advanced Java Concepts  
-- Real-world project building  
-
----
-
-## 💼 Professional Mindset
-
-Clean Code • Logical Thinking • Continuous Improvement • Discipline  
-
----
-
-<p align="center">
-  <i>“Code. Improve. Repeat.”</i>
-</p>
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: YOUR_USERNAME
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+      - uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
