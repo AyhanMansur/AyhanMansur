@@ -10,7 +10,7 @@
 
 ---
 
-## 🧠 Tech Stack
+## 🧠 Full Stack
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,java,html,git,github,vscode" />
