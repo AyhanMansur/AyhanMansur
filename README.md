@@ -56,3 +56,6 @@
 <p align="center">
   <i>“Code. Improve. Repeat.”</i>
 </p>
+<p align="center">
+<i>@𝓐𝔂𝓱𝓪𝓷𝓜𝓪𝓷𝓼𝓾𝓻 2026 </i>
+</p>
