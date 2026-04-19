@@ -9,11 +9,11 @@
 </p>
 
 ---
-
+,
 ## 🧠 Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,java,html,git,github,vscode,swift,photoshop,security" />
+  <img src="https://skillicons.dev/icons?i=python,java,html,git,github,vscode,swift,photoshop,php,bash" />
 </p>
 
 ---
