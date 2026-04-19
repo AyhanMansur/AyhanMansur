@@ -13,7 +13,7 @@
 ## 🧠 Full Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,java,html,git,github,vscode" />
+  <img src="https://skillicons.dev/icons?i=python,javaScript,html,git,github,vscode" />
 </p>
 
 ---
