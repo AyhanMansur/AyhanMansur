@@ -9,7 +9,6 @@
 </p>
 
 ---
-,
 ## 🧠 Tech Stack
 
 <p align="center">
