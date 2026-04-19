@@ -1,4 +1,4 @@
-<h1 align="center">Ayhan Mansur</h1>
+<h1 align="center">𝓐𝔂𝓱𝓪𝓷 𝓜𝓪𝓷𝓼𝓾𝓻,🌿</h1>
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=Software+Developer;Python+%7C+Java+%7C+HTML;Building+Scalable+Solutions;Future+Full+Stack+Engineer" />
@@ -33,7 +33,8 @@
 - 🧠 Strong understanding of OOP principles  
 - 🛠 Built console-based applications  
 - 🌐 Developed structured HTML web pages  
-- 📚 Self-driven learner  
+- 📚 Self-driven learner
+- Working at Digital Space city  🏙 
 
 ---
 
@@ -45,7 +46,8 @@
 - Backend Development  
 - Data Structures & Algorithms  
 - Advanced Java Concepts  
-- Real-world project building  
+- Real-world project building
+- buliding  A Big Digital Space  City
 
 ---
 
