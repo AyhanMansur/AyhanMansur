@@ -16,6 +16,7 @@
   <img src="https://skillicons.dev/icons?i=python,java,html,git,github,vscode,swift,css,cloudflare" />
 </p>
 
+---
 
 ## 📊 GitHub Analytics
 
@@ -25,6 +26,7 @@
 </p>
 
 ---
+
 ## 🧠 About Me
 
 - 🎂 **14-Year-Old Developer** with an **IQ of 180**
@@ -73,6 +75,15 @@
 
 > "Code. Improve. Repeat."  
 > **Discipline • Logic • Innovation • Security**
+
+---
+
+## 🔗 Visit Real Profile & Live Demo
+
+> 👀 **Want to see the real Digital Space City in action?**  
+> Click below to explore the live project, source code, and full profile details!
+
+[🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur) <!-- لینک واقعی خودت رو اینجا بذار -->
 
 ---
 
