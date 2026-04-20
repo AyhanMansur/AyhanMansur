@@ -10,6 +10,21 @@
 
 ---
 
+## 🧠 Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,java,html,git,github,vscode,swift,css,cloudflare" />
+</p>
+
+
+## 📊 GitHub Analytics
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=AyhanMansur&show_icons=true&theme=tokyonight&hide_border=true" height="165">
+  <img src="https://streak-stats.demolab.com?user=AyhanMansur&theme=tokyonight&hide_border=true" height="165">
+</p>
+
+---
 ## 🧠 About Me
 
 - 🎂 **14-Year-Old Developer** with an **IQ of 180**
@@ -31,23 +46,6 @@
 - 🛡️ **Security Tools:** Gatekeeper, SSL via ArvanCloud
 - 📡 **IP Range:** Iranian IP ranges + Global distribution
 - 🚀 **Status:** **Project Completed** & Live on GitHub Pages
-
----
-
-## 🧠 Tech Stack
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,java,html,git,github,vscode,swift,kotlin,php,css,security,cloudflare,arvancloud" />
-</p>
-
----
-
-## 📊 GitHub Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AyhanMansur&show_icons=true&theme=tokyonight&hide_border=true" height="165">
-  <img src="https://streak-stats.demolab.com?user=AyhanMansur&theme=tokyonight&hide_border=true" height="165">
-</p>
 
 ---
 
