@@ -30,7 +30,6 @@
 ## 🧠 About Me
 
 - 🎂 **14-Year-Old Developer** with an **IQ of 180**
-- 🧘‍♂️ Completed **1 month of deep meditation** to write the "Digital Space City" code in my mind
 - 💻 **Languages:** HTML, CSS, PHP, Java, Python, Kotlin, Apple Swift
 ---
 
