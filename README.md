@@ -10,7 +10,7 @@
 
 ---
 
-## 🧠 Tech Stack
+## 🧠Skills
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,java,html,git,github,vscode,swift,css,cloudflare" />
@@ -32,34 +32,15 @@
 - 🎂 **14-Year-Old Developer** with an **IQ of 180**
 - 🧘‍♂️ Completed **1 month of deep meditation** to write the "Digital Space City" code in my mind
 - 💻 **Languages:** HTML, CSS, PHP, Java, Python, Kotlin, Apple Swift
-- 🔒 **Security Expert:** Implemented **WireGuard** (Personal + City Network) with **500+ security layers**
-
 ---
 
 ## 🏙️ Digital Space City Project
 
 - 🌐 **Architecture:** Multi-layered network with **500 security layers**
-- 🔐 **WireGuard:** Two instances (Personal & City Network)
-- 🌍 **Infrastructure:**
-  - VPS in **Germany & Iran** (100 layers)
-  - VPS in **UAE & Turkey** (400 layers)
-  - **ArvanCloud** & **Cloudflare Workers** for global distribution
-  - **Private Relay** & **Apple Ecosystem** integration
-- 🛡️ **Security Tools:** Gatekeeper, SSL via ArvanCloud
-- 📡 **IP Range:** Iranian IP ranges + Global distribution
-- 🚀 **Status:** **Project Completed** & Live on GitHub Pages
-
 ---
 
 ## 🏆 Achievements
-
-- 🚀 Built a **500-layer secure network** for the Digital Space City
-- 🌍 Deployed on **Germany, Iran, UAE, Turkey** VPS infrastructure
-- 🔒 Implemented **WireGuard** with dual instances (Personal & City)
-- 🛡️ Integrated **Gatekeeper** & **ArvanCloud SSL** for maximum security
-- 🧘‍♂️ Achieved deep mental focus through meditation to architect complex systems
 - 🌐 Live project on **GitHub Pages** & **Cloudflare Workers**
-
 ---
 
 ## 🎯 Current Focus
@@ -67,7 +48,6 @@
 - ⚙️ **Scaling the Digital Space City** to 1000+ layers
 - 🧠 **Advanced Cyber Security** research
 - 🍎 **Swift & Apple Ecosystem** deep integration
-- 🌌 **Global Network Optimization** (UAE, Turkey, Iran, Germany)
 
 ---
 
