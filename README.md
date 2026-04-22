@@ -33,11 +33,6 @@
 - 💻 **Languages:** HTML, CSS, PHP, Java, Python, Kotlin, Apple Swift
 ---
 
-## 🏙️ Digital Space City Project
-
-- 🌐 **Architecture:** Multi-layered network with **500 security layers**
----
-
 ## 🏆 Achievements
 - 🌐 Live project on **GitHub Pages** & **Cloudflare Workers**
 ---
