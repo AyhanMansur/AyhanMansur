@@ -39,6 +39,7 @@
 - ⚙️ **Scaling the Digital Space City** to 1000+ layers
 - 🧠 **Advanced Cyber Security** research
 - 🍎 **Swift & Apple Ecosystem** deep integration
+- 🐍 **pyhton and flask ** projects📽 
 
 ---
 
