@@ -51,6 +51,14 @@
 > **Discipline • Logic • Innovation • Security**
 
 ---
+## 🔗 Visit Real Profile & Live Demo
+
+> 👀 **Want to see the real Digital Space City in action?**  
+> Click below to explore the live project, source code, and full profile details!
+
+[🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur) <!-- لینک واقعی خودت رو اینجا بذار -->
+
+---
 
 <p align="center">
   <i>“The future is built by those who dare to dream it.”</i>
