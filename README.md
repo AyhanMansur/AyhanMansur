@@ -1,7 +1,7 @@
 <h1 align="center">𝓐𝔂𝓱𝓪𝓷 𝓜𝓪𝓷𝓼𝓾𝓻 🌿</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=14-Year-Old+Genius+%28IQ+180%29;Full+Stack+Developer;Cyber+Security+%F0%9F%94%92;Multi-Layer+Network+Architect;Building+Digital+Space+City+%F0%9F%9A%80" />
+  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=14-Year-Old+Genius+%28IQ+180%29;Full+Stack+Developer;Cyber+Security+%F0%9F%94%92" />
 </p>
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square">
