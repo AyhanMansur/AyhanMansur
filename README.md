@@ -58,7 +58,7 @@
 [🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur)
 
 ---
-<img src="https://gitlyy.vercel.app/api/languages?username=AyhanMansur&layout=donut&hide_border=true"/><img src="https://gitlyy.vercel.app/api/commits?username=AyhanMansur&layout=compact&hide_border=true"/><img src="https://gitlyy.vercel.app/api/contribution?username=AyhanMansur&layout=pulse&hide_border=true"/>
+<img src="https://gitlyy.vercel.app/api/contribution?username=AyhanMansur&layout=pulse&hide_border=true"/><img src="https://gitlyy.vercel.app/api/languages?username=AyhanMansur&layout=donut&hide_border=true"/><img src="https://gitlyy.vercel.app/api/commits?username=AyhanMansur&layout=compact&hide_border=true"/>
 <p align="center">
   <i>“The future is built by those who dare to dream it.”</i>
 </p>
