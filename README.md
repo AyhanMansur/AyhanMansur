@@ -37,10 +37,11 @@
 ---
 
 ## 🎯 Current Focus
-- 🧠 **Advanced Cyber Security** research
+- 🧠 **Advanced Cyber Security** HTB Projects
 - 🧐⏰💻🤖 Working at Different Al  Chat 🤖 Bots💬 
 - 🐍 **pyhton and flask ** projects📽 
-
+- 📉 Working at Serverless Projects
+- 🌿💻🛜 build html css Tools 🛠️ for web
 ---
 
 ## 💼 Professional Mindset
