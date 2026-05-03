@@ -49,7 +49,6 @@
 
 > "Code. Improve. Repeat."  
 > **Discipline • Logic • Innovation • Security**
-
 ---
 ## 🔗 Visit Real Profile & Live Demo
 
@@ -59,7 +58,7 @@
 [🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur)
 
 ---
-
+<img src="https://gitlyy.vercel.app/api/contribution?username=AyhanMansur&layout=pulse&hide_border=true"/>
 <p align="center">
   <i>“The future is built by those who dare to dream it.”</i>
 </p>
