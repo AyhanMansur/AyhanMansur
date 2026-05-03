@@ -30,6 +30,7 @@
 
 - 🎂 **14-Year-Old Developer** with an **IQ of 180**
 - 💻 **Languages:** HTML, CSS, PHP, Java, Python, Kotlin, Apple Swift
+- 🧑‍💻I am a passionate Full Stack Developer and Cyber Security Enthusiast focused on building secure, scalable, and innovative digital solutions. My journey in programming is driven by a love for logic, discipline, and continuous learning.
 ---
 
 ## 🏆 Achievements
