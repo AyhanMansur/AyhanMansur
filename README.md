@@ -55,7 +55,7 @@
 > 👀 **Want to see the real Digital Space City in action?**  
 > Click below to explore the live project, source code, and full profile details!
 
-[🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur) <!-- لینک واقعی خودت رو اینجا بذار -->
+[🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur)
 
 ---
 
