@@ -41,7 +41,7 @@
 - 🧐⏰💻🤖 Working at  Different Al  Chat 🤖💬 Bot Projects📽 
 - 🐍 **pyhton and flask ** projects📽 
 - 📉 Working at Serverless Projects
-- 🌿💻🛜 build html css Tools 🛠️ for web
+- 🌿💻🛜 building html css Tools 🛠️ for web
 ---
 
 ## 💼 Professional Mindset
