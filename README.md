@@ -20,7 +20,6 @@
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AyhanMansur&show_icons=true&theme=tokyonight&hide_border=true" height="165">
   <img src="https://streak-stats.demolab.com?user=AyhanMansur&theme=tokyonight&hide_border=true" height="165">
 </p>
 
@@ -58,7 +57,7 @@
 [🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur)
 
 ---
-<img src="https://gitlyy.vercel.app/api/contribution?username=AyhanMansur&layout=pulse&hide_border=true"/><img src="https://gitlyy.vercel.app/api/languages?username=AyhanMansur&layout=donut&hide_border=true"/><img src="https://gitlyy.vercel.app/api/commits?username=AyhanMansur&layout=compact&hide_border=true"/>
+<img src="https://gitlyy.vercel.app/api/contribution?username=AyhanMansur&layout=pulse&hide_border=true"/><img src="https://gitlyy.vercel.app/api/languages?username=AyhanMansur&layout=donut&hide_border=true"/><img src="https://gitlyy.vercel.app/api/commits?username=AyhanMansur&layout=compact&hide_border=true"/><img src="https://raw.githubusercontent.com/Chintanpatel24/gitlyy/refs/heads/main/images/gitlyy.png"/>
 <p align="center">
   <i>“The future is built by those who dare to dream it.”</i>
 </p>
