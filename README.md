@@ -36,6 +36,7 @@
 - 🌐 Live project on **GitHub Pages** & **Cloudflare Workers**
 - 🌐 🏆 I'm able to 🌿💻🛜 build html css Tools 🛠️ for web
 - 🌐 🏆 i'm able to Design Cool🆒😎 UI and UIX interfaces 🌿
+- 🌐 🏆 Currently Working at freelancer.com
 ---
 
 ## 🎯 Current Focus
