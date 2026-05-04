@@ -35,7 +35,7 @@
 ## 🏆 Achievements
 - 🌐 Live project on **GitHub Pages** & **Cloudflare Workers**
 - 🌐 🏆 I'm able to 🌿💻🛜 build html css Tools 🛠️ for web
-- 🌐 🏆 im able to Design Cool🆒😎 UI and UIX interfaces 🌿
+- 🌐 🏆 i'm able to Design Cool🆒😎 UI and UIX interfaces 🌿
 ---
 
 ## 🎯 Current Focus
