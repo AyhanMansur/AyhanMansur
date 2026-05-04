@@ -34,7 +34,7 @@
 
 ## 🏆 Achievements
 - 🌐 Live project on **GitHub Pages** & **Cloudflare Workers**
-- 🌐 🏆 i Can Make Super Cool html css project's 
+- 🌐 🏆 Ican Make Super Cool html CSS Project's 
 ---
 
 ## 🎯 Current Focus
