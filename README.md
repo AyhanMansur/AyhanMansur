@@ -1,5 +1,18 @@
 <h1 align="center">𝓐𝔂𝓱𝓪𝓷 𝓜𝓪𝓷𝓼𝓾𝓻 🌿</h1>
-
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/leaked/leaked/output/snake-dark.svg"
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/leaked/leaked/output/snake-light.svg"
+  />
+  <img
+    alt="snake animation"
+    src="https://raw.githubusercontent.com/leaked/leaked/output/snake-light.svg"
+  />
+</picture>
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=14-Year-Old+Genius+%28IQ+180%29;Full+Stack+Developer;Cyber+Security+%F0%9F%94%92" />
 </p>
