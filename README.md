@@ -44,7 +44,7 @@
 - 🧠 **Advanced Cyber Security** HTB Projects
 - 🧐⏰💻🤖 Working at  Different Al  Chat 🤖💬 Bot Projects📽 
 - 🐍 pyhton and flask projects📽 
-- 📉 Working at Serverless Projects
+- 📉 Working at networking Projects
 - 🌿💻🛜 building html css Tools 🛠️ for web
 ---
 
