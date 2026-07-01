@@ -1,16 +1,16 @@
 <h1 align="center">𝓐𝔂𝓱𝓪𝓷 𝓜𝓪𝓷𝓼𝓾𝓻 🌿</h1>
 
-</picture>
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=14-Year-Old+Genius+%28IQ+180%29;Full+Stack+Developer;Cyber+Security+%F0%9F%94%92" />
+  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=14-Year-Old+Full+Stack+Developer;Cyber+Security+Enthusiast;Python+PHP+HTML+CSS+Developer;Open+Source+Developer;Networking+%26+Cloudflare+Projects" />
 </p>
+
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square">
 </p>
 
 ---
 
-## 🧠Skills
+## 🧠 Skills
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,php,github,html,cloudflare,vscode,css" />
@@ -28,39 +28,61 @@
 
 ## 🧠 About Me
 
-- 🎂 **14-Year-Old Developer** with an **IQ of 180**
-- 💻 **Languages:** HTML, CSS, PHP, Java, Python, Kotlin, Apple Swift
-- 🧑‍💻I am a passionate Full Stack Developer and Cyber Security Enthusiast focused on building secure, scalable, and innovative digital solutions. My journey in programming is driven by a love for logic, discipline, and continuous learning.
+- 💻 Full Stack Developer specializing in **Python, PHP, HTML, CSS, Java, Kotlin, and Swift**
+- 🔐 Passionate about **Cyber Security**, **Ethical Hacking**, **Networking**, and **Cloudflare Workers**
+- 🌍 Building modern, secure, scalable, and high-performance web applications
+- 🚀 Open Source Developer sharing projects on GitHub
+- 📚 Continuously learning software engineering, backend development, networking, and cybersecurity
+
 ---
 
 ## 🏆 Achievements
-- 🌐 Live project on **GitHub Pages** & **Cloudflare Workers**
-- 🌐 🏆 I'm able to 🌿💻🛜 build html css Tools 🛠️ for web
-- 🌐 🏆 i'm able to Design Cool🆒😎 UI and UIX interfaces 🌿
-- 🌐 🏆 Currently Working at freelancer.com
+
+- 🌐 Published projects using **GitHub Pages** and **Cloudflare Workers**
+- 🛠️ Developed multiple HTML, CSS, and Python-based web tools
+- 🎨 Designed responsive and modern UI/UX interfaces
+- 💼 Working as a Freelancer on software and web development projects
+- 🚀 Contributing to open-source development and personal programming projects
+
 ---
 
 ## 🎯 Current Focus
-- 🧠 **Advanced Cyber Security** HTB Projects
-- 🧐⏰💻🤖 Working at  Different Al  Chat 🤖💬 Bot Projects📽 
-- 🐍 pyhton and flask projects📽 
-- 📉 Working at networking Projects
-- 🌿💻🛜 building html css Tools 🛠️ for web
+
+- 🔐 Advanced Cyber Security & HTB Projects
+- 🤖 AI Chatbot Development
+- 🐍 Python & Flask Applications
+- 🌐 Networking & Cloud Infrastructure
+- ⚡ Cloudflare Workers & Serverless Applications
+- 💻 Modern HTML, CSS & JavaScript Tools
+- 📈 Full Stack Web Development
+
 ---
 
 ## 💼 Professional Mindset
 
-> "Code. Improve. Repeat."  
-> **Discipline • Logic • Innovation • Security**
+> "Code. Improve. Repeat."
+
+**Discipline • Logic • Innovation • Security**
+
 ---
+
 ## 🔗 Visit Real Profile & Live Demo
 
-> 👀 **Want to see the real Digital Space City in action?**  
-> Click below to explore the live project, source code, and full profile details!
+> 👀 **Explore my GitHub profile to discover my latest projects, open-source contributions, web development work, cybersecurity experiments, and networking tools.**
 
 [🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur)
 
 ---
+
 <p align="center">
-  <i>“The future is built by those who dare to dream it.”</i>
+  <i>"Building secure software, creating innovative solutions, and learning something new every day."</i>
 </p>
+
+<!--
+SEO Keywords:
+Ayhan Mansur, Full Stack Developer, Python Developer, PHP Developer,
+Cyber Security, Ethical Hacking, Networking, Flask Developer,
+Cloudflare Workers, GitHub Projects, HTML CSS JavaScript,
+Open Source Developer, Software Engineer, Web Developer,
+Backend Developer, Frontend Developer, UI UX Designer
+-->
