@@ -70,19 +70,10 @@
 
 > 👀 **Explore my GitHub profile to discover my latest projects, open-source contributions, web development work, cybersecurity experiments, and networking tools.**
 
-[🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur)
+[🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur?tab=repositories)
 
 ---
 
 <p align="center">
   <i>"Building secure software, creating innovative solutions, and learning something new every day."</i>
 </p>
-
-<!--
-SEO Keywords:
-Ayhan Mansur, Full Stack Developer, Python Developer, PHP Developer,
-Cyber Security, Ethical Hacking, Networking, Flask Developer,
-Cloudflare Workers, GitHub Projects, HTML CSS JavaScript,
-Open Source Developer, Software Engineer, Web Developer,
-Backend Developer, Frontend Developer, UI UX Designer
--->
