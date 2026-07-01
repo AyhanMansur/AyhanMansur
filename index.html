@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ayhan Mansur | Full Stack Developer & Cyber Security Portfolio</title>
+<meta name="description" content="Portfolio of Ayhan Mansur, Full Stack Developer and Cyber Security Enthusiast.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#020617,#031b4e,#001b44);color:#fff}
+nav{position:fixed;top:0;width:100%;background:#0008;padding:15px;backdrop-filter:blur(8px)}
+nav a{color:#fff;margin:0 12px;text-decoration:none}
+section{max-width:1100px;margin:auto;padding:90px 20px}
+.hero{text-align:center;padding-top:140px}
+.btn{display:inline-block;padding:12px 24px;background:#00e5ff;color:#001;text-decoration:none;border-radius:30px;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#ffffff12;border:1px solid #ffffff22;border-radius:16px;padding:20px;backdrop-filter:blur(8px)}
+.skills span{display:inline-block;margin:6px;padding:8px 14px;background:#00e5ff33;border-radius:20px}
+footer{text-align:center;padding:30px;color:#ddd}
+</style>
+</head><body>
+<nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+<section class="hero">
+<h1>Ayhan Mansur</h1>
+<h2>Full Stack Developer • Cyber Security Enthusiast</h2>
+<p>I build modern, secure, fast web applications and enjoy networking, Python, PHP, JavaScript, Cloudflare Workers and open-source development.</p>
+<a class="btn" href="https://github.com/AyhanMansur">GitHub</a>
+</section>
+<section id="about"><h2>About Me</h2><div class="card"><p>Passionate Full Stack Developer focused on Python, PHP, HTML, CSS, JavaScript, Flask, networking, cybersecurity and modern web technologies. I enjoy creating responsive, SEO-friendly and secure applications.</p></div></section>
+<section id="skills"><h2>Skills</h2><div class="skills">
+<span>Python</span><span>PHP</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Flask</span><span>GitHub</span><span>Cloudflare</span><span>Networking</span><span>Cyber Security</span>
+</div></section>
+<section id="projects"><h2>Featured Projects</h2><div class="grid">
+<div class="card"><h3>Web Tools</h3><p>Responsive HTML/CSS/JS utilities.</p></div>
+<div class="card"><h3>Cloudflare Workers</h3><p>Serverless networking solutions.</p></div>
+<div class="card"><h3>Python & Flask</h3><p>Backend APIs and automation.</p></div>
+</div></section>
+<section id="contact"><h2>Contact</h2><div class="card"><p>GitHub: <a style="color:#00e5ff" href="https://github.com/AyhanMansur">github.com/AyhanMansur</a></p></div></section>
+<footer>© 2026 Ayhan Mansur • Built with HTML, CSS & JavaScript</footer>
+<script>
+document.querySelectorAll('nav a').forEach(a=>a.onclick=e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});});
+</script>
+</body></html>
