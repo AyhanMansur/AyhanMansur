@@ -32,7 +32,7 @@ Hi, I'm Ayhan Mansur
 Welcome to my Telegram profile! 😎
 I'm a curious and enthusiastic developer exploring the world of **programming, web development and technology**. I love learning new skills and sharing projects with the community.
 
-- 💻 Developer specializing in **Python, HTML, CSS, Java**
+- 💻 Developer specializing in **Python, HTML, CSS, Javascript**
 - 🔐 Passionate about **cybersecurity**, **ethical hacking**, **networking** and **modern technologies**
 - 🌍 Building modern, secure, scalable and high-performance web applications
 - 🚀 Open source developer sharing his projects on GitHub
