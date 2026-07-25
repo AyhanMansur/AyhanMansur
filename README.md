@@ -28,11 +28,15 @@
 
 ## 🧠 About Me
 
-- 💻 Full Stack Developer specializing in **Python, PHP, HTML, CSS, Java, Kotlin, and Swift**
-- 🔐 Passionate about **Cyber Security**, **Ethical Hacking**, **Networking**, and **Cloudflare Workers**
-- 🌍 Building modern, secure, scalable, and high-performance web applications
-- 🚀 Open Source Developer sharing projects on GitHub
-- 📚 Continuously learning software engineering, backend development, networking, and cybersecurity
+Hi, I'm Ayhan Mansur
+Welcome to my Telegram profile! 😎
+I'm a curious and enthusiastic developer exploring the world of **programming, web development and technology**. I love learning new skills and sharing projects with the community.
+
+- 💻 Developer specializing in **Python, HTML, CSS, Java**
+- 🔐 Passionate about **cybersecurity**, **ethical hacking**, **networking** and **modern technologies**
+- 🌍 Building modern, secure, scalable and high-performance web applications
+- 🚀 Open source developer sharing his projects on GitHub
+- 📚 Constantly learning about software engineering, backend development, networking and cybersecurity
 
 ---
 
@@ -47,11 +51,8 @@
 ---
 
 ## 🎯 Current Focus
-
-- 🔐 Advanced Cyber Security & HTB Projects
-- 🤖 AI Chatbot Development
 - 🐍 Python & Flask Applications
-- 🌐 Networking & Cloud Infrastructure
+- 🌐 Networking and cloud technologies
 - ⚡ Cloudflare Workers & Serverless Applications
 - 💻 Modern HTML, CSS & JavaScript Tools
 - 📈 Full Stack Web Development
