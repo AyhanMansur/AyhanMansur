@@ -1,7 +1,7 @@
 <h1 align="center">𝓐𝔂𝓱𝓪𝓷 𝓜𝓪𝓷𝓼𝓾𝓻 🌿</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=14-Year-Old+Full+Stack+Developer;Cyber+Security+Enthusiast;Python+PHP+HTML+CSS+Developer;Open+Source+Developer;Networking+%26+tunnel" />
+  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=14-Year-Old+Developer;Cyber+Security+;Python+HTML+CSS+Developer;Open+Source+Developer;Networking" />
 </p>
 
 <p align="center">
@@ -51,7 +51,7 @@ I'm a curious and enthusiastic developer exploring the world of **programming, w
 ---
 
 ## 🎯 Current Focus
-- 🐍 Python & Flask Applications
+- 🐍 Python based Projects
 - 🌐 Networking and cloud technologies
 - ⚡ Cloudflare Workers & Serverless Applications
 - 💻 Modern HTML, CSS & JavaScript Tools
@@ -69,7 +69,7 @@ I'm a curious and enthusiastic developer exploring the world of **programming, w
 
 ## 🔗 Visit Real Profile & Live Demo
 
-> 👀 **Explore my GitHub profile to discover my latest projects, open-source contributions, web development work, cybersecurity experiments, and networking tools.**
+> 👀 **Explore my GitHub profile to discover my latest projects, open-source contributions, web development work, and networking tools.**
 
 [🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur?tab=repositories)
 
