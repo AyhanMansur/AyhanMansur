@@ -1,7 +1,7 @@
 <h1 align="center">𝓐𝔂𝓱𝓪𝓷 𝓜𝓪𝓷𝓼𝓾𝓻 🌿</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=14-Year-Old+Developer;Cyber+Security+;Python+HTML+CSS+Developer;Open+Source+Developer;Networking" />
+  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=14-Years-Old;OpenSource+Python+HTML+CSS+Developer" />
 </p>
 
 <p align="center">
