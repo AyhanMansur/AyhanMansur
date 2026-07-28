@@ -29,7 +29,7 @@
 ## 🧠 About Me
 
 Hi, I'm Ayhan Mansur
-Welcome to my Telegram profile! 😎
+Welcome to my Github profile! 😎
 I'm a curious and enthusiastic developer exploring the world of **programming, web development and technology**. I love learning new skills and sharing projects with the community.
 
 - 💻 Developer specializing in **Python, HTML, CSS, Javascript**
