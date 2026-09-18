@@ -18,14 +18,6 @@
 
 ---
 
-## 📊 GitHub Analytics
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=AyhanMansur&theme=tokyonight&hide_border=true" height="165">
-</p>
-
----
-
 ## 🧠 About Me
 
 Hi, I'm Ayhan Mansur
@@ -64,11 +56,15 @@ I'm a curious and enthusiastic developer exploring the world of **programming, w
 > "Code. Improve. Repeat."
 
 **Discipline • Logic • Innovation • Security**
-
 ---
+<p align="center">
+<a href="https://github.com/arvin341az-glitch" target="_blank">
+<img src="https://raw.githubusercontent.com/arvin341az-glitch/arvin341az-glitch/output/github-contribution-grid-snake-dark.svg" width="100%"/>
+</a>
+</p>
+<br/>
 
-## 🔗 Visit Real Profile & Live Demo
-
+<div align="center">
 > 👀 **Explore my GitHub profile to discover my latest projects, open-source contributions, web development work, and networking tools.**
 
 [🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur?tab=repositories)
