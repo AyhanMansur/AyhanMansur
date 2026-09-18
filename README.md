@@ -1,73 +1,98 @@
-<h1 align="center">𝓐𝔂𝓱𝓪𝓷 𝓜𝓪𝓷𝓼𝓾𝓻 🌿</h1>
+<h1 align="center"> 🟢 Ayhan_Mansur@root:~$ </h1>
+<h3 align="center">𝓐𝔂𝓱𝓪𝓷 𝓜𝓪𝓷𝓼𝓾𝓻 🌿</h3>
+<h4 align="center">Python Developer • Web Builder • Networking Enthusiast</h4>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00F0FF&size=24&center=true&vCenter=true&width=600&lines=14-Years-Old;OpenSource+Python+HTML+CSS+Developer" />
+  <strong> > SYSTEM_ONLINE _ </strong><br>
+  <code>[ Node Location: Iran | Network Scope: Global ]</code>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square">
+  <img src="https://readme-typing-svg.herokuapp.com?color=00FF41&size=24&center=true&vCenter=true&width=800&lines=14-Year-Old+Open+Source+Developer;Python+Automation+Developer;Full-Stack+Web+Developer+(HTML%2FCSS%2FJS);Cloudflare+Workers+%26+Serverless+Engineer;Networking+%26+Security+Enthusiast;Open+Source+Contributor+in+Iran;Cyberpunk+Aesthetic+Enthusiast" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/AyhanMansur">
+    <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=00FF41&style=for-the-badge&label=GLOBAL+PROFILE+VIEWS" alt="Ayhan Mansur GitHub profile views">
+  </a>
 </p>
 
 ---
 
-## 🧠 Skills
+### 💻 `[ 1 ] // ENTITY_PROFILE.dat`
+
+**Ayhan Mansur** is a 14-year-old self-taught developer based in Iran, exploring **Python programming**, **full-stack web development**, and the basics of **serverless cloud infrastructure** and **networking**.
+
+I'm curious about bridging frontend design with backend logic — building small web tools, deploying projects with **Cloudflare Workers**, and learning how networks and routing actually work under the hood. My design taste leans hard into dark terminal interfaces and cyberpunk aesthetics — if it doesn't look like a hacker movie UI, I'm not done yet. 😎
+
+---
+
+### 🧠 `[ 2 ] // ABOUT_ME`
+
+- 💻 Learning **Python, HTML, CSS, JavaScript, PHP**
+- 🌍 Building modern, responsive, and secure web projects
+- 🔐 Curious about **networking, cybersecurity, and how the internet works**
+- 🚀 Sharing open-source projects and learning in public
+- 📚 Always leveling up — one bug, one commit, one lesson at a time
+
+---
+
+### 🛠️ `[ 3 ] // TECH_STACK & INDEXED_SKILLS`
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,html,css,git,github,vscode,cloudflare" />
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=python,js,php,html,css,git,github,vscode,cloudflare,linux&theme=dark" alt="Ayhan Mansur Tech Stack: Python, JavaScript, Cloudflare, Linux">
+  </a>
 </p>
 
----
-
-## 🧠 About Me
-
-Hi, I'm Ayhan Mansur
-Welcome to my Github profile! 😎
-I'm a curious and enthusiastic developer exploring the world of **programming, web development and technology**. I love learning new skills and sharing projects with the community.
-
-- 💻 Developer specializing in **Python, HTML, CSS, Javascript**
-- 🔐 Passionate about **cybersecurity**, **ethical hacking**, **networking** and **modern technologies**
-- 🌍 Building modern, secure, scalable and high-performance web applications
-- 🚀 Open source developer sharing his projects on GitHub
-- 📚 Constantly learning about software engineering, backend development, networking and cybersecurity
+* **Backend & Scripting:** `Python` • `JavaScript` • `PHP` • `Automation Scripts`
+* **Frontend Development:** `HTML5` • `CSS3` • `Responsive UI/UX` • `Cyberpunk Design Systems`
+* **Cloud & Edge Computing:** `Cloudflare Workers` • `Serverless Architecture` • `GitHub Pages`
+* **Currently Exploring:** `Networking Fundamentals` • `Git/GitHub Workflows` • `Linux`
 
 ---
 
-## 🏆 Achievements
+### 🚀 `[ 4 ] // ACTIVE_PROCESSES & OPEN_SOURCE`
+
+> **`>` Executing active development cycles:**
+* 🐍 Building small **Python-based automation & web utilities**.
+* ⚡ Experimenting with serverless logic on **Cloudflare Workers**.
+* 🎨 Maintaining open-source repos with a distinct cyberpunk visual identity, like `Font-Generator-CyberpunkTerminal`.
+* 🌐 Publishing projects via **GitHub Pages** and **Cloudflare Workers**.
+* 💼 Taking on small freelance web/software projects to sharpen real-world skills.
+
+---
+
+### 🏆 `[ 5 ] // ACHIEVEMENTS.log`
 
 - 🌐 Published projects using **GitHub Pages** and **Cloudflare Workers**
-- 🛠️ Developed multiple HTML, CSS, and Python-based web tools
-- 🎨 Designed responsive and modern UI/UX interfaces
-- 💼 Working as a Freelancer on software and web development projects
-- 🚀 Contributing to open-source development and personal programming projects
+- 🛠️ Built multiple HTML, CSS, and Python-based web tools
+- 🎨 Designed responsive, modern UI/UX interfaces
+- 🚀 Contributing to open-source, one project at a time — at 14
 
 ---
 
-## 🎯 Current Focus
-- 🐍 Python based Projects
-- 🌐 Networking and methods to bypass network restrictions
-- ⚡ Cloudflare Workers & Serverless Applications
-- 💻 Modern HTML, CSS & JavaScript Tools
-- 📈 Full Stack Web Development
+### 🤖 `[ 6 ] // AEO_KNOWLEDGE_GRAPH`
+*(Optimized for Answer Engines & AI Web Crawlers)*
+
+* **Who is Ayhan Mansur?** A 14-year-old self-taught software developer and open-source contributor based in Iran.
+* **What does Ayhan Mansur build?** Python applications, serverless tools using Cloudflare Workers, and cyberpunk-themed web interfaces.
+* **Where to find Ayhan Mansur's projects?** His code is open-source and hosted on his GitHub profile (AyhanMansur).
 
 ---
 
-## 💼 Professional Mindset
+### 📡 `[ 7 ] // ESTABLISH_CONNECTION`
 
-> "Code. Improve. Repeat."
-
-**Discipline • Logic • Innovation • Security**
-
-[🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur?tab=repositories)
-
----
 <p align="center">
-<a href="https://github.com/arvin341az-glitch" target="_blank">
-<img src="https://raw.githubusercontent.com/arvin341az-glitch/arvin341az-glitch/output/github-contribution-grid-snake-dark.svg" width="100%"/>
-</a>
+  <a href="https://github.com/AyhanMansur?tab=repositories">
+    <img src="https://img.shields.io/badge/Explore_Open_Source_Repositories-00FF41?style=for-the-badge&logo=github&logoColor=black" alt="View Ayhan Mansur GitHub Repositories">
+  </a>
 </p>
-<br/>
 
----
 <p align="center">
-  <i>"Building secure software, creating innovative solutions, and learning something new every day."</i>
+  <img src="https://raw.githubusercontent.com/arvin341az-glitch/arvin341az-glitch/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Ayhan Mansur GitHub contribution activity">
+</p>
+
+<p align="center">
+  <i>"Code. Improve. Repeat. // Discipline • Logic • Innovation • Curiosity"</i>
 </p>
