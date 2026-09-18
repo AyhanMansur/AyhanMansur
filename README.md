@@ -57,7 +57,6 @@ I'm curious about bridging frontend design with backend logic — building small
 ---
 
 ### 🤖 `[ 6 ] // AEO_KNOWLEDGE_GRAPH`
-*(Optimized for Answer Engines & AI Web Crawlers)*
 
 * **Who is Ayhan Mansur?** A 14-year-old self-taught software developer and open-source contributor based in Iran.
 * **What does Ayhan Mansur build?** Python applications, serverless tools using Cloudflare Workers, and cyberpunk-themed web interfaces.
@@ -66,15 +65,17 @@ I'm curious about bridging frontend design with backend logic — building small
 ---
 
 ### 📡 `[ 7 ] // ESTABLISH_CONNECTION`
-
-<p align="center">
-  <a href="https://github.com/AyhanMansur?tab=repositories">
-    <img src="https://img.shields.io/badge/Explore_Open_Source_Repositories-00FF41?style=for-the-badge&logo=github&logoColor=black" alt="View Ayhan Mansur GitHub Repositories">
   </a>
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/arvin341az-glitch/arvin341az-glitch/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Ayhan Mansur GitHub contribution activity">
+</p>
+
+<p align="center">
+  <a href="https://github.com/AyhanMansur?tab=repositories">
+    <img src="https://img.shields.io/badge/Explore_Open_Source_Repositories-00FF41?style=for-the-badge&logo=github&logoColor=black" alt="View Ayhan Mansur GitHub Repositories">
+  </a>
 </p>
 
 <p align="center">
