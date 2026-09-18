@@ -12,32 +12,12 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/AyhanMansur">
-    <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=00FF41&style=for-the-badge&label=GLOBAL+PROFILE+VIEWS" alt="Ayhan Mansur GitHub profile views">
-  </a>
+  <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square">
 </p>
 
 ---
 
-### 💻 `[ 1 ] // ENTITY_PROFILE.dat`
-
-**Ayhan Mansur** is a 14-year-old self-taught developer based in Iran, exploring **Python programming**, **full-stack web development**, and the basics of **serverless cloud infrastructure** and **networking**.
-
-I'm curious about bridging frontend design with backend logic — building small web tools, deploying projects with **Cloudflare Workers**, and learning how networks and routing actually work under the hood. My design taste leans hard into dark terminal interfaces and cyberpunk aesthetics — if it doesn't look like a hacker movie UI, I'm not done yet. 😎
-
----
-
-### 🧠 `[ 2 ] // ABOUT_ME`
-
-- 💻 Learning **Python, HTML, CSS, JavaScript, PHP**
-- 🌍 Building modern, responsive, and secure web projects
-- 🔐 Curious about **networking, cybersecurity, and how the internet works**
-- 🚀 Sharing open-source projects and learning in public
-- 📚 Always leveling up — one bug, one commit, one lesson at a time
-
----
-
-### 🛠️ `[ 3 ] // TECH_STACK & INDEXED_SKILLS`
+###
 
 <p align="center">
   <a href="https://skillicons.dev">
@@ -45,10 +25,23 @@ I'm curious about bridging frontend design with backend logic — building small
   </a>
 </p>
 
-* **Backend & Scripting:** `Python` • `JavaScript` • `PHP` • `Automation Scripts`
-* **Frontend Development:** `HTML5` • `CSS3` • `Responsive UI/UX` • `Cyberpunk Design Systems`
-* **Cloud & Edge Computing:** `Cloudflare Workers` • `Serverless Architecture` • `GitHub Pages`
-* **Currently Exploring:** `Networking Fundamentals` • `Git/GitHub Workflows` • `Linux`
+---
+
+### 💻 `[ 2 ] // ENTITY_PROFILE.dat`
+
+**Ayhan Mansur** is a 14-year-old self-taught developer based in Iran, exploring **Python programming**, **full-stack web development**, and the basics of **serverless cloud infrastructure** and **networking**.
+
+I'm curious about bridging frontend design with backend logic — building small web tools, deploying projects with **Cloudflare Workers**, and learning how networks and routing actually work under the hood. My design taste leans hard into dark terminal interfaces and cyberpunk aesthetics — if it doesn't look like a hacker movie UI, I'm not done yet. 😎
+
+---
+
+### 🧠 `[ 3 ] // ABOUT_ME`
+
+- 💻 Learning **Python, HTML, CSS, JavaScript, PHP**
+- 🌍 Building modern, responsive, and secure web projects
+- 🔐 Curious about **networking, cybersecurity, and how the internet works**
+- 🚀 Sharing open-source projects and learning in public
+- 📚 Always leveling up — one bug, one commit, one lesson at a time
 
 ---
 
