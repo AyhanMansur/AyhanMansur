@@ -1,0 +1,2243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Ayhan Mansur | Python Developer &amp; Frontend Developer (HTML/CSS/JS/Bash)</title>
+    <meta name="description" content="Ayhan Mansur — Python Developer and Frontend Developer skilled in HTML, CSS, JavaScript, and Bash scripting. Builds automation tools, IP scanners, and clean, responsive web interfaces." />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Ayhan Mansur",
+            "url": "https://ayhanmansur.dev",
+            "jobTitle": "Python Developer & Frontend Developer",
+            "sameAs": [
+                "https://github.com/AyhanMansur",
+                "https://www.instagram.com/ayhan_dev91/"
+            ]
+        }
+    </script>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        /* ============================================================
+               RESET & VARIABLES
+               ============================================================ */
+        :root {
+            --bg-deep: #020617;
+            --bg-mid: #031b4e;
+            --bg-card: rgba(2, 6, 23, 0.88);
+            --glass-border: rgba(0, 229, 255, 0.18);
+            --accent: #00e5ff;
+            --accent-glow: rgba(0, 229, 255, 0.3);
+            --secondary: #38bdf8;
+            --accent-purple: #7c3aed;
+            --text-primary: #ffffff;
+            --text-secondary: #cbd5e1;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-fa: 'Vazirmatn', 'Inter', Tahoma, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --transition: 0.3s ease;
+            --nav-height: 64px;
+            --touch-target: 44px;
+            --radius: 16px;
+            --radius-lg: 24px;
+            --max-width: 1280px;
+            --container-padding: 16px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-text-size-adjust: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* ============================================================
+               BODY – FINAL iOS SCROLL BLANK FIX
+               ============================================================ */
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-deep);
+            background-image: radial-gradient(ellipse at 20% 20%, var(--bg-mid), var(--bg-deep) 80%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            color: var(--text-primary);
+            min-height: 100vh;
+            min-height: 100dvh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overscroll-behavior-x: none;
+        }
+
+        html[dir="rtl"] body {
+            font-family: var(--font-fa);
+        }
+        html[dir="rtl"] .typing-cursor,
+        html[dir="rtl"] .nav-logo,
+        html[dir="rtl"] .logo-icon,
+        html[dir="rtl"] .btn i,
+        html[dir="rtl"] .project-tech span,
+        html[dir="rtl"] code {
+            font-family: var(--font-sans);
+        }
+        html[dir="rtl"] .section-tag,
+        html[dir="rtl"] .hero-badge {
+            letter-spacing: 0;
+        }
+
+        .lang-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 36px;
+            padding: 0 12px;
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+            background: rgba(0, 229, 255, 0.06);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            touch-action: manipulation;
+        }
+        .lang-toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        nav[aria-label="Main navigation"] {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* ============================================================
+               CURSOR GLOW – only on hover devices
+               ============================================================ */
+        #cursor-glow {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 229, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            will-change: transform;
+            display: none;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            #cursor-glow {
+                display: block;
+            }
+        }
+
+        /* ============================================================
+               PARTICLE CANVAS
+               ============================================================ */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* ============================================================
+               CONTAINER & LAYOUT
+               ============================================================ */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            padding: 60px 0 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================================
+               NAVIGATION
+               ============================================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: var(--nav-height);
+            background: rgba(2, 8, 23, 0.92);
+            border-bottom: 1px solid rgba(0, 229, 255, 0.08);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+            min-height: var(--touch-target);
+            padding: 4px 0;
+        }
+        .nav-logo .logo-icon {
+            color: var(--accent);
+            font-size: 1.3rem;
+        }
+        .nav-logo .logo-accent {
+            color: var(--accent);
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 8px;
+            min-height: var(--touch-target);
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 12px;
+            right: 12px;
+            bottom: 4px;
+            height: 2px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        .nav-links a:hover {
+            color: #fff;
+        }
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+        }
+        .nav-links a:active {
+            background: rgba(0, 229, 255, 0.08);
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: transparent;
+            border: none;
+            padding: 8px;
+            min-width: var(--touch-target);
+            min-height: var(--touch-target);
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            cursor: pointer;
+            touch-action: manipulation;
+        }
+        .nav-toggle span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 4px;
+            transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            transform-origin: center;
+        }
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100svh;
+                background: rgba(2, 8, 23, 0.97);
+                flex-direction: column;
+                justify-content: center;
+                gap: 8px;
+                transition: right 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+                padding: 40px 24px;
+                border-left: 1px solid var(--glass-border);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                overflow-y: auto;
+            }
+            .nav-links.open {
+                right: 0;
+            }
+            .nav-links a {
+                font-size: 1.1rem;
+                padding: 14px 16px;
+                width: 100%;
+                border-radius: 12px;
+                justify-content: center;
+            }
+            .nav-links a::after {
+                display: none;
+            }
+            .nav-toggle {
+                display: flex;
+            }
+            .nav-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.35s ease;
+            }
+            .nav-overlay.active {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        /* ============================================================
+               HERO
+               ============================================================ */
+        .hero {
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: calc(var(--nav-height) + 20px) 0 30px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 16px 4px 10px;
+            border: 1px solid var(--accent);
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--accent);
+            background: rgba(0, 229, 255, 0.06);
+            white-space: nowrap;
+        }
+        .hero-badge .dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            animation: pulse-dot 2s infinite;
+            flex-shrink: 0;
+        }
+        @keyframes pulse-dot {
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.4;
+                transform: scale(0.8);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 10vw, 5.2rem);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+        }
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-greeting {
+            display: block;
+            font-size: 0.5em;
+            font-weight: 500;
+            color: var(--text-secondary);
+            -webkit-text-fill-color: var(--text-secondary);
+            letter-spacing: 1px;
+            margin-bottom: 0.1em;
+        }
+        .hero-role {
+            display: block;
+            font-size: 0.45em;
+            font-weight: 500;
+            color: var(--accent);
+            -webkit-text-fill-color: var(--accent);
+            margin-top: 0.15em;
+        }
+        .typing-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .typing-text {
+            display: inline-block;
+            min-width: 2ch;
+        }
+        .typing-cursor {
+            display: inline-block;
+            font-weight: 300;
+            animation: blink 0.8s step-end infinite;
+            color: var(--accent);
+        }
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .hero-description {
+            font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+            color: var(--text-secondary);
+            max-width: 640px;
+            line-height: 1.7;
+            margin: 0 auto;
+            padding: 0 4px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 4px;
+            width: 100%;
+            max-width: 480px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all var(--transition);
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            position: relative;
+            overflow: hidden;
+            min-height: var(--touch-target);
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+            flex: 0 1 auto;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #020617;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 35px var(--accent-glow);
+        }
+        .btn-primary:active {
+            transform: scale(0.97);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent);
+        }
+        .btn-secondary:active {
+            background: rgba(255, 255, 255, 0.12);
+            transform: scale(0.97);
+        }
+
+        .btn-ripple .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.35);
+            transform: scale(0);
+            animation: ripple-anim 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes ripple-anim {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        .hero-social {
+            display: flex;
+            gap: 16px;
+            margin-top: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .hero-social .social-link {
+            color: var(--text-secondary);
+            font-size: 1.4rem;
+            transition: color 0.3s, transform 0.3s;
+            min-height: var(--touch-target);
+            min-width: var(--touch-target);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            padding: 4px;
+            text-decoration: none;
+        }
+        .hero-social .social-link:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+        .hero-social .social-link:active {
+            transform: scale(0.9);
+            color: var(--accent);
+        }
+
+        .hero-scroll {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin-top: 24px;
+            color: var(--text-secondary);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .scroll-line {
+            width: 1px;
+            height: 32px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
+            position: relative;
+        }
+        .scroll-line .scroll-dot {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--accent);
+            animation: scroll-dot 2s infinite;
+        }
+        @keyframes scroll-dot {
+            0% {
+                top: 0;
+                opacity: 1;
+            }
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+
+        /* Glowing blobs */
+        .glow-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(50px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.2;
+        }
+        .glow-blob-1 {
+            width: 200px;
+            height: 200px;
+            background: var(--accent);
+            top: -5%;
+            right: -10%;
+            animation: float-blob 12s ease-in-out infinite alternate;
+        }
+        .glow-blob-2 {
+            width: 160px;
+            height: 160px;
+            background: var(--accent-purple);
+            bottom: -5%;
+            left: -10%;
+            animation: float-blob 14s ease-in-out infinite alternate-reverse;
+        }
+        .glow-blob-3 {
+            width: 120px;
+            height: 120px;
+            background: var(--secondary);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float-blob 16s ease-in-out infinite alternate;
+            display: none;
+        }
+        @keyframes float-blob {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(15px, -15px) scale(1.08);
+            }
+        }
+
+        /* ============================================================
+               TABLET & DESKTOP BREAKPOINTS
+               ============================================================ */
+        @media (min-width: 600px) {
+            :root {
+                --container-padding: 32px;
+            }
+            section {
+                padding: 80px 0 60px;
+            }
+            .hero {
+                padding: calc(var(--nav-height) + 40px) 0 40px;
+            }
+            .hero .container {
+                gap: 24px;
+            }
+            .hero-title {
+                font-size: clamp(2.4rem, 7vw, 5.2rem);
+            }
+            .section-header {
+                margin-bottom: 48px;
+            }
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .contact-info {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .glow-blob-1 {
+                width: 300px;
+                height: 300px;
+            }
+            .glow-blob-2 {
+                width: 250px;
+                height: 250px;
+            }
+            .glow-blob-3 {
+                display: block;
+                width: 200px;
+                height: 200px;
+            }
+            .back-to-top {
+                bottom: 30px;
+                right: 30px;
+                width: 52px;
+                height: 52px;
+                font-size: 1.2rem;
+            }
+            .back-to-top:hover {
+                transform: scale(1.05) translateY(-3px);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            :root {
+                --container-padding: 48px;
+            }
+            .skill-card:hover {
+                border-color: var(--accent);
+                transform: translateY(-4px);
+                box-shadow: 0 0 30px rgba(0, 229, 255, 0.05);
+            }
+            .contact-item:hover {
+                border-color: var(--accent);
+                transform: translateX(4px);
+            }
+        }
+
+        /* ============================================================
+               SECTION HEADERS
+               ============================================================ */
+        .section-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .section-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--accent);
+            background: rgba(0, 229, 255, 0.06);
+            padding: 3px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(0, 229, 255, 0.12);
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-size: clamp(1.6rem, 5vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .section-title .highlight {
+            background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-subtitle {
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 8px auto 0;
+            font-size: clamp(0.9rem, 2vw, 1.05rem);
+            padding: 0 4px;
+        }
+
+        /* ============================================================
+               ABOUT
+               ============================================================ */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            line-height: 1.7;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
+        }
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .stat-item {
+            text-align: center;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            padding: 14px 10px;
+        }
+        .stat-number {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .about-timeline {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: 20px 18px;
+        }
+        .timeline-title {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .timeline-item {
+            display: flex;
+            gap: 14px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+        .timeline-dot {
+            width: 10px;
+            height: 10px;
+            min-width: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-top: 4px;
+            box-shadow: 0 0 12px var(--accent-glow);
+        }
+        .timeline-content .timeline-date {
+            font-size: 0.7rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+        .timeline-content h4 {
+            font-size: 0.95rem;
+            margin: 2px 0;
+        }
+        .timeline-content p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        @media (min-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1.2fr 0.8fr;
+                gap: 40px;
+            }
+            .about-stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .stat-number {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* ============================================================
+               SKILLS
+               ============================================================ */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        .skill-card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: 20px 18px;
+            transition: all var(--transition);
+        }
+        .skill-card:active {
+            transform: scale(0.99);
+            border-color: var(--accent);
+        }
+        .skill-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .skill-card-header .skill-icon {
+            font-size: 1.3rem;
+            width: 32px;
+            text-align: center;
+        }
+        .skill-card-header h3 {
+            font-size: 1rem;
+        }
+        .skill-card-desc {
+            font-size: 0.82rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+        }
+        .skill-item {
+            margin-bottom: 12px;
+        }
+        .skill-item:last-child {
+            margin-bottom: 0;
+        }
+        .skill-name {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        .skill-bar {
+            width: 100%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .skill-progress {
+            height: 100%;
+            width: 0;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-purple));
+            transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        @media (min-width: 900px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+                max-width: 760px;
+                margin: 0 auto;
+            }
+        }
+
+        /* ============================================================
+               PROJECTS – LAYOUT FIX ONLY (No design changes)
+               ============================================================ */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition);
+            /* ✅ LAYOUT FIX: Makes all cards equal height */
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card:active {
+            transform: scale(0.99);
+            border-color: var(--accent);
+        }
+
+        .project-image {
+            height: 140px;
+            background: linear-gradient(145deg, rgba(0, 229, 255, 0.08), rgba(124, 58, 237, 0.08));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--accent);
+            opacity: 0.7;
+            /* ✅ LAYOUT FIX: Prevents image from shrinking */
+            flex-shrink: 0;
+        }
+
+        .project-image i {
+            font-size: 3rem;
+        }
+
+        .project-info {
+            padding: 16px 18px 20px;
+            /* ✅ LAYOUT FIX: Fills remaining space */
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-tag {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--accent);
+            background: rgba(0, 229, 255, 0.06);
+            padding: 2px 10px;
+            border-radius: 999px;
+            margin-bottom: 6px;
+            border: 1px solid rgba(0, 229, 255, 0.08);
+            align-self: flex-start;
+        }
+
+        .project-info h3 {
+            font-size: 1.05rem;
+            margin-bottom: 2px;
+        }
+
+        .project-info p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            flex: 1; /* Pushes tech to bottom */
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            /* ✅ LAYOUT FIX: Pushes tech to the bottom */
+            margin-top: auto;
+            padding-top: 10px;
+        }
+
+        .project-tech span {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 2px 10px;
+            border-radius: 999px;
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+            /* ✅ LAYOUT FIX: Ensures buttons stick to bottom */
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .project-links .btn-sm {
+            padding: 6px 14px;
+            font-size: 0.75rem;
+            border-radius: 10px;
+            min-height: 38px;
+            min-width: auto;
+            flex: 0 1 auto;
+        }
+
+        @media (min-width: 600px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .project-image {
+                height: 180px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 28px;
+            }
+            .project-image {
+                height: 200px;
+            }
+            /* Hover effect untouched */
+            .project-card:hover {
+                transform: translateY(-6px);
+                border-color: var(--accent);
+                box-shadow: 0 0 40px rgba(0, 229, 255, 0.06);
+            }
+        }
+
+        /* ============================================================
+               CONTACT
+               ============================================================ */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 700px;
+            margin: 0 auto;
+            gap: 16px;
+        }
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            padding: 14px 16px;
+            transition: all var(--transition);
+            min-height: 60px;
+        }
+        .contact-item:active {
+            transform: scale(0.98);
+            border-color: var(--accent);
+        }
+        .contact-icon {
+            font-size: 1.2rem;
+            color: var(--accent);
+            width: 36px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .contact-item h4 {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .contact-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            word-break: break-all;
+            font-size: 0.9rem;
+        }
+        .contact-item a:active {
+            color: var(--accent);
+        }
+
+        /* ============================================================
+               FOOTER
+               ============================================================ */
+        .footer {
+            border-top: 1px solid var(--glass-border);
+            padding: 32px 0 24px;
+            margin-top: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+        .footer .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+        .footer .footer-social a {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            transition: color 0.3s, transform 0.3s;
+            min-height: var(--touch-target);
+            min-width: var(--touch-target);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            padding: 4px;
+            text-decoration: none;
+        }
+        .footer .footer-social a:active {
+            color: var(--accent);
+            transform: scale(0.9);
+        }
+        .footer .heart {
+            color: #ff6b6b;
+            display: inline-block;
+        }
+
+        /* ============================================================
+               BACK TO TOP
+               ============================================================ */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: #020617;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 0 24px var(--accent-glow);
+            transition: all var(--transition);
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.8);
+            touch-action: manipulation;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1);
+        }
+        .back-to-top:active {
+            transform: scale(0.9);
+        }
+
+        /* ============================================================
+               SCROLL REVEAL
+               ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================================
+               ACCESSIBILITY
+               ============================================================ */
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* ============================================================
+               REDUCED MOTION
+               ============================================================ */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .skill-progress {
+                transition: none;
+            }
+            .hero-badge .dot,
+            .typing-cursor,
+            .scroll-line .scroll-dot,
+            .glow-blob,
+            .btn-ripple .ripple {
+                animation: none;
+            }
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* ============================================================
+               MOBILE‑FIRST RESPONSIVE TWEAKS
+               ============================================================ */
+        @media (max-width: 480px) {
+            section {
+                padding: 40px 0 30px;
+            }
+            .hero {
+                padding: calc(var(--nav-height) + 12px) 0 20px;
+                min-height: 90svh;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-description {
+                font-size: 0.9rem;
+            }
+            .btn {
+                font-size: 0.8rem;
+                padding: 10px 16px;
+                min-height: 44px;
+            }
+            .hero-social .social-link {
+                font-size: 1.2rem;
+                min-height: 40px;
+                min-width: 40px;
+            }
+            .hero-scroll {
+                display: none;
+            }
+            .glow-blob-1,
+            .glow-blob-2 {
+                opacity: 0.12;
+            }
+            .section-header {
+                margin-bottom: 24px;
+            }
+            .section-tag {
+                font-size: 0.6rem;
+                letter-spacing: 2px;
+                padding: 2px 12px;
+            }
+            .about-stats {
+                gap: 8px;
+            }
+            .stat-item {
+                padding: 10px 6px;
+            }
+            .stat-number {
+                font-size: 1.4rem;
+            }
+            .stat-label {
+                font-size: 0.6rem;
+            }
+            .about-timeline {
+                padding: 16px 14px;
+            }
+            .timeline-item {
+                gap: 12px;
+                padding: 8px 0;
+            }
+            .skill-card {
+                padding: 16px 14px;
+            }
+            .skill-card-header .skill-icon {
+                font-size: 1.1rem;
+                width: 28px;
+            }
+            .skill-card-header h3 {
+                font-size: 0.9rem;
+            }
+            .skill-name {
+                font-size: 0.8rem;
+            }
+            .skill-bar {
+                height: 4px;
+            }
+            .project-image {
+                height: 110px;
+            }
+            .project-image i {
+                font-size: 2.2rem;
+            }
+            .project-info {
+                padding: 14px 14px 16px;
+            }
+            .project-info h3 {
+                font-size: 0.95rem;
+            }
+            .project-info p {
+                font-size: 0.8rem;
+            }
+            .project-links .btn-sm {
+                font-size: 0.7rem;
+                padding: 5px 12px;
+                min-height: 34px;
+            }
+            .contact-item {
+                padding: 12px 14px;
+                gap: 12px;
+                min-height: 52px;
+            }
+            .contact-icon {
+                font-size: 1rem;
+                width: 30px;
+            }
+            .contact-item a {
+                font-size: 0.8rem;
+            }
+            .contact-item h4 {
+                font-size: 0.65rem;
+            }
+            .footer {
+                padding: 24px 0 18px;
+                font-size: 0.7rem;
+            }
+            .footer .footer-social a {
+                font-size: 1rem;
+                min-height: 36px;
+                min-width: 36px;
+            }
+            .back-to-top {
+                bottom: 14px;
+                right: 14px;
+                width: 44px;
+                height: 44px;
+                font-size: 1rem;
+                box-shadow: 0 0 16px var(--accent-glow);
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero-title {
+                font-size: 1.7rem;
+            }
+            .hero-badge {
+                font-size: 0.65rem;
+                padding: 2px 12px 2px 8px;
+            }
+            .btn {
+                font-size: 0.75rem;
+                padding: 8px 12px;
+                min-width: 100px;
+            }
+            .about-stats {
+                gap: 6px;
+            }
+            .stat-number {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                min-height: auto;
+                padding: calc(var(--nav-height) + 16px) 0 20px;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-description {
+                font-size: 0.85rem;
+                max-width: 80%;
+            }
+            .hero-scroll {
+                display: none;
+            }
+            .hero-social {
+                margin-top: 4px;
+            }
+            .glow-blob-1,
+            .glow-blob-2 {
+                opacity: 0.08;
+            }
+        }
+
+        /* ============================================================
+               LARGE SCREENS (4K)
+               ============================================================ */
+        @media (min-width: 1920px) {
+            .container {
+                max-width: 1600px;
+            }
+            .hero-title {
+                font-size: 5.6rem;
+            }
+            .hero-description {
+                font-size: 1.4rem;
+                max-width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== Cursor Glow ===== -->
+    <div id="cursor-glow" aria-hidden="true"></div>
+
+    <!-- ===== Particle Background ===== -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <!-- ===== Navigation Overlay (mobile) ===== -->
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+    <!-- ===== Navigation ===== -->
+    <header class="navbar" role="banner">
+        <div class="container">
+            <a href="#" class="nav-logo" aria-label="Ayhan Mansur Home">
+                <span class="logo-icon">⚡</span>
+                <span>Ayhan <span class="logo-accent">Mansur</span></span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="navLinks" role="menubar">
+                    <li role="none"><a href="#about" role="menuitem" data-i18n="nav.about">About</a></li>
+                    <li role="none"><a href="#skills" role="menuitem" data-i18n="nav.skills">Skills</a></li>
+                    <li role="none"><a href="#projects" role="menuitem" data-i18n="nav.projects">Projects</a></li>
+                    <li role="none"><a href="#contact" role="menuitem" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+                <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">FA</button>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero" aria-label="Hero section">
+        <div class="glow-blob glow-blob-1" aria-hidden="true"></div>
+        <div class="glow-blob glow-blob-2" aria-hidden="true"></div>
+        <div class="glow-blob glow-blob-3" aria-hidden="true"></div>
+
+        <div class="container">
+            <div class="hero-badge">
+                <span class="dot" aria-hidden="true"></span>
+                <span data-i18n="hero.badge">Software Developer</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-greeting" data-i18n="hero.greeting">Hello, I'm</span>
+                <span class="highlight">Ayhan Mansur</span>
+                <span class="hero-role">
+                    <span class="typing-wrapper">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="typing-cursor" id="typingCursor">|</span>
+                    </span>
+                </span>
+            </h1>
+            <p class="hero-description" data-i18n-html="hero.description">
+                I build practical tools and clean web interfaces with Python, HTML, CSS, JavaScript, and Bash.
+                <br />Focused on automation, cross-platform utilities, and user-friendly design.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary btn-ripple">
+                    <span data-i18n="hero.viewProjects">View Projects</span>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary btn-ripple">
+                    <span data-i18n="hero.hireMe">Hire Me</span>
+                    <i class="fas fa-comment" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/AyhanMansur" target="_blank" aria-label="GitHub" class="social-link"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/ayhan_dev91/" target="_blank" aria-label="Instagram" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://t.me/AyhanMansur" target="_blank" aria-label="Telegram" class="social-link"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a>
+                <a href="mailto:umc.masnur13@icloud.com" aria-label="Email" class="social-link"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+            </div>
+            <div class="hero-scroll" aria-hidden="true">
+                <span data-i18n="hero.scroll">Scroll</span>
+                <div class="scroll-line">
+                    <span class="scroll-dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" aria-label="About section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="about.tag">About Me</span>
+                <h2 class="section-title" data-i18n-html="about.title">Python &amp; Frontend Developer <span class="highlight">Building Practical Tools</span></h2>
+                <p class="section-subtitle" data-i18n="about.subtitle">
+                    I build automation scripts, command-line tools, and responsive web interfaces
+                    using Python, HTML, CSS, JavaScript, and Bash.
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p data-i18n-html="about.p1">
+                        I'm a self-taught developer specializing in <strong>Python</strong> for scripting and automation,
+                        and <strong>HTML/CSS/JavaScript</strong> for building clean, responsive front-end interfaces.
+                        I also write <strong>Bash</strong> scripts for Linux and Termux environments to automate
+                        repetitive tasks and system utilities.
+                    </p>
+                    <p data-i18n="about.p2">
+                        My projects range from IP range scanners and cross-platform download tools to
+                        interactive, cyberpunk-styled web apps. I care about clean code, cross-platform
+                        compatibility, and interfaces people actually enjoy using — and I'm always
+                        looking to grow through real-world projects and new challenges.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="9">0</span>
+                            <span class="stat-label" data-i18n="about.stat1">Public Repos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="9">0</span>
+                            <span class="stat-label" data-i18n="about.stat2">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="6">0</span>
+                            <span class="stat-label" data-i18n="about.stat3">Tools Built</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="120">0</span>
+                            <span class="stat-label" data-i18n="about.stat4">Stars</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-timeline reveal">
+                    <h3 class="timeline-title"><i class="fas fa-bolt" style="color:var(--accent);"></i> <span data-i18n="about.journey">Journey</span></h3>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2022</span>
+                            <h4 data-i18n="about.t1title">Started Building Tools</h4>
+                            <p data-i18n="about.t1desc">Began developing Python utilities for security and networking.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023</span>
+                            <h4 data-i18n="about.t2title">First Public Repositories</h4>
+                            <p data-i18n="about.t2desc">Released downwib, AyhanX-Fredom-Scanner, and Font-Generator-CyberpunkTerminal.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024</span>
+                            <h4 data-i18n="about.t3title">Building &amp; Improving</h4>
+                            <p data-i18n="about.t3desc">Continuing to develop and refine tools with a focus on performance and UI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" aria-label="Skills section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="skills.tag">Skills</span>
+                <h2 class="section-title" data-i18n-html="skills.title">Languages &amp; <span class="highlight">Tools I Use</span></h2>
+                <p class="section-subtitle" data-i18n="skills.subtitle">
+                    HTML, CSS, JavaScript, Python, and Bash — the core languages I build with, plus the tools around them.
+                </p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <div class="skill-card-header">
+                        <i class="fas fa-code skill-icon" style="color: var(--accent);"></i>
+                        <h3 data-i18n="skills.languagesHeader">Languages</h3>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">HTML5</span>
+                        <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">CSS3</span>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Bash</span>
+                        <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-card-header">
+                        <i class="fas fa-shield-alt skill-icon" style="color: var(--accent-purple);"></i>
+                        <h3 data-i18n="skills.securityHeader">Security &amp; Networking</h3>
+                    </div>
+                    <p class="skill-card-desc" data-i18n="skills.securityDesc">
+                        Hands-on experience with network reconnaissance and IP-range scanning, and a practical
+                        understanding of how sites get attacked. I apply that knowledge to my own projects —
+                        this portfolio included — through basic hardening practices like input sanitization,
+                        safe headers, and privacy-conscious defaults.
+                    </p>
+                    <div class="skill-item">
+                        <span class="skill-name" data-i18n="skills.privacy">Privacy &amp; Anonymity</span>
+                        <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" aria-label="Projects section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="projects.tag">Projects</span>
+                <h2 class="section-title" data-i18n-html="projects.title">Featured <span class="highlight">Repositories</span></h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">
+                    Tools and utilities I've built, from security scanners to cyberpunk web apps.
+                </p>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <div class="project-image"><i class="fas fa-radar"></i></div>
+                    <div class="project-info">
+                        <span class="project-tag" data-i18n="projects.p1tag">Scanner</span>
+                        <h3>AyhanX-Fredom-Scanner</h3>
+                        <p data-i18n="projects.p1desc">A high‑performance Python utility for scanning IP ranges from Cloudflare and ArvanCloud. Optimized for Termux and Linux with zero dependencies.</p>
+                        <div class="project-tech"><span>Python</span><span>Cloudflare</span><span>Termux</span><span>Linux</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/AyhanMansur/AyhanX-Fredom-Scanner" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-github" aria-hidden="true"></i> <span data-i18n="projects.view">View</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-image"><i class="fas fa-font"></i></div>
+                    <div class="project-info">
+                        <span class="project-tag" data-i18n="projects.p2tag">Web App</span>
+                        <h3>Font‑Generator‑CyberpunkTerminal</h3>
+                        <p data-i18n="projects.p2desc">A client‑side web app that converts text into Unicode mathematical symbols with a full cyberpunk aesthetic, Matrix rain background, and CRT effects.</p>
+                        <div class="project-tech"><span>JavaScript</span><span>HTML5 Canvas</span><span>CSS3</span><span>Unicode</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/AyhanMansur/Font-Generator-CyberpunkTerminal" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-github" aria-hidden="true"></i> <span data-i18n="projects.view">View</span></a>
+                            <a href="https://ayhanmansur.github.io/Font-Generator-CyberpunkTerminal/" target="_blank" class="btn btn-secondary btn-sm"><i class="fas fa-external-link-alt" aria-hidden="true"></i> <span data-i18n="projects.liveDemo">Live Demo</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-image"><i class="fas fa-download"></i></div>
+                    <div class="project-info">
+                        <span class="project-tag" data-i18n="projects.p3tag">Platform</span>
+                        <h3>downwib</h3>
+                        <p data-i18n="projects.p3desc">A comprehensive app download platform for Android, Windows, Mac, and Linux. Provides fast, secure, and ad‑free direct download links.</p>
+                        <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/AyhanMansur/downwib" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-github" aria-hidden="true"></i> <span data-i18n="projects.view">View</span></a>
+                            <a href="https://ayhanmansur.github.io/downwib/" target="_blank" class="btn btn-secondary btn-sm"><i class="fas fa-external-link-alt" aria-hidden="true"></i> <span data-i18n="projects.liveDemo">Live Demo</span></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" aria-label="Contact section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="contact.tag">Contact</span>
+                <h2 class="section-title" data-i18n-html="contact.title">Let's <span class="highlight">Connect</span></h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">
+                    Reach out via any of the channels below.
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                        <div>
+                            <h4 data-i18n="contact.email">Email</h4>
+                            <a href="mailto:umc.masnur13@icloud.com">umc.masnur13@icloud.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-github" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/AyhanMansur" target="_blank">github.com/AyhanMansur</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Instagram</h4>
+                            <a href="https://www.instagram.com/ayhan_dev91/" target="_blank">@ayhan_dev91</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-telegram-plane" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Telegram</h4>
+                            <a href="https://t.me/AyhanMansur" target="_blank">t.me/AyhanMansur</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://github.com/AyhanMansur" target="_blank" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/ayhan_dev91/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://t.me/AyhanMansur" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a>
+                <a href="mailto:umc.masnur13@icloud.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+            </div>
+            <p data-i18n-html="footer.text">&copy; 2026 Ayhan Mansur. Built with <span class="heart">❤</span> and code.</p>
+        </div>
+    </footer>
+
+    <!-- ===== Back to Top ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- ============================================================
+    JAVASCRIPT – FULLY OPTIMIZED
+    ============================================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            const isLowPower = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isMobile = window.innerWidth < 768 || isTouch;
+
+            // ---- CURSOR GLOW (desktop only) ----
+            const cursorGlow = document.getElementById('cursor-glow');
+            if (cursorGlow && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                window.addEventListener('mousemove', (e) => {
+                    cursorGlow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+                }, { passive: true });
+            }
+
+            // ---- PARTICLE CANVAS ----
+            const canvas = document.getElementById('particles-canvas');
+            const ctx = canvas ? canvas.getContext('2d') : null;
+            let particleCount = isMobile ? 20 : 35;
+            let particles = [];
+
+            function resizeCanvas() {
+                if (!canvas) return;
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            function initParticles() {
+                if (!canvas || !ctx) return;
+                resizeCanvas();
+                particles = Array.from({ length: particleCount }, () => ({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
+                    r: Math.random() * 1.5 + 0.5
+                }));
+            }
+
+            function animateParticles() {
+                if (!canvas || !ctx) return;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'rgba(0, 229, 255, 0.5)';
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+                requestAnimationFrame(animateParticles);
+            }
+
+            if (canvas && !isLowPower) {
+                initParticles();
+                animateParticles();
+            }
+            window.addEventListener('resize', resizeCanvas, { passive: true });
+
+            // ---- MOBILE NAV ----
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
+            const navOverlay = document.getElementById('navOverlay');
+
+            function openNav() {
+                navLinks.classList.add('open');
+                navOverlay.classList.add('active');
+                navToggle.classList.add('active');
+                navToggle.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeNav() {
+                navLinks.classList.remove('open');
+                navOverlay.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+
+            navToggle.addEventListener('click', () => {
+                const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+                isOpen ? closeNav() : openNav();
+            });
+
+            navOverlay.addEventListener('click', closeNav);
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', closeNav);
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+                    closeNav();
+                }
+            });
+
+            // ---- TYPING EFFECT ----
+            const typingText = document.getElementById('typingText');
+            const rolesByLang = {
+                en: ['Python Developer', 'Frontend Developer', 'Bash Automation', 'Tool Builder'],
+                fa: ['توسعه‌دهنده پایتون', 'توسعه‌دهنده فرانت‌اند', 'اتوماسیون Bash', 'سازنده ابزار']
+            };
+            let roles = rolesByLang.en;
+            let roleIndex = 0,
+                charIndex = 0,
+                isDeleting = false;
+            const typeSpeed = isMobile ? 100 : 80;
+            const deleteSpeed = isMobile ? 50 : 40;
+            const pause = isMobile ? 2000 : 1800;
+            let typingTimeout = null;
+
+            function typeEffect() {
+                const current = roles[roleIndex];
+                if (isDeleting) {
+                    typingText.textContent = current.substring(0, charIndex - 1);
+                    charIndex--;
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        roleIndex = (roleIndex + 1) % roles.length;
+                        typingTimeout = setTimeout(typeEffect, 400);
+                        return;
+                    }
+                    typingTimeout = setTimeout(typeEffect, deleteSpeed);
+                } else {
+                    typingText.textContent = current.substring(0, charIndex + 1);
+                    charIndex++;
+                    if (charIndex === current.length) {
+                        isDeleting = true;
+                        typingTimeout = setTimeout(typeEffect, pause);
+                        return;
+                    }
+                    typingTimeout = setTimeout(typeEffect, typeSpeed);
+                }
+            }
+
+            function restartTyping(lang) {
+                roles = rolesByLang[lang] || rolesByLang.en;
+                roleIndex = 0;
+                charIndex = 0;
+                isDeleting = false;
+                clearTimeout(typingTimeout);
+                if (!isLowPower) {
+                    typeEffect();
+                } else {
+                    typingText.textContent = roles[0];
+                }
+            }
+
+            if (!isLowPower) {
+                typeEffect();
+            } else {
+                typingText.textContent = roles[0];
+                document.getElementById('typingCursor').style.display = 'none';
+            }
+
+            // ---- SCROLL REVEAL ----
+            const reveals = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                const revealObserver = new IntersectionObserver((entries) => {
+                    for (const entry of entries) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    }
+                }, { threshold: 0.12, rootMargin: '0px 0px -20px 0px' });
+                reveals.forEach(el => revealObserver.observe(el));
+            } else {
+                reveals.forEach(el => el.classList.add('visible'));
+            }
+
+            // ---- SKILL BARS ----
+            const skillFills = document.querySelectorAll('.skill-progress');
+            if ('IntersectionObserver' in window && !isLowPower) {
+                const skillObserver = new IntersectionObserver((entries) => {
+                    for (const entry of entries) {
+                        if (entry.isIntersecting) {
+                            const fill = entry.target;
+                            fill.style.width = fill.getAttribute('data-width') + '%';
+                        }
+                    }
+                }, { threshold: 0.2 });
+                skillFills.forEach(el => skillObserver.observe(el));
+            } else {
+                skillFills.forEach(el => {
+                    el.style.width = el.getAttribute('data-width') + '%';
+                });
+            }
+
+            // ---- COUNTER ANIMATION ----
+            const statNumbers = document.querySelectorAll('.stat-number');
+            if ('IntersectionObserver' in window && !isLowPower) {
+                const counterObserver = new IntersectionObserver((entries) => {
+                    for (const entry of entries) {
+                        if (entry.isIntersecting) {
+                            const el = entry.target;
+                            const target = parseInt(el.getAttribute('data-target'));
+                            let current = 0;
+                            const steps = isMobile ? 30 : 45;
+                            const increment = target / steps;
+                            let step = 0;
+                            const timer = setInterval(() => {
+                                step++;
+                                current += increment;
+                                if (step >= steps) {
+                                    el.textContent = target;
+                                    clearInterval(timer);
+                                } else {
+                                    el.textContent = Math.ceil(current);
+                                }
+                            }, isMobile ? 30 : 20);
+                            counterObserver.unobserve(el);
+                        }
+                    }
+                }, { threshold: 0.3 });
+                statNumbers.forEach(el => counterObserver.observe(el));
+            } else {
+                statNumbers.forEach(el => {
+                    el.textContent = el.getAttribute('data-target');
+                });
+            }
+
+            // ---- BUTTON RIPPLE ----
+            document.querySelectorAll('.btn-ripple').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = (e.clientX || e.touches?.[0]?.clientX || rect.width / 2) - rect.left - size / 2;
+                    const y = (e.clientY || e.touches?.[0]?.clientY || rect.height / 2) - rect.top - size / 2;
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple';
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    this.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 600);
+                });
+            });
+
+            // ---- BACK TO TOP ----
+            const backBtn = document.getElementById('backToTop');
+            let scrollTimeout = false;
+            window.addEventListener('scroll', () => {
+                if (!scrollTimeout) {
+                    scrollTimeout = true;
+                    requestAnimationFrame(() => {
+                        backBtn.classList.toggle('visible', window.scrollY > 500);
+                        scrollTimeout = false;
+                    });
+                }
+            }, { passive: true });
+
+            backBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ---- RESIZE ----
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    const newIsMobile = window.innerWidth < 768;
+                    const newCount = newIsMobile ? 20 : 35;
+                    if (newCount !== particleCount) {
+                        particleCount = newCount;
+                        initParticles();
+                    }
+                }, 300);
+            }, { passive: true });
+
+            // ---- SAFE AREA (iOS) ----
+            if (window.navigator.userAgent.includes('iPhone') || window.navigator.userAgent.includes('iPad')) {
+                document.documentElement.style.setProperty('--container-padding', 'max(16px, env(safe-area-inset-left))');
+            }
+
+            // ---- KEYBOARD ACCESSIBILITY ----
+            navLinks.addEventListener('keydown', (e) => {
+                if (e.key === 'Tab') {
+                    const focusable = navLinks.querySelectorAll('a, button');
+                    const first = focusable[0];
+                    const last = focusable[focusable.length - 1];
+                    if (e.shiftKey && document.activeElement === first) {
+                        e.preventDefault();
+                        last.focus();
+                    } else if (!e.shiftKey && document.activeElement === last) {
+                        e.preventDefault();
+                        first.focus();
+                    }
+                }
+            });
+
+            // ---- LANGUAGE TOGGLE (EN / FA) ----
+            const translations = {
+                en: {
+                    'nav.about': 'About', 'nav.skills': 'Skills', 'nav.projects': 'Projects', 'nav.contact': 'Contact',
+                    'hero.badge': 'Software Developer',
+                    'hero.greeting': "Hello, I'm",
+                    'hero.description': 'I build practical tools and clean web interfaces with Python, HTML, CSS, JavaScript, and Bash.<br />Focused on automation, cross-platform utilities, and user-friendly design.',
+                    'hero.viewProjects': 'View Projects',
+                    'hero.hireMe': 'Hire Me',
+                    'hero.scroll': 'Scroll',
+                    'about.tag': 'About Me',
+                    'about.title': 'Python &amp; Frontend Developer <span class="highlight">Building Practical Tools</span>',
+                    'about.subtitle': 'I build automation scripts, command-line tools, and responsive web interfaces using Python, HTML, CSS, JavaScript, and Bash.',
+                    'about.p1': "I'm a self-taught developer specializing in <strong>Python</strong> for scripting and automation, and <strong>HTML/CSS/JavaScript</strong> for building clean, responsive front-end interfaces. I also write <strong>Bash</strong> scripts for Linux and Termux environments to automate repetitive tasks and system utilities.",
+                    'about.p2': "My projects range from IP range scanners and cross-platform download tools to interactive, cyberpunk-styled web apps. I care about clean code, cross-platform compatibility, and interfaces people actually enjoy using — and I'm always looking to grow through real-world projects and new challenges.",
+                    'about.stat1': 'Public Repos', 'about.stat2': 'Projects', 'about.stat3': 'Tools Built', 'about.stat4': 'Stars',
+                    'about.journey': 'Journey',
+                    'about.t1title': 'Started Building Tools',
+                    'about.t1desc': 'Began developing Python utilities for security and networking.',
+                    'about.t2title': 'First Public Repositories',
+                    'about.t2desc': 'Released downwib, AyhanX-Fredom-Scanner, and Font-Generator-CyberpunkTerminal.',
+                    'about.t3title': 'Building &amp; Improving',
+                    'about.t3desc': 'Continuing to develop and refine tools with a focus on performance and UI.',
+                    'skills.tag': 'Skills',
+                    'skills.title': 'Languages &amp; <span class="highlight">Tools I Use</span>',
+                    'skills.subtitle': 'HTML, CSS, JavaScript, Python, and Bash — the core languages I build with, plus the tools around them.',
+                    'skills.languagesHeader': 'Languages',
+                    'skills.securityHeader': 'Security &amp; Networking',
+                    'skills.securityDesc': 'Hands-on experience with network reconnaissance and IP-range scanning, and a practical understanding of how sites get attacked. I apply that knowledge to my own projects — this portfolio included — through basic hardening practices like input sanitization, safe headers, and privacy-conscious defaults.',
+                    'skills.privacy': 'Privacy &amp; Anonymity',
+                    'projects.tag': 'Projects',
+                    'projects.title': 'Featured <span class="highlight">Repositories</span>',
+                    'projects.subtitle': "Tools and utilities I've built, from security scanners to cyberpunk web apps.",
+                    'projects.p1tag': 'Scanner',
+                    'projects.p1desc': 'A high‑performance Python utility for scanning IP ranges from Cloudflare and ArvanCloud. Optimized for Termux and Linux with zero dependencies.',
+                    'projects.p2tag': 'Web App',
+                    'projects.p2desc': 'A client‑side web app that converts text into Unicode mathematical symbols with a full cyberpunk aesthetic, Matrix rain background, and CRT effects.',
+                    'projects.p3tag': 'Platform',
+                    'projects.p3desc': 'A comprehensive app download platform for Android, Windows, Mac, and Linux. Provides fast, secure, and ad‑free direct download links.',
+                    'projects.view': 'View',
+                    'projects.liveDemo': 'Live Demo',
+                    'contact.tag': 'Contact',
+                    'contact.title': "Let's <span class=\"highlight\">Connect</span>",
+                    'contact.subtitle': 'Reach out via any of the channels below.',
+                    'contact.email': 'Email',
+                    'footer.text': '&copy; 2026 Ayhan Mansur. Built with <span class="heart">❤</span> and code.',
+                    'meta.title': 'Ayhan Mansur | Python Developer &amp; Frontend Developer (HTML/CSS/JS/Bash)',
+                    'meta.description': 'Ayhan Mansur — Python Developer and Frontend Developer skilled in HTML, CSS, JavaScript, and Bash scripting. Builds automation tools, IP scanners, and clean, responsive web interfaces.'
+                },
+                fa: {
+                    'nav.about': 'درباره من', 'nav.skills': 'مهارت‌ها', 'nav.projects': 'پروژه‌ها', 'nav.contact': 'تماس',
+                    'hero.badge': 'توسعه‌دهنده نرم‌افزار',
+                    'hero.greeting': 'سلام، من',
+                    'hero.description': 'ابزارهای کاربردی و رابط‌های وب تمیز با Python، HTML، CSS، JavaScript و Bash می‌سازم.<br />تمرکزم روی اتوماسیون، ابزارهای چندسکویی و طراحی کاربرپسنده.',
+                    'hero.viewProjects': 'مشاهده پروژه‌ها',
+                    'hero.hireMe': 'استخدامم کن',
+                    'hero.scroll': 'اسکرول',
+                    'about.tag': 'درباره من',
+                    'about.title': 'توسعه‌دهنده Python و فرانت‌اند <span class="highlight">که ابزارهای کاربردی می‌سازد</span>',
+                    'about.subtitle': 'اسکریپت‌های اتوماسیون، ابزارهای خط فرمان و رابط‌های وب واکنش‌گرا با Python، HTML، CSS، JavaScript و Bash می‌سازم.',
+                    'about.p1': 'من یک توسعه‌دهنده خودآموخته‌ام که در <strong>Python</strong> برای اسکریپت‌نویسی و اتوماسیون، و <strong>HTML/CSS/JavaScript</strong> برای ساخت رابط‌های فرانت‌اند تمیز و واکنش‌گرا تخصص دارم. همچنین اسکریپت‌های <strong>Bash</strong> برای محیط‌های لینوکس و ترموکس می‌نویسم تا کارهای تکراری و ابزارهای سیستمی رو خودکار کنم.',
+                    'about.p2': 'پروژه‌های من از اسکنرهای رنج IP و ابزارهای دانلود چندسکویی تا اپ‌های وب سایبرپانک تعاملی رو شامل می‌شه. برام کد تمیز، سازگاری چندسکویی، و رابط‌هایی که مردم واقعاً از استفاده‌شون لذت می‌برن مهمه — و همیشه دنبال رشد از طریق پروژه‌های واقعی و چالش‌های جدیدم.',
+                    'about.stat1': 'مخزن عمومی', 'about.stat2': 'پروژه', 'about.stat3': 'ابزار ساخته‌شده', 'about.stat4': 'استار',
+                    'about.journey': 'مسیر من',
+                    'about.t1title': 'شروع ساخت ابزارها',
+                    'about.t1desc': 'شروع توسعه ابزارهای پایتون برای امنیت و شبکه.',
+                    'about.t2title': 'اولین مخزن‌های عمومی',
+                    'about.t2desc': 'انتشار downwib، AyhanX-Fredom-Scanner و Font-Generator-CyberpunkTerminal.',
+                    'about.t3title': 'ساخت و بهبود',
+                    'about.t3desc': 'ادامه توسعه و بهبود ابزارها با تمرکز روی کارایی و رابط کاربری.',
+                    'skills.tag': 'مهارت‌ها',
+                    'skills.title': 'زبان‌ها و <span class="highlight">ابزارهایی که استفاده می‌کنم</span>',
+                    'skills.subtitle': 'HTML، CSS، JavaScript، Python و Bash — زبان‌های اصلی‌ای که باهاشون کار می‌کنم، به‌همراه ابزارهای اطرافشون.',
+                    'skills.languagesHeader': 'زبان‌ها',
+                    'skills.securityHeader': 'امنیت و شبکه',
+                    'skills.securityDesc': 'تجربه عملی در شناسایی شبکه و اسکن رنج IP، و درک عملی از اینکه سایت‌ها چطور مورد حمله قرار می‌گیرن. این دانش رو روی پروژه‌های خودم — از جمله همین پورتفولیو — با اصول پایه‌ای مثل پاکسازی ورودی‌ها، هدرهای امن، و تنظیمات حریم خصوصی پیاده می‌کنم.',
+                    'skills.privacy': 'حریم خصوصی و ناشناسی',
+                    'projects.tag': 'پروژه‌ها',
+                    'projects.title': 'مخزن‌های <span class="highlight">منتخب</span>',
+                    'projects.subtitle': 'ابزارها و یوتیلیتی‌هایی که ساختم، از اسکنرهای امنیتی تا اپ‌های وب سایبرپانک.',
+                    'projects.p1tag': 'اسکنر',
+                    'projects.p1desc': 'یک ابزار پایتون با کارایی بالا برای اسکن رنج‌های IP از Cloudflare و ArvanCloud. بهینه‌شده برای ترموکس و لینوکس بدون هیچ وابستگی‌ای.',
+                    'projects.p2tag': 'اپ وب',
+                    'projects.p2desc': 'یک اپ وب سمت کلاینت که متن رو به نمادهای ریاضی یونیکد تبدیل می‌کنه، با ظاهر سایبرپانک کامل، پس‌زمینه بارش ماتریکس و افکت‌های CRT.',
+                    'projects.p3tag': 'پلتفرم',
+                    'projects.p3desc': 'یک پلتفرم دانلود اپ جامع برای اندروید، ویندوز، مک و لینوکس. لینک‌های دانلود مستقیم، سریع، امن و بدون تبلیغ ارائه می‌ده.',
+                    'projects.view': 'مشاهده',
+                    'projects.liveDemo': 'دموی زنده',
+                    'contact.tag': 'تماس',
+                    'contact.title': 'بیا <span class="highlight">در ارتباط باشیم</span>',
+                    'contact.subtitle': 'از هر کدوم از راه‌های زیر می‌تونی باهام در ارتباط باشی.',
+                    'contact.email': 'ایمیل',
+                    'footer.text': '&copy; ۲۰۲۶ آیهان منصور. ساخته‌شده با <span class="heart">❤</span> و کد.',
+                    'meta.title': 'آیهان منصور | توسعه‌دهنده Python و فرانت‌اند',
+                    'meta.description': 'آیهان منصور — توسعه‌دهنده Python و فرانت‌اند با مهارت در HTML، CSS، JavaScript و اسکریپت‌نویسی Bash. سازنده ابزارهای اتوماسیون، اسکنرهای IP و رابط‌های وب تمیز و واکنش‌گرا.'
+                }
+            };
+
+            const langToggle = document.getElementById('langToggle');
+            const STORAGE_KEY = 'site-lang';
+
+            function applyLanguage(lang) {
+                const dict = translations[lang] || translations.en;
+                document.documentElement.lang = lang;
+                document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+                langToggle.textContent = lang === 'fa' ? 'EN' : 'FA';
+
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (dict[key] !== undefined) el.textContent = dict[key];
+                });
+                document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-html');
+                    if (dict[key] !== undefined) el.innerHTML = dict[key];
+                });
+
+                document.title = dict['meta.title'] ? dict['meta.title'].replace(/&amp;/g, '&') : document.title;
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc && dict['meta.description']) metaDesc.setAttribute('content', dict['meta.description']);
+
+                restartTyping(lang);
+
+                try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+            }
+
+            let currentLang = 'en';
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved === 'fa' || saved === 'en') currentLang = saved;
+            } catch (e) {}
+
+            if (currentLang === 'fa') applyLanguage('fa');
+
+            langToggle.addEventListener('click', () => {
+                currentLang = currentLang === 'fa' ? 'en' : 'fa';
+                applyLanguage(currentLang);
+            });
+
+        })();
+    </script>
+
+</body>
+</html>
