@@ -44,7 +44,7 @@ I'm a curious and enthusiastic developer exploring the world of **programming, w
 
 ## 🎯 Current Focus
 - 🐍 Python based Projects
-- 🌐 Networking and cloud technologies
+- 🌐 Networking and methods to bypass network restrictions
 - ⚡ Cloudflare Workers & Serverless Applications
 - 💻 Modern HTML, CSS & JavaScript Tools
 - 📈 Full Stack Web Development
