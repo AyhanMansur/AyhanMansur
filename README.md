@@ -56,6 +56,9 @@ I'm a curious and enthusiastic developer exploring the world of **programming, w
 > "Code. Improve. Repeat."
 
 **Discipline • Logic • Innovation • Security**
+
+[🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur?tab=repositories)
+
 ---
 <p align="center">
 <a href="https://github.com/arvin341az-glitch" target="_blank">
@@ -64,13 +67,7 @@ I'm a curious and enthusiastic developer exploring the world of **programming, w
 </p>
 <br/>
 
-<div align="center">
-> 👀 **Explore my GitHub profile to discover my latest projects, open-source contributions, web development work, and networking tools.**
-
-[🚀 **View Live Project & Full Profile**](https://github.com/AyhanMansur?tab=repositories)
-
 ---
-
 <p align="center">
   <i>"Building secure software, creating innovative solutions, and learning something new every day."</i>
 </p>
