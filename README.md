@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,js,php,html,css,git,github,vscode,cloudflare,linux&theme=dark" alt="Ayhan Mansur Tech Stack: Python, JavaScript, Cloudflare, Linux">
+    <img src="https://skillicons.dev/icons?i=python,js,html,css,git,github,vscode,cloudflare,linux&theme=dark" alt="Ayhan Mansur Tech Stack: Python, JavaScript, Cloudflare, Linux">
   </a>
 </p>
 
