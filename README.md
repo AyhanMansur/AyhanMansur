@@ -1,16 +1,7 @@
 <h1 align="center"> 🟢 Ayhan_Mansur@root:~$ </h1>
-<h3 align="center">𝓐𝔂𝓱𝓪𝓷 𝓜𝓪𝓷𝓼𝓾𝓻 🌿</h3>
-<h4 align="center">Python Developer • Web Builder • Networking Enthusiast</h4>
-
 <p align="center">
-  <strong> > SYSTEM_ONLINE _ </strong><br>
-  <code>[ Node Location: Iran | Network Scope: Global ]</code>
+  <img src="https://readme-typing-svg.herokuapp.com?color=00FF41&size=24&center=true&vCenter=true&width=800&lines=14-Year-Old+Open+Source+Developer;Python+Automation+Developer;Full-Stack+Web+Developer+(HTML%2FCSS%2FJS);Cloudflare+Workers+%26+Serverless+Engineer;Networking+%26+Security+Enthusiast;Open+Source+Contributor+in+Iran;Cyberpunk+Aesthetic+Enthusiast"
 </p>
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00FF41&size=24&center=true&vCenter=true&width=800&lines=14-Year-Old+Open+Source+Developer;Python+Automation+Developer;Full-Stack+Web+Developer+(HTML%2FCSS%2FJS);Cloudflare+Workers+%26+Serverless+Engineer;Networking+%26+Security+Enthusiast;Open+Source+Contributor+in+Iran;Cyberpunk+Aesthetic+Enthusiast" alt="Typing SVG" />
-</p>
-
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square">
 </p>
