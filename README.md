@@ -1,6 +1,6 @@
 <h1 align="center"> 🟢 Ayhan_Mansur@root:~$ </h1>
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00FF41&size=24&center=true&vCenter=true&width=800&lines=14-Year-Old+Open+Source+Developer;Python+Automation+Developer;Full-Stack+Web+Developer+(HTML%2FCSS%2FJS);Cloudflare+Workers+%26+Serverless+Engineer;Networking+%26+Security+Enthusiast;Open+Source+Contributor+in+Iran;Cyberpunk+Aesthetic+Enthusiast"
+  <img src="https://readme-typing-svg.herokuapp.com?color=00FF41&size=24&center=true&vCenter=true&width=800&lines=14-Year-Old+Open+Source+Developer;Python+Automation+Developer;Full-Stack+Web+Developer+(HTML%2FCSS%2FJS)Open+Source+Contributor+in+Iran;Cyberpunk+Aesthetic+Enthusiast"
 </p>
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square">
