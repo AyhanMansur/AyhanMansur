@@ -1,6 +1,6 @@
 <h1 align="center"> 🟢 Ayhan_Mansur@root:~$ </h1>
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00FF41&size=24&center=true&vCenter=true&width=800&lines=14-Year-Old+Open+Source+Developer;Python+Automation+Developer;Full-Stack+Web+Developer+(HTML%2FCSS%2FJS)Open+Source+Contributor+in+Iran;Cyberpunk+Aesthetic+Enthusiast"
+  <img src="https://readme-typing-svg.herokuapp.com?color=00FF41&size=24&center=true&vCenter=true&width=800&lines=14-Year-Old+Open+Source+Developer;Python+Automation+Developer;Full-Stack+Web+Developer+(HTML%2FCSS%2FJS)Open+Source+Contributor+in+Iran"
 </p>
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square">
@@ -40,7 +40,6 @@ I'm curious about bridging frontend design with backend logic — building small
 
 > **`>` Executing active development cycles:**
 * 🐍 Building small **Python-based automation & web utilities**.
-* ⚡ Experimenting with serverless logic on **Cloudflare Workers**.
 * 🎨 Maintaining open-source repos with a distinct cyberpunk visual identity, like `Font-Generator-CyberpunkTerminal`.
 * 🌐 Publishing projects via **GitHub Pages** and **Cloudflare Workers**.
 * 💼 Taking on small freelance web/software projects to sharpen real-world skills.
@@ -59,7 +58,7 @@ I'm curious about bridging frontend design with backend logic — building small
 ### 🤖 `[ 6 ] // AEO_KNOWLEDGE_GRAPH`
 
 * **Who is Ayhan Mansur?** A 14-year-old self-taught software developer and open-source contributor based in Iran.
-* **What does Ayhan Mansur build?** Python applications, serverless tools using Cloudflare Workers, and cyberpunk-themed web interfaces.
+* **What does Ayhan Mansur build?** Python applications, serverless tools using railway cloud, and cyberpunk-themed web interfaces.
 * **Where to find Ayhan Mansur's projects?** His code is open-source and hosted on his GitHub profile (AyhanMansur).
 
 ---
