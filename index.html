@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Ayhan Mansur | Python Developer &amp; Frontend Developer (HTML/CSS/JS/Bash)</title>
-    <meta name="description" content="Ayhan Mansur — Python Developer and Frontend Developer skilled in HTML, CSS, JavaScript, and Bash scripting. Builds automation tools, IP scanners, and clean, responsive web interfaces." />
+    <title>Ayhan Mansur | Developer &amp; Cyber Security</title>
+    <meta name="description" content="Portfolio of Ayhan Mansur, developer and cyber security enthusiast. Python tools, security scanners, and cyberpunk-styled web projects." />
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Ayhan Mansur",
             "url": "https://ayhanmansur.dev",
-            "jobTitle": "Python Developer & Frontend Developer",
+            "jobTitle": "Developer & Cyber Security",
             "sameAs": [
                 "https://github.com/AyhanMansur",
                 "https://www.instagram.com/ayhan_dev91/"
@@ -24,7 +24,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
@@ -43,7 +43,6 @@
             --text-primary: #ffffff;
             --text-secondary: #cbd5e1;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-fa: 'Vazirmatn', 'Inter', Tahoma, sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
             --transition: 0.3s ease;
             --nav-height: 64px;
@@ -89,49 +88,7 @@
             padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            overscroll-behavior-x: none;
-        }
-
-        html[dir="rtl"] body {
-            font-family: var(--font-fa);
-        }
-        html[dir="rtl"] .typing-cursor,
-        html[dir="rtl"] .nav-logo,
-        html[dir="rtl"] .logo-icon,
-        html[dir="rtl"] .btn i,
-        html[dir="rtl"] .project-tech span,
-        html[dir="rtl"] code {
-            font-family: var(--font-sans);
-        }
-        html[dir="rtl"] .section-tag,
-        html[dir="rtl"] .hero-badge {
-            letter-spacing: 0;
-        }
-
-        .lang-toggle {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 36px;
-            padding: 0 12px;
-            border-radius: 8px;
-            border: 1px solid var(--glass-border);
-            background: rgba(0, 229, 255, 0.06);
-            color: var(--text-primary);
-            font-family: var(--font-sans);
-            font-size: 0.8rem;
-            font-weight: 600;
-            cursor: pointer;
-            touch-action: manipulation;
-        }
-        .lang-toggle:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-        nav[aria-label="Main navigation"] {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            overscroll-behavior: none;
         }
 
         /* ============================================================
@@ -502,7 +459,8 @@
             touch-action: manipulation;
             user-select: none;
             -webkit-user-select: none;
-            flex: 0 1 auto;
+            flex: 1 1 auto;
+            min-width: 140px;
         }
         .btn-primary {
             background: var(--accent);
@@ -902,12 +860,6 @@
         .skill-card-header h3 {
             font-size: 1rem;
         }
-        .skill-card-desc {
-            font-size: 0.82rem;
-            line-height: 1.6;
-            color: var(--text-secondary);
-            margin-bottom: 14px;
-        }
         .skill-item {
             margin-bottom: 12px;
         }
@@ -937,10 +889,8 @@
 
         @media (min-width: 900px) {
             .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 24px;
-                max-width: 760px;
-                margin: 0 auto;
             }
         }
 
@@ -1296,6 +1246,7 @@
             .btn {
                 font-size: 0.8rem;
                 padding: 10px 16px;
+                min-width: 120px;
                 min-height: 44px;
             }
             .hero-social .social-link {
@@ -1489,12 +1440,11 @@
             </a>
             <nav aria-label="Main navigation">
                 <ul class="nav-links" id="navLinks" role="menubar">
-                    <li role="none"><a href="#about" role="menuitem" data-i18n="nav.about">About</a></li>
-                    <li role="none"><a href="#skills" role="menuitem" data-i18n="nav.skills">Skills</a></li>
-                    <li role="none"><a href="#projects" role="menuitem" data-i18n="nav.projects">Projects</a></li>
-                    <li role="none"><a href="#contact" role="menuitem" data-i18n="nav.contact">Contact</a></li>
+                    <li role="none"><a href="#about" role="menuitem">About</a></li>
+                    <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+                    <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
                 </ul>
-                <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">FA</button>
             </nav>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span><span></span><span></span>
@@ -1511,10 +1461,10 @@
         <div class="container">
             <div class="hero-badge">
                 <span class="dot" aria-hidden="true"></span>
-                <span data-i18n="hero.badge">Software Developer</span>
+                Developer · Cyber Security
             </div>
             <h1 class="hero-title">
-                <span class="hero-greeting" data-i18n="hero.greeting">Hello, I'm</span>
+                <span class="hero-greeting">Hello, I'm</span>
                 <span class="highlight">Ayhan Mansur</span>
                 <span class="hero-role">
                     <span class="typing-wrapper">
@@ -1523,28 +1473,28 @@
                     </span>
                 </span>
             </h1>
-            <p class="hero-description" data-i18n-html="hero.description">
-                I build practical tools and clean web interfaces with Python, HTML, CSS, JavaScript, and Bash.
-                <br />Focused on automation, cross-platform utilities, and user-friendly design.
+            <p class="hero-description">
+                Building new cool experiences and cool interfaces.
+                <br />Passionate about Python, security, and clean design.
             </p>
             <div class="hero-actions">
                 <a href="#projects" class="btn btn-primary btn-ripple">
-                    <span data-i18n="hero.viewProjects">View Projects</span>
+                    <span>View Projects</span>
                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
                 <a href="#contact" class="btn btn-secondary btn-ripple">
-                    <span data-i18n="hero.hireMe">Hire Me</span>
+                    <span>Get in Touch</span>
                     <i class="fas fa-comment" aria-hidden="true"></i>
                 </a>
             </div>
             <div class="hero-social">
                 <a href="https://github.com/AyhanMansur" target="_blank" aria-label="GitHub" class="social-link"><i class="fab fa-github" aria-hidden="true"></i></a>
                 <a href="https://www.instagram.com/ayhan_dev91/" target="_blank" aria-label="Instagram" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://t.me/AyhanMansur" target="_blank" aria-label="Telegram" class="social-link"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Telegram" class="social-link"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a>
                 <a href="mailto:umc.masnur13@icloud.com" aria-label="Email" class="social-link"><i class="fas fa-envelope" aria-hidden="true"></i></a>
             </div>
             <div class="hero-scroll" aria-hidden="true">
-                <span data-i18n="hero.scroll">Scroll</span>
+                <span>Scroll</span>
                 <div class="scroll-line">
                     <span class="scroll-dot"></span>
                 </div>
@@ -1556,70 +1506,69 @@
     <section id="about" aria-label="About section">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag" data-i18n="about.tag">About Me</span>
-                <h2 class="section-title" data-i18n-html="about.title">Python &amp; Frontend Developer <span class="highlight">Building Practical Tools</span></h2>
-                <p class="section-subtitle" data-i18n="about.subtitle">
-                    I build automation scripts, command-line tools, and responsive web interfaces
-                    using Python, HTML, CSS, JavaScript, and Bash.
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Building New <span class="highlight">Cool Experiences</span> &amp; Cool Interfaces</h2>
+                <p class="section-subtitle">
+                    I'm a developer focused on creating practical tools, security scanners, and
+                    visually striking web experiences.
                 </p>
             </div>
             <div class="about-grid">
                 <div class="about-text reveal">
-                    <p data-i18n-html="about.p1">
-                        I'm a self-taught developer specializing in <strong>Python</strong> for scripting and automation,
-                        and <strong>HTML/CSS/JavaScript</strong> for building clean, responsive front-end interfaces.
-                        I also write <strong>Bash</strong> scripts for Linux and Termux environments to automate
-                        repetitive tasks and system utilities.
+                    <p>
+                        I specialize in Python development, building utilities that solve real problems.
+                        From IP range scanners to font generators, I enjoy creating tools that are both
+                        functional and aesthetically unique.
                     </p>
-                    <p data-i18n="about.p2">
-                        My projects range from IP range scanners and cross-platform download tools to
-                        interactive, cyberpunk-styled web apps. I care about clean code, cross-platform
-                        compatibility, and interfaces people actually enjoy using — and I'm always
-                        looking to grow through real-world projects and new challenges.
+                    <p>
+                        My work spans across security, networking, and frontend development.
+                        I believe in clean code, cross-platform compatibility, and user-centric design.
+                        Whether it's a terminal-based scanner or a cyberpunk-styled web app,
+                        I bring the same level of dedication to every project.
                     </p>
                     <div class="about-stats">
                         <div class="stat-item">
                             <span class="stat-number" data-target="9">0</span>
-                            <span class="stat-label" data-i18n="about.stat1">Public Repos</span>
+                            <span class="stat-label">Public Repos</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="9">0</span>
-                            <span class="stat-label" data-i18n="about.stat2">Projects</span>
+                            <span class="stat-label">Projects</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="6">0</span>
-                            <span class="stat-label" data-i18n="about.stat3">Tools Built</span>
+                            <span class="stat-label">Tools Built</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="120">0</span>
-                            <span class="stat-label" data-i18n="about.stat4">Stars</span>
+                            <span class="stat-label">Stars</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-timeline reveal">
-                    <h3 class="timeline-title"><i class="fas fa-bolt" style="color:var(--accent);"></i> <span data-i18n="about.journey">Journey</span></h3>
+                    <h3 class="timeline-title"><i class="fas fa-bolt" style="color:var(--accent);"></i> Journey</h3>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <span class="timeline-date">2022</span>
-                            <h4 data-i18n="about.t1title">Started Building Tools</h4>
-                            <p data-i18n="about.t1desc">Began developing Python utilities for security and networking.</p>
+                            <h4>Started Building Tools</h4>
+                            <p>Began developing Python utilities for security and networking.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <span class="timeline-date">2023</span>
-                            <h4 data-i18n="about.t2title">First Public Repositories</h4>
-                            <p data-i18n="about.t2desc">Released downwib, AyhanX-Fredom-Scanner, and Font-Generator-CyberpunkTerminal.</p>
+                            <h4>First Public Repositories</h4>
+                            <p>Released downwib, AyhanX-Fredom-Scanner, and Font-Generator-CyberpunkTerminal.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <span class="timeline-date">2024</span>
-                            <h4 data-i18n="about.t3title">Building &amp; Improving</h4>
-                            <p data-i18n="about.t3desc">Continuing to develop and refine tools with a focus on performance and UI.</p>
+                            <h4>Building &amp; Improving</h4>
+                            <p>Continuing to develop and refine tools with a focus on performance and UI.</p>
                         </div>
                     </div>
                 </div>
@@ -1631,17 +1580,17 @@
     <section id="skills" aria-label="Skills section">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag" data-i18n="skills.tag">Skills</span>
-                <h2 class="section-title" data-i18n-html="skills.title">Languages &amp; <span class="highlight">Tools I Use</span></h2>
-                <p class="section-subtitle" data-i18n="skills.subtitle">
-                    HTML, CSS, JavaScript, Python, and Bash — the core languages I build with, plus the tools around them.
+                <span class="section-tag">Skills</span>
+                <h2 class="section-title">Technologies I <span class="highlight">Work With</span></h2>
+                <p class="section-subtitle">
+                    A focused toolkit for building tools, scanners, and web interfaces.
                 </p>
             </div>
             <div class="skills-grid">
                 <div class="skill-card reveal">
                     <div class="skill-card-header">
                         <i class="fas fa-code skill-icon" style="color: var(--accent);"></i>
-                        <h3 data-i18n="skills.languagesHeader">Languages</h3>
+                        <h3>Languages</h3>
                     </div>
                     <div class="skill-item">
                         <span class="skill-name">Python</span>
@@ -1652,31 +1601,43 @@
                         <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">HTML5</span>
+                        <span class="skill-name">HTML / CSS</span>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-card-header">
+                        <i class="fas fa-tools skill-icon" style="color: var(--secondary);"></i>
+                        <h3>Tools &amp; Frameworks</h3>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Git / GitHub</span>
                         <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">CSS3</span>
+                        <span class="skill-name">Linux / Bash</span>
                         <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Bash</span>
+                        <span class="skill-name">Termux / Android</span>
                         <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
                     </div>
                 </div>
                 <div class="skill-card reveal">
                     <div class="skill-card-header">
                         <i class="fas fa-shield-alt skill-icon" style="color: var(--accent-purple);"></i>
-                        <h3 data-i18n="skills.securityHeader">Security &amp; Networking</h3>
+                        <h3>Security &amp; Networking</h3>
                     </div>
-                    <p class="skill-card-desc" data-i18n="skills.securityDesc">
-                        Hands-on experience with network reconnaissance and IP-range scanning, and a practical
-                        understanding of how sites get attacked. I apply that knowledge to my own projects —
-                        this portfolio included — through basic hardening practices like input sanitization,
-                        safe headers, and privacy-conscious defaults.
-                    </p>
                     <div class="skill-item">
-                        <span class="skill-name" data-i18n="skills.privacy">Privacy &amp; Anonymity</span>
+                        <span class="skill-name">IP Scanning</span>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Cloudflare / CDN</span>
+                        <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Privacy &amp; Anonymity</span>
                         <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
                     </div>
                 </div>
@@ -1688,9 +1649,9 @@
     <section id="projects" aria-label="Projects section">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag" data-i18n="projects.tag">Projects</span>
-                <h2 class="section-title" data-i18n-html="projects.title">Featured <span class="highlight">Repositories</span></h2>
-                <p class="section-subtitle" data-i18n="projects.subtitle">
+                <span class="section-tag">Projects</span>
+                <h2 class="section-title">Featured <span class="highlight">Repositories</span></h2>
+                <p class="section-subtitle">
                     Tools and utilities I've built, from security scanners to cyberpunk web apps.
                 </p>
             </div>
@@ -1698,12 +1659,12 @@
                 <article class="project-card reveal">
                     <div class="project-image"><i class="fas fa-radar"></i></div>
                     <div class="project-info">
-                        <span class="project-tag" data-i18n="projects.p1tag">Scanner</span>
+                        <span class="project-tag">Scanner</span>
                         <h3>AyhanX-Fredom-Scanner</h3>
-                        <p data-i18n="projects.p1desc">A high‑performance Python utility for scanning IP ranges from Cloudflare and ArvanCloud. Optimized for Termux and Linux with zero dependencies.</p>
+                        <p>A high‑performance Python utility for scanning IP ranges from Cloudflare and ArvanCloud. Optimized for Termux and Linux with zero dependencies.</p>
                         <div class="project-tech"><span>Python</span><span>Cloudflare</span><span>Termux</span><span>Linux</span></div>
                         <div class="project-links">
-                            <a href="https://github.com/AyhanMansur/AyhanX-Fredom-Scanner" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-github" aria-hidden="true"></i> <span data-i18n="projects.view">View</span></a>
+                            <a href="https://github.com/AyhanMansur/AyhanX-Fredom-Scanner" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-github" aria-hidden="true"></i> View</a>
                         </div>
                     </div>
                 </article>
@@ -1711,13 +1672,13 @@
                 <article class="project-card reveal">
                     <div class="project-image"><i class="fas fa-font"></i></div>
                     <div class="project-info">
-                        <span class="project-tag" data-i18n="projects.p2tag">Web App</span>
+                        <span class="project-tag">Web App</span>
                         <h3>Font‑Generator‑CyberpunkTerminal</h3>
-                        <p data-i18n="projects.p2desc">A client‑side web app that converts text into Unicode mathematical symbols with a full cyberpunk aesthetic, Matrix rain background, and CRT effects.</p>
+                        <p>A client‑side web app that converts text into Unicode mathematical symbols with a full cyberpunk aesthetic, Matrix rain background, and CRT effects.</p>
                         <div class="project-tech"><span>JavaScript</span><span>HTML5 Canvas</span><span>CSS3</span><span>Unicode</span></div>
                         <div class="project-links">
-                            <a href="https://github.com/AyhanMansur/Font-Generator-CyberpunkTerminal" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-github" aria-hidden="true"></i> <span data-i18n="projects.view">View</span></a>
-                            <a href="https://ayhanmansur.github.io/Font-Generator-CyberpunkTerminal/" target="_blank" class="btn btn-secondary btn-sm"><i class="fas fa-external-link-alt" aria-hidden="true"></i> <span data-i18n="projects.liveDemo">Live Demo</span></a>
+                            <a href="https://github.com/AyhanMansur/Font-Generator-CyberpunkTerminal" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-github" aria-hidden="true"></i> View</a>
+                            <a href="https://ayhanmansur.github.io/Font-Generator-CyberpunkTerminal/" target="_blank" class="btn btn-secondary btn-sm"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a>
                         </div>
                     </div>
                 </article>
@@ -1725,13 +1686,13 @@
                 <article class="project-card reveal">
                     <div class="project-image"><i class="fas fa-download"></i></div>
                     <div class="project-info">
-                        <span class="project-tag" data-i18n="projects.p3tag">Platform</span>
+                        <span class="project-tag">Platform</span>
                         <h3>downwib</h3>
-                        <p data-i18n="projects.p3desc">A comprehensive app download platform for Android, Windows, Mac, and Linux. Provides fast, secure, and ad‑free direct download links.</p>
+                        <p>A comprehensive app download platform for Android, Windows, Mac, and Linux. Provides fast, secure, and ad‑free direct download links.</p>
                         <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
                         <div class="project-links">
-                            <a href="https://github.com/AyhanMansur/downwib" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-github" aria-hidden="true"></i> <span data-i18n="projects.view">View</span></a>
-                            <a href="https://ayhanmansur.github.io/downwib/" target="_blank" class="btn btn-secondary btn-sm"><i class="fas fa-external-link-alt" aria-hidden="true"></i> <span data-i18n="projects.liveDemo">Live Demo</span></a>
+                            <a href="https://github.com/AyhanMansur/downwib" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-github" aria-hidden="true"></i> View</a>
+                            <a href="https://ayhanmansur.github.io/downwib/" target="_blank" class="btn btn-secondary btn-sm"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a>
                         </div>
                     </div>
                 </article>
@@ -1743,9 +1704,9 @@
     <section id="contact" aria-label="Contact section">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag" data-i18n="contact.tag">Contact</span>
-                <h2 class="section-title" data-i18n-html="contact.title">Let's <span class="highlight">Connect</span></h2>
-                <p class="section-subtitle" data-i18n="contact.subtitle">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Let's <span class="highlight">Connect</span></h2>
+                <p class="section-subtitle">
                     Reach out via any of the channels below.
                 </p>
             </div>
@@ -1754,7 +1715,7 @@
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
                         <div>
-                            <h4 data-i18n="contact.email">Email</h4>
+                            <h4>Email</h4>
                             <a href="mailto:umc.masnur13@icloud.com">umc.masnur13@icloud.com</a>
                         </div>
                     </div>
@@ -1776,7 +1737,7 @@
                         <div class="contact-icon"><i class="fab fa-telegram-plane" aria-hidden="true"></i></div>
                         <div>
                             <h4>Telegram</h4>
-                            <a href="https://t.me/AyhanMansur" target="_blank">t.me/AyhanMansur</a>
+                            <a href="#">t.me/ayhanmansur</a>
                         </div>
                     </div>
                 </div>
@@ -1790,10 +1751,10 @@
             <div class="footer-social">
                 <a href="https://github.com/AyhanMansur" target="_blank" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
                 <a href="https://www.instagram.com/ayhan_dev91/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://t.me/AyhanMansur" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a>
                 <a href="mailto:umc.masnur13@icloud.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
             </div>
-            <p data-i18n-html="footer.text">&copy; 2026 Ayhan Mansur. Built with <span class="heart">❤</span> and code.</p>
+            <p>&copy; 2026 Ayhan Mansur. Built with <span class="heart">❤</span> and code.</p>
         </div>
     </footer>
 
@@ -1906,11 +1867,12 @@
 
             // ---- TYPING EFFECT ----
             const typingText = document.getElementById('typingText');
-            const rolesByLang = {
-                en: ['Python Developer', 'Frontend Developer', 'Bash Automation', 'Tool Builder'],
-                fa: ['توسعه‌دهنده پایتون', 'توسعه‌دهنده فرانت‌اند', 'اتوماسیون Bash', 'سازنده ابزار']
-            };
-            let roles = rolesByLang.en;
+            const roles = [
+                'Developer',
+                'Python Enthusiast',
+                'Tool Builder',
+                'Cyberpunk UI Designer'
+            ];
             let roleIndex = 0,
                 charIndex = 0,
                 isDeleting = false;
@@ -1940,19 +1902,6 @@
                         return;
                     }
                     typingTimeout = setTimeout(typeEffect, typeSpeed);
-                }
-            }
-
-            function restartTyping(lang) {
-                roles = rolesByLang[lang] || rolesByLang.en;
-                roleIndex = 0;
-                charIndex = 0;
-                isDeleting = false;
-                clearTimeout(typingTimeout);
-                if (!isLowPower) {
-                    typeEffect();
-                } else {
-                    typingText.textContent = roles[0];
                 }
             }
 
@@ -2096,144 +2045,6 @@
                         first.focus();
                     }
                 }
-            });
-
-            // ---- LANGUAGE TOGGLE (EN / FA) ----
-            const translations = {
-                en: {
-                    'nav.about': 'About', 'nav.skills': 'Skills', 'nav.projects': 'Projects', 'nav.contact': 'Contact',
-                    'hero.badge': 'Software Developer',
-                    'hero.greeting': "Hello, I'm",
-                    'hero.description': 'I build practical tools and clean web interfaces with Python, HTML, CSS, JavaScript, and Bash.<br />Focused on automation, cross-platform utilities, and user-friendly design.',
-                    'hero.viewProjects': 'View Projects',
-                    'hero.hireMe': 'Hire Me',
-                    'hero.scroll': 'Scroll',
-                    'about.tag': 'About Me',
-                    'about.title': 'Python &amp; Frontend Developer <span class="highlight">Building Practical Tools</span>',
-                    'about.subtitle': 'I build automation scripts, command-line tools, and responsive web interfaces using Python, HTML, CSS, JavaScript, and Bash.',
-                    'about.p1': "I'm a self-taught developer specializing in <strong>Python</strong> for scripting and automation, and <strong>HTML/CSS/JavaScript</strong> for building clean, responsive front-end interfaces. I also write <strong>Bash</strong> scripts for Linux and Termux environments to automate repetitive tasks and system utilities.",
-                    'about.p2': "My projects range from IP range scanners and cross-platform download tools to interactive, cyberpunk-styled web apps. I care about clean code, cross-platform compatibility, and interfaces people actually enjoy using — and I'm always looking to grow through real-world projects and new challenges.",
-                    'about.stat1': 'Public Repos', 'about.stat2': 'Projects', 'about.stat3': 'Tools Built', 'about.stat4': 'Stars',
-                    'about.journey': 'Journey',
-                    'about.t1title': 'Started Building Tools',
-                    'about.t1desc': 'Began developing Python utilities for security and networking.',
-                    'about.t2title': 'First Public Repositories',
-                    'about.t2desc': 'Released downwib, AyhanX-Fredom-Scanner, and Font-Generator-CyberpunkTerminal.',
-                    'about.t3title': 'Building &amp; Improving',
-                    'about.t3desc': 'Continuing to develop and refine tools with a focus on performance and UI.',
-                    'skills.tag': 'Skills',
-                    'skills.title': 'Languages &amp; <span class="highlight">Tools I Use</span>',
-                    'skills.subtitle': 'HTML, CSS, JavaScript, Python, and Bash — the core languages I build with, plus the tools around them.',
-                    'skills.languagesHeader': 'Languages',
-                    'skills.securityHeader': 'Security &amp; Networking',
-                    'skills.securityDesc': 'Hands-on experience with network reconnaissance and IP-range scanning, and a practical understanding of how sites get attacked. I apply that knowledge to my own projects — this portfolio included — through basic hardening practices like input sanitization, safe headers, and privacy-conscious defaults.',
-                    'skills.privacy': 'Privacy &amp; Anonymity',
-                    'projects.tag': 'Projects',
-                    'projects.title': 'Featured <span class="highlight">Repositories</span>',
-                    'projects.subtitle': "Tools and utilities I've built, from security scanners to cyberpunk web apps.",
-                    'projects.p1tag': 'Scanner',
-                    'projects.p1desc': 'A high‑performance Python utility for scanning IP ranges from Cloudflare and ArvanCloud. Optimized for Termux and Linux with zero dependencies.',
-                    'projects.p2tag': 'Web App',
-                    'projects.p2desc': 'A client‑side web app that converts text into Unicode mathematical symbols with a full cyberpunk aesthetic, Matrix rain background, and CRT effects.',
-                    'projects.p3tag': 'Platform',
-                    'projects.p3desc': 'A comprehensive app download platform for Android, Windows, Mac, and Linux. Provides fast, secure, and ad‑free direct download links.',
-                    'projects.view': 'View',
-                    'projects.liveDemo': 'Live Demo',
-                    'contact.tag': 'Contact',
-                    'contact.title': "Let's <span class=\"highlight\">Connect</span>",
-                    'contact.subtitle': 'Reach out via any of the channels below.',
-                    'contact.email': 'Email',
-                    'footer.text': '&copy; 2026 Ayhan Mansur. Built with <span class="heart">❤</span> and code.',
-                    'meta.title': 'Ayhan Mansur | Python Developer &amp; Frontend Developer (HTML/CSS/JS/Bash)',
-                    'meta.description': 'Ayhan Mansur — Python Developer and Frontend Developer skilled in HTML, CSS, JavaScript, and Bash scripting. Builds automation tools, IP scanners, and clean, responsive web interfaces.'
-                },
-                fa: {
-                    'nav.about': 'درباره من', 'nav.skills': 'مهارت‌ها', 'nav.projects': 'پروژه‌ها', 'nav.contact': 'تماس',
-                    'hero.badge': 'توسعه‌دهنده نرم‌افزار',
-                    'hero.greeting': 'سلام، من',
-                    'hero.description': 'ابزارهای کاربردی و رابط‌های وب تمیز با Python، HTML، CSS، JavaScript و Bash می‌سازم.<br />تمرکزم روی اتوماسیون، ابزارهای چندسکویی و طراحی کاربرپسنده.',
-                    'hero.viewProjects': 'مشاهده پروژه‌ها',
-                    'hero.hireMe': 'استخدامم کن',
-                    'hero.scroll': 'اسکرول',
-                    'about.tag': 'درباره من',
-                    'about.title': 'توسعه‌دهنده Python و فرانت‌اند <span class="highlight">که ابزارهای کاربردی می‌سازد</span>',
-                    'about.subtitle': 'اسکریپت‌های اتوماسیون، ابزارهای خط فرمان و رابط‌های وب واکنش‌گرا با Python، HTML، CSS، JavaScript و Bash می‌سازم.',
-                    'about.p1': 'من یک توسعه‌دهنده خودآموخته‌ام که در <strong>Python</strong> برای اسکریپت‌نویسی و اتوماسیون، و <strong>HTML/CSS/JavaScript</strong> برای ساخت رابط‌های فرانت‌اند تمیز و واکنش‌گرا تخصص دارم. همچنین اسکریپت‌های <strong>Bash</strong> برای محیط‌های لینوکس و ترموکس می‌نویسم تا کارهای تکراری و ابزارهای سیستمی رو خودکار کنم.',
-                    'about.p2': 'پروژه‌های من از اسکنرهای رنج IP و ابزارهای دانلود چندسکویی تا اپ‌های وب سایبرپانک تعاملی رو شامل می‌شه. برام کد تمیز، سازگاری چندسکویی، و رابط‌هایی که مردم واقعاً از استفاده‌شون لذت می‌برن مهمه — و همیشه دنبال رشد از طریق پروژه‌های واقعی و چالش‌های جدیدم.',
-                    'about.stat1': 'مخزن عمومی', 'about.stat2': 'پروژه', 'about.stat3': 'ابزار ساخته‌شده', 'about.stat4': 'استار',
-                    'about.journey': 'مسیر من',
-                    'about.t1title': 'شروع ساخت ابزارها',
-                    'about.t1desc': 'شروع توسعه ابزارهای پایتون برای امنیت و شبکه.',
-                    'about.t2title': 'اولین مخزن‌های عمومی',
-                    'about.t2desc': 'انتشار downwib، AyhanX-Fredom-Scanner و Font-Generator-CyberpunkTerminal.',
-                    'about.t3title': 'ساخت و بهبود',
-                    'about.t3desc': 'ادامه توسعه و بهبود ابزارها با تمرکز روی کارایی و رابط کاربری.',
-                    'skills.tag': 'مهارت‌ها',
-                    'skills.title': 'زبان‌ها و <span class="highlight">ابزارهایی که استفاده می‌کنم</span>',
-                    'skills.subtitle': 'HTML، CSS، JavaScript، Python و Bash — زبان‌های اصلی‌ای که باهاشون کار می‌کنم، به‌همراه ابزارهای اطرافشون.',
-                    'skills.languagesHeader': 'زبان‌ها',
-                    'skills.securityHeader': 'امنیت و شبکه',
-                    'skills.securityDesc': 'تجربه عملی در شناسایی شبکه و اسکن رنج IP، و درک عملی از اینکه سایت‌ها چطور مورد حمله قرار می‌گیرن. این دانش رو روی پروژه‌های خودم — از جمله همین پورتفولیو — با اصول پایه‌ای مثل پاکسازی ورودی‌ها، هدرهای امن، و تنظیمات حریم خصوصی پیاده می‌کنم.',
-                    'skills.privacy': 'حریم خصوصی و ناشناسی',
-                    'projects.tag': 'پروژه‌ها',
-                    'projects.title': 'مخزن‌های <span class="highlight">منتخب</span>',
-                    'projects.subtitle': 'ابزارها و یوتیلیتی‌هایی که ساختم، از اسکنرهای امنیتی تا اپ‌های وب سایبرپانک.',
-                    'projects.p1tag': 'اسکنر',
-                    'projects.p1desc': 'یک ابزار پایتون با کارایی بالا برای اسکن رنج‌های IP از Cloudflare و ArvanCloud. بهینه‌شده برای ترموکس و لینوکس بدون هیچ وابستگی‌ای.',
-                    'projects.p2tag': 'اپ وب',
-                    'projects.p2desc': 'یک اپ وب سمت کلاینت که متن رو به نمادهای ریاضی یونیکد تبدیل می‌کنه، با ظاهر سایبرپانک کامل، پس‌زمینه بارش ماتریکس و افکت‌های CRT.',
-                    'projects.p3tag': 'پلتفرم',
-                    'projects.p3desc': 'یک پلتفرم دانلود اپ جامع برای اندروید، ویندوز، مک و لینوکس. لینک‌های دانلود مستقیم، سریع، امن و بدون تبلیغ ارائه می‌ده.',
-                    'projects.view': 'مشاهده',
-                    'projects.liveDemo': 'دموی زنده',
-                    'contact.tag': 'تماس',
-                    'contact.title': 'بیا <span class="highlight">در ارتباط باشیم</span>',
-                    'contact.subtitle': 'از هر کدوم از راه‌های زیر می‌تونی باهام در ارتباط باشی.',
-                    'contact.email': 'ایمیل',
-                    'footer.text': '&copy; ۲۰۲۶ آیهان منصور. ساخته‌شده با <span class="heart">❤</span> و کد.',
-                    'meta.title': 'آیهان منصور | توسعه‌دهنده Python و فرانت‌اند',
-                    'meta.description': 'آیهان منصور — توسعه‌دهنده Python و فرانت‌اند با مهارت در HTML، CSS، JavaScript و اسکریپت‌نویسی Bash. سازنده ابزارهای اتوماسیون، اسکنرهای IP و رابط‌های وب تمیز و واکنش‌گرا.'
-                }
-            };
-
-            const langToggle = document.getElementById('langToggle');
-            const STORAGE_KEY = 'site-lang';
-
-            function applyLanguage(lang) {
-                const dict = translations[lang] || translations.en;
-                document.documentElement.lang = lang;
-                document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
-                langToggle.textContent = lang === 'fa' ? 'EN' : 'FA';
-
-                document.querySelectorAll('[data-i18n]').forEach(el => {
-                    const key = el.getAttribute('data-i18n');
-                    if (dict[key] !== undefined) el.textContent = dict[key];
-                });
-                document.querySelectorAll('[data-i18n-html]').forEach(el => {
-                    const key = el.getAttribute('data-i18n-html');
-                    if (dict[key] !== undefined) el.innerHTML = dict[key];
-                });
-
-                document.title = dict['meta.title'] ? dict['meta.title'].replace(/&amp;/g, '&') : document.title;
-                const metaDesc = document.querySelector('meta[name="description"]');
-                if (metaDesc && dict['meta.description']) metaDesc.setAttribute('content', dict['meta.description']);
-
-                restartTyping(lang);
-
-                try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
-            }
-
-            let currentLang = 'en';
-            try {
-                const saved = localStorage.getItem(STORAGE_KEY);
-                if (saved === 'fa' || saved === 'en') currentLang = saved;
-            } catch (e) {}
-
-            if (currentLang === 'fa') applyLanguage('fa');
-
-            langToggle.addEventListener('click', () => {
-                currentLang = currentLang === 'fa' ? 'en' : 'fa';
-                applyLanguage(currentLang);
             });
 
         })();
