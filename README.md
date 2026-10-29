@@ -41,14 +41,14 @@ I'm curious about bridging frontend design with backend logic — building small
 > **`>` Executing active development cycles:**
 * 🐍 Building small **Python-based automation & web utilities**.
 * 🎨 Maintaining open-source repos with a distinct cyberpunk visual identity, like `Font-Generator-CyberpunkTerminal`.
-* 🌐 Publishing projects via **GitHub Pages** and **Cloudflare Workers**.
+* 🌐 Publishing projects via **GitHub Pages**.
 * 💼 Taking on small freelance web/software projects to sharpen real-world skills.
 
 ---
 
 ### 🏆 `[ 5 ] // ACHIEVEMENTS.log`
 
-- 🌐 Published projects using **GitHub Pages** and **Cloudflare Workers**
+- 🌐 Published projects using **GitHub Pages**
 - 🛠️ Built multiple HTML, CSS, and Python-based web tools
 - 🎨 Designed responsive, modern UI/UX interfaces
 - 🚀 Contributing to open-source, one project at a time — at 14
