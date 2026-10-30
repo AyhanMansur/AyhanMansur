@@ -20,9 +20,9 @@
 
 ### 💻 `[ 2 ] // ENTITY_PROFILE.dat`
 
-**Ayhan Mansur** is a 14-year-old self-taught developer based in Iran, exploring **Python programming**, **full-stack web development**, and the basics of **serverless cloud infrastructure** and **networking**.
+**Ayhan Mansur** is a 14-year-old self-taught developer based in Iran, exploring **Python programming**, **full-stack web development**, and **networking**.
 
-I'm curious about bridging frontend design with backend logic — building small web tools, deploying projects with **Cloudflare Workers**, and learning how networks and routing actually work under the hood. My design taste leans hard into dark terminal interfaces and cyberpunk aesthetics — if it doesn't look like a hacker movie UI, I'm not done yet. 😎
+I'm curious about bridging frontend design with backend logic — building small web tools, deploying projects with **railway cloud**, and learning how networks and routing actually work under the hood. My design taste leans hard into dark terminal interfaces and cyberpunk aesthetics — if it doesn't look like a hacker movie UI, I'm not done yet. 😎
 
 ---
 
