@@ -70,13 +70,22 @@ main {
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    padding: 8px 0;
+    padding: 9px 14px;
+    border: 1px solid transparent;
+    border-radius: 10px;
 }
 
 .nav-links a:hover,
 .site_links a:hover {
-    color: #ede9e6;
-    text-decoration: underline;
+    color: #B7EEE7;
+    background-color: #122A2B;
+    border-color: #6DBDB6;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #8DD2CA;
+    text-decoration: none;
 }
 
 section {
@@ -306,8 +315,10 @@ tbody tr:hover {
     font-family: inherit;
 }
 
-.contact-form button:disabled {
+.contact-form button:enabled {
     background-color: #0C181C;
+    justify-content: center;
+    align-content: center;
     border-color: #0C181C;
     color: #D0DEDE;
     cursor: not-allowed;
@@ -320,13 +331,31 @@ tbody tr:hover {
 }
 
 .github-link {
-    color: #8DD2CA;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 16px;
+    max-width: 100%;
+    background-color: #05090B;
+    color: #D0DEDE;
+    border: 1px solid #1E484B;
+    border-radius: 12px;
     font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .github-link:hover {
-    color: #D0DEDE;
-    text-decoration: underline;
+    background-color: #122A2B;
+    color: #B7EEE7;
+    border-color: #6DBDB6;
+    text-decoration: none;
+}
+
+.github-icon {
+    width: 22px;
+    height: 22px;
 }
 
 footer {
