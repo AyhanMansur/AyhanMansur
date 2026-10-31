@@ -4,6 +4,9 @@
   <img src="https://readme-typing-svg.herokuapp.com?color=00FF41&size=24&center=true&vCenter=true&width=800&lines=Python+Developer;Docker+%26+Bash+Enthusiast;Learning+Front-End+Development;Building+%26+Sharing+Open-Source+Projects" alt="Typing introduction" />
 </p>
 <p align="center">
+  <img src="https://skillicons.dev/icons?i=python,docker,bash,linux,html,css,git,github,vscode&theme=dark" alt="Python, Docker, Bash, Linux, HTML, CSS, Git, GitHub and VS Code" />
+</p>
+<p align="center">
   <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square" alt="Profile views" />
 </p>
 
@@ -12,11 +15,7 @@
 ### 🛠️ `[ 1 ] // TECH_STACK`
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,docker,bash,linux,html,css,git,github,vscode&theme=dark" alt="Python, Docker, Bash, Linux, HTML, CSS, Git, GitHub and VS Code" />
-</p>
-
-<p align="center">
-  <b>Comfortable with:</b> Python • Docker • Bash / Shell<br/>
+  <b>⚡Comfortable with:</b> Python • Docker • Bash / Shell<br/>
   <b>Also using:</b> Linux • Git • GitHub • HTML • CSS<br/>
   <b>Currently learning:</b> Front-end development
 </p>
