@@ -70,7 +70,7 @@ I enjoy building practical tools, experimenting with Linux, and publishing small
 * **Who is Ayhan Mansur?** A 14-year-old self-taught developer based in Iran.
 * **What does he work with?** Python, Docker, Bash, Linux, HTML, and CSS.
 * **What is he learning?** Front-end web development.
-* **Where can you see his work?** On his [GitHub repositories](https://github.com/AyhanMansur?tab=repositories) and [portfolio](https://ayhanmansur.github.io/AyhanMansur/).
+* **Where can you see his work?** On his [GitHub repositories](https://github.com/AyhanMansur?tab=repositories) and [portfolio](https://ayhanmansur.github.io/AyhanMansur/) ,[instegram](https://www.instagram.com/ayhan_dev.py/).
 
 ---
 
