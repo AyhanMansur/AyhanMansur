@@ -4,10 +4,11 @@
   <img src="https://readme-typing-svg.herokuapp.com?color=00FF41&size=24&center=true&vCenter=true&width=800&lines=Python+Developer;Docker+%26+Bash+Enthusiast;Learning+Front-End+Development;Building+%26+Sharing+Open-Source+Projects" alt="Typing introduction" />
 </p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,docker,bash,linux,html,css,git,github,vscode&theme=dark" alt="Python, Docker, Bash, Linux, HTML, CSS, Git, GitHub and VS Code" />
-</p>
-<p align="center">
   <img src="https://komarev.com/ghpvc/?username=AyhanMansur&color=blueviolet&style=flat-square" alt="Profile views" />
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,docker,bash,linux,html,css,git,github,vscode&theme=dark" alt="Python, Docker, Bash, Linux, HTML, CSS, Git, GitHub and VS Code" />
 </p>
 
 ---
