@@ -87,14 +87,15 @@ h2{font-size:clamp(32px,8vw,52px);font-weight:800;letter-spacing:-.02em;margin:0
 .chips li{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--deep)}
 .rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;margin:0 calc(var(--padr)*-1) 0 calc(var(--pad)*-1);padding:6px var(--padr) 16px var(--pad);scroll-padding-left:var(--pad)}
 .rail::-webkit-scrollbar{display:none}
-.card{flex:0 0 min(78vw,320px);scroll-snap-align:start;width:320px;max-width:100%;background:#060B18;border:3px solid #0B2E30;border-radius:15px;padding:22px;display:flex;flex-direction:column;transition:background .2s,border-color .2s}
+.card{flex:0 0 min(78vw,320px);scroll-snap-align:start;min-height:280px;background:#060B18;border:3px solid #0B2E30;border-radius:15px;padding:22px;display:flex;flex-direction:column;transition:background .2s,border-color .2s}
 .card:hover{background:var(--panel);border-color:var(--a2)}
 .card .tag{align-self:flex-start;display:inline-block;font-size:12px;color:var(--a);border:1px solid var(--line);border-radius:8px;padding:0 8px;margin-bottom:12px}
 .card h3{color:var(--a);margin:0 0 6px;font-size:20px}
 .card p{font-size:14px;margin:0 0 12px;color:var(--text)}
 .card ul{padding-left:18px;margin:0;font-size:14px;color:var(--muted)}
 .card li{margin-bottom:6px}
-.card .open-link{margin-top:auto;padding-top:12px;font-size:14px;min-height:40px;align-items:flex-end}
+.card ul{flex:1}
+.card .open-link{margin-top:auto;padding-top:14px;font-size:14px;min-height:40px;align-items:flex-end}
 .hint{font-size:13px;color:var(--muted);margin:0}
 .open-link{display:inline-flex;align-items:center;gap:8px;min-height:48px;margin-top:10px;font-weight:700;color:var(--hi)}
 .open-link svg{width:16px;height:16px;transition:transform .2s}
@@ -146,6 +147,11 @@ footer a{color:var(--a);margin:0 10px;display:inline-flex;min-height:40px;align-
  .rail{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;margin:0;padding:0}
  .card{flex:none}
  .hint{display:none}
+ .srail{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+ .srail .card:first-child{grid-column:span 2}
+ .prail{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch}
+ .prail .card:first-child{grid-column:1/-1}
+ .prail .card{min-height:260px}
  .tilt{transform-style:preserve-3d;transition:transform .15s ease-out,border-color .2s}
  .wrapx{perspective:900px}
  .about{max-width:680px}
@@ -191,7 +197,7 @@ footer a{color:var(--a);margin:0 10px;display:inline-flex;min-height:40px;align-
 
   <section id="skills" aria-labelledby="skills-title">
     <div class="sh rv"><h2 id="skills-title">Skills</h2><p>What I use, and how far along I am.</p></div>
-    <div class="wrapx rv" style="--d:.1s"><div class="rail" tabindex="0" aria-label="Skills, swipe sideways">
+    <div class="wrapx rv" style="--d:.1s"><div class="rail srail" tabindex="0" aria-label="Skills, swipe sideways">
       <article class="card tilt"><span class="tag">Strong</span><h3>Python</h3><p>Completed Python learning and earned a Python certificate.</p><ul><li>Core language skills</li><li>Certified</li></ul></article>
       <article class="card tilt"><span class="tag">Learning</span><h3>JavaScript</h3><p>Working through the fundamentals.</p><ul><li>Variables, <code>let</code> and <code>const</code></li><li>Alerts</li><li>Basic programming concepts</li></ul></article>
       <article class="card tilt"><span class="tag">Practicing</span><h3>Web development</h3><p>Building the structure and style of web pages.</p><ul><li>HTML</li><li>CSS</li><li>Responsive design</li><li>Front-end fundamentals</li></ul></article>
@@ -203,7 +209,7 @@ footer a{color:var(--a);margin:0 10px;display:inline-flex;min-height:40px;align-
 
   <section id="projects" aria-labelledby="projects-title">
     <div class="sh rv"><h2 id="projects-title">My projects</h2><p>Things I have built. Open any card to see the code on GitHub.</p></div>
-    <div class="wrapx rv" style="--d:.1s"><div class="rail" id="plist" tabindex="0" aria-label="Projects, swipe sideways"></div></div>
+    <div class="wrapx rv" style="--d:.1s"><div class="rail prail" id="plist" tabindex="0" aria-label="Projects, swipe sideways"></div></div>
     <p class="hint">Swipe sideways for more.</p>
   </section>
 
