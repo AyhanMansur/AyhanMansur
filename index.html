@@ -95,6 +95,11 @@ h2{font-size:clamp(32px,8vw,52px);font-weight:800;letter-spacing:-.02em;margin:0
 .card ul{padding-left:18px;margin:0;font-size:14px;color:var(--muted)}
 .card li{margin-bottom:6px}
 .card ul{flex:1}
+.prail .card{min-height:0;padding:18px 20px}
+.prail .card h3{font-size:19px;margin-bottom:4px}
+.prail .card p{margin-bottom:8px}
+.prail .card li{margin-bottom:3px}
+.prail .card .open-link{padding-top:10px}
 .card .open-link{margin-top:auto;padding-top:14px;font-size:14px;min-height:40px;align-items:flex-end}
 .hint{font-size:13px;color:var(--muted);margin:0}
 .open-link{display:inline-flex;align-items:center;gap:8px;min-height:48px;margin-top:10px;font-weight:700;color:var(--hi)}
@@ -151,7 +156,7 @@ footer a{color:var(--a);margin:0 10px;display:inline-flex;min-height:40px;align-
  .srail .card:first-child{grid-column:span 2}
  .prail{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch}
  .prail .card:first-child{grid-column:1/-1}
- .prail .card{min-height:260px}
+ .prail .card{min-height:0}
  .tilt{transform-style:preserve-3d;transition:transform .15s ease-out,border-color .2s}
  .wrapx{perspective:900px}
  .about{max-width:680px}
