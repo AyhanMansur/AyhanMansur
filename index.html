@@ -170,6 +170,30 @@ footer a{color:var(--a);margin:0 10px;display:inline-flex;min-height:40px;align-
  .cursor{opacity:1}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none;filter:none}html{scroll-behavior:auto}.cursor{display:none}}
+
+/* contact: centered layout */
+.contact{text-align:center;align-items:center}
+.contact .sh{width:100%}
+.contact .sh h2::after{margin-left:auto;margin-right:auto}
+.contact .sh p{margin-left:auto;margin-right:auto}
+.contact .cgrid{grid-template-columns:1fr;gap:28px;max-width:560px;width:100%;margin:0 auto;text-align:center}
+.contact .cinfo{display:flex;flex-direction:column;align-items:center}
+.contact .cinfo h3{text-align:center}
+.contact .cinfo .social{justify-content:center;margin-top:16px;flex-direction:row}
+.contact form{width:100%;text-align:left}
+.contact .btn{display:flex;margin:0 auto}
+.contact .note{text-align:center}
+@media (min-width:900px){
+ .contact{max-width:1000px}
+ .contact .cgrid{max-width:600px;grid-template-columns:1fr}
+ .contact .cgrid .social{flex-direction:row}
+}
+
+/* contact: true centering (overrides desktop main>* margin:0) */
+main>#contact{margin-left:auto;margin-right:auto;width:100%;max-width:1000px;justify-self:center}
+@media (min-width:900px){
+ main>#contact{max-width:1000px;margin-left:auto;margin-right:auto}
+}
 </style>
 </head>
 <body>
