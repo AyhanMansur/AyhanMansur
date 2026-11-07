@@ -25,12 +25,20 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,"SF Pro Text",Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:calc(96px + env(safe-area-inset-bottom));overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--a);outline-offset:3px}
-#scene{position:fixed;left:0;top:0;width:100%;height:100vh;height:100lvh;z-index:0;pointer-events:none;display:block;transition:opacity .4s}
-.glow{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(60% 45% at 50% 28%,rgba(109,189,182,.18),transparent 70%)}
+.orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;transform:translate3d(0,calc(var(--sy,0)*-.1px),0)}
+.orbs i{position:absolute;border-radius:50%;will-change:transform;translate:calc(var(--mx,0)*var(--k)*1px) calc(var(--my,0)*var(--k)*1px)}
+.orbs i:nth-child(1){--k:-.6;width:62vmax;height:62vmax;left:-18vmax;top:-20vmax;background:radial-gradient(circle,rgba(109,189,182,.22),transparent 68%);animation:f1 24s ease-in-out infinite}
+.orbs i:nth-child(2){--k:.5;width:54vmax;height:54vmax;right:-20vmax;top:14vh;background:radial-gradient(circle,rgba(141,210,202,.12),transparent 68%);animation:f2 30s ease-in-out infinite}
+.orbs i:nth-child(3){--k:-.9;width:58vmax;height:58vmax;left:6vw;bottom:-26vmax;background:radial-gradient(circle,rgba(109,189,182,.14),transparent 68%);animation:f3 27s ease-in-out infinite}
+.orbs i:nth-child(4){--k:1.1;width:30vmax;height:30vmax;right:14vw;bottom:8vh;background:radial-gradient(circle,rgba(183,238,231,.08),transparent 68%);animation:f4 19s ease-in-out infinite}
+@keyframes f1{50%{transform:translate3d(9vmax,12vmax,0) scale(1.14)}}
+@keyframes f2{50%{transform:translate3d(-12vmax,-8vmax,0) scale(.9)}}
+@keyframes f3{50%{transform:translate3d(14vmax,-9vmax,0) scale(1.1)}}
+@keyframes f4{50%{transform:translate3d(-8vmax,-12vmax,0) scale(1.25)}}
 .cursor{position:fixed;left:0;top:0;width:340px;height:340px;margin:-170px 0 0 -170px;border-radius:50%;z-index:0;pointer-events:none;background:radial-gradient(circle,rgba(141,210,202,.14),transparent 65%);opacity:0;transition:opacity .3s;will-change:transform}
 .top{position:fixed;top:0;left:0;right:0;z-index:20;padding:calc(env(safe-area-inset-top) + 12px) var(--padr) 14px var(--pad);background:linear-gradient(#04080Acc,#04080A00)}
 .logo{font-family:var(--head);font-weight:800;font-size:18px;color:#fff}
-.dock{position:fixed;z-index:30;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom) + 12px);display:flex;gap:2px;padding:6px;border:1px solid #2B5558;border-radius:999px;background:rgba(7,16,19,.84);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);max-width:calc(100vw - 20px);overflow-x:auto;scrollbar-width:none}
+.dock{position:fixed;z-index:30;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom) + 12px);display:flex;gap:2px;padding:6px;border:1px solid #2B5558;border-radius:999px;background:rgba(7,16,19,.84);-webkit-backdrop-filter:blur(24px) saturate(1.6);backdrop-filter:blur(24px) saturate(1.6);max-width:calc(100vw - 20px);overflow-x:auto;scrollbar-width:none}
 .dock::-webkit-scrollbar{display:none}
 .dock a{min-height:44px;display:flex;align-items:center;padding:0 13px;border-radius:999px;font-size:14px;font-weight:700;color:#C5D6D6;white-space:nowrap;transition:background .25s,color .25s}
 .dock a[aria-current="true"]{background:var(--a);color:var(--bg)}
@@ -63,11 +71,11 @@ h2{font-size:clamp(32px,8vw,52px);font-weight:800;letter-spacing:-.02em;margin:0
 .sh{margin-bottom:26px}
 .sh h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;margin-top:14px;background:linear-gradient(90deg,var(--a),transparent)}
 .sh p{margin:12px 0 0;color:var(--muted);max-width:32em}
-.glass{background:var(--glass);border:1px solid var(--line);border-radius:24px;padding:22px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.glass{background:var(--glass);border:1px solid var(--line);border-radius:24px;padding:22px;-webkit-backdrop-filter:blur(26px) saturate(1.6);backdrop-filter:blur(26px) saturate(1.6);}
 .rv{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1),filter .8s ease;transition-delay:var(--d,0s)}
 .js .rv{opacity:0;transform:translateY(34px);filter:blur(8px)}
 .js .rv.in{opacity:1;transform:none;filter:none}
-.marquee{position:relative;z-index:1;overflow:hidden;border-block:1px solid #12292b;background:rgba(4,8,10,.55);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee{position:relative;z-index:1;overflow:hidden;border-block:1px solid #12292b;background:rgba(4,8,10,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
 .track{display:flex;width:max-content;animation:scroll 32s linear infinite}
 .track span{padding:14px 22px;font-family:var(--head);font-weight:800;font-size:22px;color:#2D5A5C;white-space:nowrap}
 .track span:nth-child(3n){color:var(--a)}
@@ -79,22 +87,20 @@ h2{font-size:clamp(32px,8vw,52px);font-weight:800;letter-spacing:-.02em;margin:0
 .chips li{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--deep)}
 .rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;margin:0 calc(var(--padr)*-1) 0 calc(var(--pad)*-1);padding:6px var(--padr) 16px var(--pad);scroll-padding-left:var(--pad)}
 .rail::-webkit-scrollbar{display:none}
-.card{flex:0 0 min(78vw,290px);scroll-snap-align:start;min-height:210px;display:flex;flex-direction:column;transition:border-color .2s}
-.card:hover{border-color:var(--a2);box-shadow:0 18px 50px rgba(0,0,0,.4),0 0 30px rgba(141,210,202,.12)}
-.card .lv{align-self:flex-start;font-size:12px;font-weight:700;color:var(--a);border:1px solid var(--line);border-radius:999px;padding:2px 10px;margin-bottom:auto}
-.card h3{font-size:26px;margin:26px 0 8px}
-.card p{margin:0;font-size:14px;color:var(--muted)}
+.card{flex:0 0 min(78vw,320px);scroll-snap-align:start;width:320px;max-width:100%;background:#060B18;border:3px solid #0B2E30;border-radius:15px;padding:22px;display:flex;flex-direction:column;transition:background .2s,border-color .2s}
+.card:hover{background:var(--panel);border-color:var(--a2)}
+.card .tag{align-self:flex-start;display:inline-block;font-size:12px;color:var(--a);border:1px solid var(--line);border-radius:8px;padding:0 8px;margin-bottom:12px}
+.card h3{color:var(--a);margin:0 0 6px;font-size:20px}
+.card p{font-size:14px;margin:0 0 12px;color:var(--text)}
+.card ul{padding-left:18px;margin:0;font-size:14px;color:var(--muted)}
+.card li{margin-bottom:6px}
+.card .open-link{margin-top:auto;padding-top:12px;font-size:14px;min-height:40px;align-items:flex-end}
 .hint{font-size:13px;color:var(--muted);margin:0}
-.pcard{position:relative;min-height:300px;flex:0 0 min(82vw,320px)}
-.pcard .glyph{position:absolute;top:18px;right:20px;font-size:34px;line-height:1;transition:transform .4s}
-.pcard:hover .glyph{transform:rotate(-10deg) scale(1.18)}
-.pcard h3{word-break:break-word}
-.pcard .chips{margin:14px 0 4px}
 .open-link{display:inline-flex;align-items:center;gap:8px;min-height:48px;margin-top:10px;font-weight:700;color:var(--hi)}
 .open-link svg{width:16px;height:16px;transition:transform .2s}
 .open-link:hover svg{transform:translate(3px,-3px)}
 /* terminal */
-.term{background:#02060a;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(141,210,202,.06)}
+.term{background:#02060a;-webkit-backdrop-filter:blur(22px) saturate(1.4);backdrop-filter:blur(22px) saturate(1.4);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(141,210,202,.06)}
 .tbar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#0A1316;border-bottom:1px solid var(--line);font:12px var(--mono);color:var(--muted)}
 .tbar i{width:11px;height:11px;border-radius:50%;background:#3A4A4D}
 .tbar i:nth-child(1){background:#FF6B6B}.tbar i:nth-child(2){background:#F5C451}.tbar i:nth-child(3){background:#58D68D}
@@ -124,7 +130,7 @@ form input::placeholder,form textarea::placeholder{color:#6F8585}
 .social a:active{transform:scale(.97)}
 .social svg{width:20px;height:20px;flex:none;color:var(--a)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
-.stat{padding:16px 10px;border:1px solid var(--line);border-radius:18px;background:var(--glass);text-align:center}
+.stat{padding:16px 10px;border:1px solid var(--line);border-radius:18px;background:var(--glass);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px);text-align:center}
 .stat b{display:block;font-family:var(--head);font-size:clamp(30px,7vw,42px);color:var(--a);line-height:1.1}
 .stat span{font-size:12px;color:var(--muted)}
 .cgrid{display:grid;gap:26px}
@@ -133,10 +139,7 @@ form input::placeholder,form textarea::placeholder{color:#6F8585}
 footer{position:relative;z-index:1;text-align:center;padding:10px 20px;font-size:12px;color:var(--muted)}
 footer a{color:var(--a);margin:0 10px;display:inline-flex;min-height:40px;align-items:center}
 @media (min-width:900px){
- .pcard{flex:none}
- .pcard.feat{grid-column:span 2}
- .pcard.feat h3{font-size:34px}
- .cgrid{grid-template-columns:1fr 1.15fr;gap:40px}
+    .cgrid{grid-template-columns:1fr 1.15fr;gap:40px}
  .cgrid .social{flex-direction:column;align-items:stretch}
  .hero{justify-content:center;padding-bottom:40px}
  .hero>*{max-width:520px}
@@ -159,8 +162,7 @@ footer a{color:var(--a);margin:0 10px;display:inline-flex;min-height:40px;align-
 </style>
 </head>
 <body>
-<div class="glow"></div><div class="cursor" id="cursor"></div>
-<canvas id="scene" aria-hidden="true"></canvas>
+<div class="orbs" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="cursor" id="cursor"></div>
 <div class="top"><a class="logo" href="#home">🍁 Ayhan Mansur</a></div>
 <nav class="dock" aria-label="Main navigation">
   <a href="#home" aria-current="true">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#terminal">Terminal</a><a href="#contact">Contact</a>
@@ -190,12 +192,11 @@ footer a{color:var(--a);margin:0 10px;display:inline-flex;min-height:40px;align-
   <section id="skills" aria-labelledby="skills-title">
     <div class="sh rv"><h2 id="skills-title">Skills</h2><p>What I use, and how far along I am.</p></div>
     <div class="wrapx rv" style="--d:.1s"><div class="rail" tabindex="0" aria-label="Skills, swipe sideways">
-      <article class="glass card tilt"><span class="lv">Strong</span><h3>Python</h3><p>Completed Python learning and earned a Python certificate.</p></article>
-      <article class="glass card tilt"><span class="lv">Learning</span><h3>JavaScript</h3><p>Variables, let, const, alerts and basic programming concepts.</p></article>
-      <article class="glass card tilt"><span class="lv">Practicing</span><h3>HTML and CSS</h3><p>Front-end fundamentals and responsive website design.</p></article>
-      <article class="glass card tilt"><span class="lv">Hands-on</span><h3>Git and GitHub</h3><p>Version control for the projects I build.</p></article>
-      <article class="glass card tilt"><span class="lv">Hands-on</span><h3>Docker</h3><p>Learned through practical tutorials and experiments.</p></article>
-      <article class="glass card tilt"><span class="lv">Basic</span><h3>Linux and Bash</h3><p>Basic commands and scripting, with Kali Linux in WSL.</p></article>
+      <article class="card tilt"><span class="tag">Strong</span><h3>Python</h3><p>Completed Python learning and earned a Python certificate.</p><ul><li>Core language skills</li><li>Certified</li></ul></article>
+      <article class="card tilt"><span class="tag">Learning</span><h3>JavaScript</h3><p>Working through the fundamentals.</p><ul><li>Variables, <code>let</code> and <code>const</code></li><li>Alerts</li><li>Basic programming concepts</li></ul></article>
+      <article class="card tilt"><span class="tag">Practicing</span><h3>Web development</h3><p>Building the structure and style of web pages.</p><ul><li>HTML</li><li>CSS</li><li>Responsive design</li><li>Front-end fundamentals</li></ul></article>
+      <article class="card tilt"><span class="tag">Hands-on</span><h3>Tools and technologies</h3><p>Tools I use to build, run and ship projects.</p><ul><li>Git and GitHub</li><li>Docker, learned through tutorials and experiments</li><li>Bash / Shell, basic commands and scripting</li></ul></article>
+      <article class="card tilt"><span class="tag">Basic</span><h3>Linux</h3><p>Comfortable around the command line.</p><ul><li>Kali Linux in WSL</li><li>Windows Subsystem for Linux</li></ul></article>
     </div></div>
     <p class="hint">Swipe sideways for more.</p>
   </section>
@@ -239,7 +240,6 @@ footer a{color:var(--a);margin:0 10px;display:inline-flex;min-height:40px;align-
 </main>
 <footer><a href="https://www.instagram.com/ayhan_dev.py/">Instagram</a><a href="https://t.me/AyhanMansur">Telegram</a><a href="https://github.com/AyhanMansur">GitHub</a><br>© 2026 Ayhan Mansur</footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
 var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,hover=matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -256,11 +256,11 @@ var ARROW='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-wid
 
 /* ---- project cards ---- */
 var list=$('plist');
-P.forEach(function(p,i){
-  var c=document.createElement('article');c.className='glass card pcard tilt'+(i===0?' feat':'');
-  c.innerHTML='<span class="lv"></span><span class="glyph" aria-hidden="true"></span><h3></h3><p></p><ul class="chips"></ul><a class="open-link" href="'+p.u+'">View on GitHub '+ARROW+'</a>';
-  c.querySelector('.lv').textContent=p.k;c.querySelector('.glyph').textContent=p.g;c.querySelector('h3').textContent=p.n;c.querySelector('p').textContent=p.d;
-  var ul=c.querySelector('.chips');p.t.forEach(function(t){var li=document.createElement('li');li.textContent=t;ul.appendChild(li);});
+P.forEach(function(p){
+  var c=document.createElement('article');c.className='card tilt';
+  c.innerHTML='<span class="tag"></span><h3></h3><p></p><ul></ul><a class="open-link" href="'+p.u+'">View on GitHub '+ARROW+'</a>';
+  c.querySelector('.tag').textContent=p.k;c.querySelector('h3').textContent=p.n;c.querySelector('p').textContent=p.d;
+  var ul=c.querySelector('ul');p.t.forEach(function(t){var li=document.createElement('li');li.textContent=t;ul.appendChild(li);});
   list.appendChild(c);
 });
 
@@ -352,72 +352,13 @@ function boot(){
 }
 if('IntersectionObserver' in window){var bio=new IntersectionObserver(function(es){if(es[0].isIntersecting){boot();bio.disconnect();}},{threshold:.3});bio.observe($('term'));}else boot();
 
-/* ---- 3D scene ---- */
-if(typeof THREE==='undefined')return;
-var canvas=$('scene'),dpr=window.devicePixelRatio||1,touch=!hover,renderer;
-try{renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:dpr<2,alpha:true});}catch(e){return;}
-renderer.setPixelRatio(Math.min(dpr,touch?1.5:2));
-var scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(50,1,.1,100);
-function wire(c,o){return new THREE.MeshBasicMaterial({color:c,wireframe:true,transparent:true,opacity:o});}
-var obj=new THREE.Group();
-var core=new THREE.Mesh(new THREE.TorusKnotGeometry(1.1,.3,touch?90:130,touch?12:16),wire(0x8DD2CA,.6));
-var inner=new THREE.Mesh(new THREE.IcosahedronGeometry(.5,1),wire(0xB7EEE7,.9));
-obj.add(core);obj.add(inner);
-var rings=[];
-for(var i=0;i<3;i++){
-  var rg=new THREE.Group(),rm=new THREE.Mesh(new THREE.TorusGeometry(2.1+i*.45,.012,8,100),new THREE.MeshBasicMaterial({color:i===1?0xB7EEE7:0x6DBDB6,transparent:true,opacity:.65}));
-  rg.add(rm);rg.rotation.set(i*1.1,i*.7,i*.5);rg.userData={s:.25+i*.15,r:1};obj.add(rg);rings.push(rg);
+/* ---- blur background parallax ---- */
+var ob=document.querySelector('.orbs');
+if(!reduce){
+  var tick=false;
+  addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){ob.style.setProperty('--sy',scrollY);tick=false;});},{passive:true});
+  if(hover)addEventListener('pointermove',function(e){ob.style.setProperty('--mx',((e.clientX/innerWidth-.5)*60).toFixed(1));ob.style.setProperty('--my',((e.clientY/innerHeight-.5)*60).toFixed(1));},{passive:true});
 }
-var orbs=[],og=new THREE.OctahedronGeometry(.11),om=new THREE.MeshBasicMaterial({color:0xB7EEE7});
-for(var j=0;j<(touch?10:16);j++){var m=new THREE.Mesh(og,om);m.userData={a:Math.random()*6.28,r:2.7+Math.random()*1.1,s:.25+Math.random()*.5,y:Math.random()*6.28};obj.add(m);orbs.push(m);}
-scene.add(obj);
-var grid=new THREE.Mesh(new THREE.PlaneGeometry(44,44,26,26),wire(0x6DBDB6,.16));grid.rotation.x=-Math.PI/2;grid.position.y=-3.4;scene.add(grid);
-var gp=grid.geometry.attributes.position,gbase=[];for(var k=0;k<gp.count;k++)gbase.push([gp.getX(k),gp.getY(k)]);
-var n=touch?220:480,pos=new Float32Array(n*3),sd=7;function rnd(){sd=(sd*9301+49297)%233280;return sd/233280;}
-for(var q=0;q<n;q++){var r=9+rnd()*14,t=rnd()*6.28,u=rnd()*2-1,s=Math.sqrt(1-u*u);pos[q*3]=r*s*Math.cos(t);pos[q*3+1]=r*u;pos[q*3+2]=r*s*Math.sin(t);}
-var pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
-var pts=new THREE.Points(pg,new THREE.PointsMaterial({color:0x6DBDB6,size:.06,transparent:true,opacity:.7}));scene.add(pts);
-
-var W=0,H=0,mx=0,my=0,sp=0,desk=false;
-function size(){
-  var w=canvas.clientWidth,h=canvas.clientHeight;
-  if(w===W&&Math.abs(h-H)<140)return;
-  W=w;H=h;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();
-  desk=w>=900;obj.scale.setScalar(desk?1:.66);camera.position.set(0,desk?.8:0,11);
-}
-size();addEventListener('resize',size);addEventListener('orientationchange',function(){setTimeout(size,250);});
-addEventListener('pointermove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;},{passive:true});
-addEventListener('touchmove',function(e){var t=e.touches[0];if(t){mx=t.clientX/innerWidth-.5;my=t.clientY/innerHeight-.5;}},{passive:true});
-var lastY=0,vel=0;
-addEventListener('scroll',function(){var d=document.documentElement.scrollHeight-innerHeight,y=scrollY;sp=d>0?Math.min(Math.max(y/d,0),1):0;vel+=(y-lastY)*.0012;lastY=y;},{passive:true});
-
-var clock=new THREE.Clock(),rotY=0,rotX=0,run=true,spin=0,lastOp='',base=obj.scale.x;
-function frame(){
-  var t=reduce?0:clock.getElapsedTime();
-  vel*=.92;spin+=vel;
-  var ty=sp*Math.PI*2+spin+mx*.9+t*.1,tx=my*.45+sp*.3;
-  rotY+=(ty-rotY)*.07;rotX+=(tx-rotX)*.07;
-  obj.rotation.set(rotX,rotY,0);
-  if(desk)obj.position.set(3.5*Math.min(1,sp*12),Math.sin(sp*Math.PI*2)*.5,0);else obj.position.set(0,2-sp*3,0);
-  var pulse=1+Math.sin(t*1.6)*.035+Math.min(Math.abs(vel)*6,.25);
-  var sc=(desk?1:.66)*pulse;obj.scale.setScalar(sc);
-  core.rotation.x=t*.35+sp*3;core.rotation.y=t*.25;
-  inner.rotation.set(-t*.8,t*.6,0);inner.scale.setScalar(1+Math.sin(t*2.2)*.12);
-  rings.forEach(function(g,i){g.rotation.x+=g.userData.s*.004+vel*.4;g.rotation.y+=g.userData.s*.003;g.scale.setScalar(1+sp*.35+Math.sin(t+i)*.03);});
-  orbs.forEach(function(o){var d=o.userData;d.a+=d.s*.012+vel*.5;o.position.set(Math.cos(d.a)*d.r,Math.sin(d.a*1.7+d.y)*.9,Math.sin(d.a)*d.r);o.rotation.set(t,t*1.3,0);});
-  for(var i=0;i<gp.count;i++){var b=gbase[i];gp.setZ(i,Math.sin(b[0]*.5+t*1.1)*.4+Math.cos(b[1]*.5+t*.8)*.4);}
-  gp.needsUpdate=true;grid.position.z=-sp*4;
-  pts.rotation.y=t*.02+sp*.6;
-  camera.position.z=11-sp*1.5;
-  var op=desk?String((.5+Math.min(sp*12,1)*.5).toFixed(2)):String(Math.max(.3,1-sp*2.4).toFixed(2));
-  if(op!==lastOp){canvas.style.opacity=op;lastOp=op;}
-  renderer.render(scene,camera);
-}
-function loop(){if(!run)return;frame();requestAnimationFrame(loop);}
-document.addEventListener('visibilitychange',function(){var was=run;run=!document.hidden;if(run&&!was&&!reduce)loop();});
-canvas.addEventListener('webglcontextlost',function(e){e.preventDefault();run=false;});
-canvas.addEventListener('webglcontextrestored',function(){run=true;if(!reduce)loop();});
-if(reduce){frame();addEventListener('scroll',frame,{passive:true});addEventListener('resize',frame);}else loop();
 })();
 </script>
 </body>
