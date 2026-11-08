@@ -170,6 +170,18 @@ section{content-visibility:auto;contain-intrinsic-size:auto 700px}
   .btn:hover,.contact-cell:hover,.nav-links a:hover,.hero-social a:hover{background:inherit}
 }
 @media (prefers-reduced-motion:reduce){section{content-visibility:visible}}
+
+/* ===== touch-device optimizations (same as the blur page) ===== */
+.reveal,.navbar,.btn,.contact-cell,.proj{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+.reveal.visible{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+@media (hover:none){
+  /* a fixed, blurred header is expensive to repaint on iPhone while scrolling */
+  .navbar{background:rgba(10,28,48,.97);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .nav-links{background:var(--navy-2)}
+  .btn:hover,.contact-cell:hover,.nav-links a:hover,.hero-social a:hover,.btn-primary:hover,.btn-secondary:hover{background:inherit;border-color:inherit;color:inherit}
+  .btn-primary{background:var(--cyan);color:var(--navy);border-color:var(--cyan)}
+  .btn-secondary{background:transparent;color:var(--ink);border-color:var(--grid-strong)}
+}
 </style>
 </head>
 <body>
