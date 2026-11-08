@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0a1c30" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<title>Ayhan Mansur | Python Developer &amp; Frontend Developer (HTML/CSS/JS/Bash)</title>
+<meta name="description" content="Ayhan Mansur — Python Developer and Frontend Developer skilled in HTML, CSS, JavaScript, and Bash scripting. Builds automation tools, IP scanners, and clean, responsive web interfaces." />
+<link rel="icon" href="https://avatars.githubusercontent.com/u/190759746?v=4" />
+<link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/190759746?v=4" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<header class="navbar" role="banner">
+  <div class="container">
+    <a href="#" class="logo" aria-label="Ayhan Mansur home">
+      <img class="logo-img" src="https://avatars.githubusercontent.com/u/190759746?v=4" alt="Ayhan Mansur logo" width="32" height="32" />
+      <span class="logo-text">Ayhan Mansur</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">FA</button>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero reg" id="hero" aria-label="Hero section">
+  <div class="container">
+    <span class="spec-label" data-i18n="hero.badge">Developer Profile — Rev. 03</span>
+    <h1 class="hero-title">Ayhan<span class="line2">Mansur</span></h1>
+    <div class="dim-row">
+      <span class="role-text"><span id="typingText"></span><span class="typing-cursor" id="typingCursor">|</span></span>
+      <span class="dim-line"></span>
+    </div>
+    <p class="hero-desc" data-i18n="hero.description">Building practical tools and clean web interfaces with Python, HTML, CSS, JavaScript, and Bash. Focused on automation, cross-platform utilities, and interfaces people actually enjoy using.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary"><span data-i18n="hero.viewProjects">View Projects</span></a>
+      <a href="#contact" class="btn btn-secondary"><span data-i18n="hero.hireMe">Hire Me</span></a>
+    </div>
+    <div class="hero-social">
+      <a href="https://github.com/AyhanMansur" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.93c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
+      <a href="https://www.instagram.com/ayhan_dev.py/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://t.me/AyhanMansur" target="_blank" rel="noopener" aria-label="Telegram"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.2 2.9 2.6 10.6c-1.2.5-1.2 1.2-.2 1.5l4.9 1.5 1.9 5.8c.2.6.5.8.9.8.4 0 .6-.2.9-.5l2.4-2.3 5 3.7c.9.5 1.5.3 1.8-.8l3.2-15.2c.4-1.4-.4-2-1.3-1.7ZM8.3 13.4l10.4-6.6c.5-.3 1 0 .6.4L10.6 15c-.3.3-.6.4-1 .1l-.1-.1-1.2-1.6Z"/></svg></a>
+      <a href="mailto:umc.masnur13@icloud.com" aria-label="Email"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2 12 13l8.5-6.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="reg" aria-label="About section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="fig-num" data-i18n="about.fig">Fig. 01 — Profile</span>
+      <h2 class="sec-title" data-i18n-html="about.title">Python &amp; Frontend Developer <span class="accent">Building Practical Tools</span></h2>
+      <p class="sec-desc" data-i18n="about.subtitle">I build automation scripts, command-line tools, and responsive web interfaces using Python, HTML, CSS, JavaScript, and Bash.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p data-i18n-html="about.p1">I'm a developer and technology enthusiast who enjoys learning, experimenting, and building projects. I specialize in <strong>Python</strong> for scripting and automation, and <strong>HTML/CSS/JavaScript</strong> for building clean, responsive front-end interfaces. I also write <strong>Bash</strong> scripts for Linux and Termux environments.</p>
+        <p data-i18n="about.p2">I like solving problems, finding practical solutions, and improving ideas that already exist. I'm most interested in useful websites and software, new technologies, and combining AI capabilities with digital products.</p>
+      </div>
+      <div class="spec-sheet reveal">
+        <div class="spec-sheet-title" data-i18n="about.journey">Journey</div>
+        <div class="spec-row"><span class="yr">2022</span><div><h4 data-i18n="about.t1title">Started Building Tools</h4><p data-i18n="about.t1desc">Began developing Python utilities for security and networking.</p></div></div>
+        <div class="spec-row"><span class="yr">2023</span><div><h4 data-i18n="about.t2title">First Public Repositories</h4><p data-i18n="about.t2desc">Released downwib and AyhanX-Fredom-Scanner.</p></div></div>
+        <div class="spec-row"><span class="yr">2024</span><div><h4 data-i18n="about.t3title">Building &amp; Improving</h4><p data-i18n="about.t3desc">Continuing to develop and refine tools with a focus on performance and UI.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="reg" aria-label="Projects section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="fig-num" data-i18n="projects.fig">Fig. 04 — Repositories</span>
+      <h2 class="sec-title" data-i18n-html="projects.title">My <span class="accent">Projects</span></h2>
+      <p class="sec-desc" data-i18n="projects.subtitle">Tools and utilities I've built, from scanners to chat and web apps.</p>
+    </div>
+    <div class="proj-grid">
+      <article class="proj reveal">
+        <span class="proj-tag">Deployment</span>
+        <h3>3X-Ui-on-railway</h3>
+        <p>A project designed to make it easier to deploy an Xray-core based panel on Railway without requiring a traditional server setup.</p>
+        <div class="proj-tech"><span>Railway</span><span>Docker</span><span>Xray-core</span></div>
+        <div class="proj-links"><a href="https://github.com/AyhanMansur/3X-Ui-on-railway" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
+      </article>
+      <article class="proj reveal">
+        <span class="proj-tag">Scanner</span>
+        <h3>AyhanX-Fredom-Scanner</h3>
+        <p>A high-performance Python utility for scanning IP ranges from Cloudflare and ArvanCloud. Optimized for Termux and Linux with zero dependencies.</p>
+        <div class="proj-tech"><span>Python</span><span>Cloudflare</span><span>Termux</span><span>Linux</span></div>
+        <div class="proj-links"><a href="https://github.com/AyhanMansur/AyhanX-Fredom-Scanner" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
+      </article>
+      <article class="proj reveal">
+        <span class="proj-tag">Platform</span>
+        <h3>downwib</h3>
+        <p>A comprehensive app download platform for Android, Windows, Mac, and Linux. Provides fast, secure, and ad-free direct download links.</p>
+        <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/AyhanMansur/downwib" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a>
+          <a href="https://ayhanmansur.github.io/downwib/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Live Demo</a>
+        </div>
+      </article>
+      <article class="proj reveal">
+        <span class="proj-tag">App</span>
+        <h3>AyhanX-Chat</h3>
+        <p>My chat application.</p>
+        <div class="proj-tech"><span>Chat app</span></div>
+        <div class="proj-links"><a href="https://github.com/AyhanMansur/AyhanX-Chat" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="reg" aria-label="Contact section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="fig-num" data-i18n="contact.fig">Fig. 05 — Contact</span>
+      <h2 class="sec-title" data-i18n-html="contact.title">Let's <span class="accent">Connect</span></h2>
+      <p class="sec-desc" data-i18n="contact.subtitle">Reach out via any of the channels below.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2 12 13l8.5-6.8" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h4 data-i18n="contact.email">Email</h4><a href="mailto:umc.masnur13@icloud.com">umc.masnur13@icloud.com</a></div></div>
+      <div class="contact-cell"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.93c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg><div><h4>GitHub</h4><a href="https://github.com/AyhanMansur" target="_blank" rel="noopener">github.com/AyhanMansur</a></div></div>
+      <div class="contact-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg><div><h4>Instagram</h4><a href="https://www.instagram.com/ayhan_dev.py/" target="_blank" rel="noopener">@ayhan_dev.py</a></div></div>
+      <div class="contact-cell"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.2 2.9 2.6 10.6c-1.2.5-1.2 1.2-.2 1.5l4.9 1.5 1.9 5.8c.2.6.5.8.9.8.4 0 .6-.2.9-.5l2.4-2.3 5 3.7c.9.5 1.5.3 1.8-.8l3.2-15.2c.4-1.4-.4-2-1.3-1.7ZM8.3 13.4l10.4-6.6c.5-.3 1 0 .6.4L10.6 15c-.3.3-.6.4-1 .1l-.1-.1-1.2-1.6Z"/></svg><div><h4>Telegram</h4><a href="https://t.me/AyhanMansur" target="_blank" rel="noopener">t.me/AyhanMansur</a></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <p data-i18n-html="footer.text">&copy; 2026 Ayhan Mansur. Built with <span class="heart">&hearts;</span> and code.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<script src="script.js"></script>
+</body>
+</html>
