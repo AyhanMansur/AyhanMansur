@@ -52,16 +52,19 @@ I enjoy building practical tools, experimenting with Linux, and publishing small
 * 🐳 **[3X-UI on Railway](https://github.com/AyhanMansur/3X-Ui-on-railway)** — a Docker and shell-based project for deploying a 3X-UI panel on Railway.
 * 🎨 **[Cyberpunk Terminal Font Generator](https://ayhanmansur.github.io/Font-Generator-CyberpunkTerminal/)** — a terminal-inspired web project.
 * 🌐 **[My Portfolio](https://ayhanmansur.github.io/AyhanMansur/)** — a personal website built while learning front-end development.
+* 🧩 🍁 **[AyhanX-Direct](https://github.com/AyhanMansur/AyhanX-Direct)** — installer that adds anti-censorship configs to 3X-UI panels, with a built-in scanner.
+* 🧩👾[miror.ayhanmansur](https://ayhanmansur.github.io/miror.ayhanmansur)** — mirror of VPN and tunnel scripts, built to download reliably inside Iran.
 * 🚀 Publishing static websites with **GitHub Pages**.
 
 ---
 
 ### 🏆 `[ 5 ] // ACHIEVEMENTS.log`
-
-- 🌐 Published my portfolio and other web projects using **GitHub Pages**
-- 🛠️ Built Python command-line tools and worked with **Docker** and **Bash**
-- 🎨 Created websites with **HTML** and **CSS**
 - 📂 Shared projects publicly on **GitHub**
+- 🎓 Python course completion certificate<br/>
+- 🛠️ Built and published multiple Python and shell-based tools<br/>
+- 🐳 Deployed containerized projects with <b>Docker</b><br/>
+- 🌐 Launched websites and mirrors using <b>GitHub Pages</b> and <b>Netlify</b><br/>
+- 📂 Maintain public open-source repositories on <b>GitHub</b>
 
 ---
 
