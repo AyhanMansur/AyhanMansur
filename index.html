@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="format-detection" content="telephone=no" />
 <title>𝐀𝐲𝐡𝐚𝐧𝐌𝐚𝐧𝐬𝐮𝐫🍁</title>
-<meta name="description" content="Ayhan Mansur — Python Developer and Frontend Developer skilled in HTML, CSS, JavaScript, and Bash scripting. Builds automation tools, IP scanners, and clean, responsive web interfaces." />
+<meta name="description" content="Ayhan Mansur — Python developer and frontend developer building practical software tools, AI-assisted applications, automation scripts, and responsive web interfaces." />
 <link rel="icon" href="https://avatars.githubusercontent.com/u/190759746?v=4" />
 <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/190759746?v=4" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -113,6 +113,16 @@ nav[aria-label="Main navigation"]{display:flex;align-items:center;gap:6px}
 .spec-row p{color:var(--ink-dim);font-size:.8rem}
 @media (min-width:900px){.about-grid{grid-template-columns:1.15fr .85fr;gap:50px}}
 
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.skill-card{border:1px solid var(--grid-strong);padding:20px;min-height:132px;background:rgba(15,41,71,.35)}
+.skill-card h3{font-family:var(--disp);font-size:1rem;margin:8px 0}
+.skill-card p{font-size:.8rem;color:var(--ink-dim)}
+.skill-level{font-size:.58rem;letter-spacing:.12em;color:var(--amber)}
+@media (min-width:560px){.skills-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.skills-grid{grid-template-columns:repeat(4,1fr)}}
+
 /* PROJECTS */
 .proj-grid{display:grid;grid-template-columns:1fr;gap:24px}
 .proj{border:1px solid var(--grid-strong);position:relative;padding:24px;display:flex;flex-direction:column}
@@ -197,6 +207,7 @@ section{content-visibility:auto;contain-intrinsic-size:auto 700px}
     <nav aria-label="Main navigation">
       <ul class="nav-links" id="navLinks">
         <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
         <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
@@ -217,7 +228,7 @@ section{content-visibility:auto;contain-intrinsic-size:auto 700px}
       <span class="role-text"><span id="typingText"></span><span class="typing-cursor" id="typingCursor">|</span></span>
       <span class="dim-line"></span>
     </div>
-    <p class="hero-desc" data-i18n="hero.description">Building practical tools and clean web interfaces with Python, HTML, CSS, JavaScript, and Bash. Focused on automation, cross-platform utilities, and interfaces people actually enjoy using.</p>
+    <p class="hero-desc" data-i18n="hero.description">I build practical software projects with Python and web technologies, from automation tools and terminal applications to responsive websites and AI-powered utilities.</p>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary"><span data-i18n="hero.viewProjects">View Projects</span></a>
       <a href="#contact" class="btn btn-secondary"><span data-i18n="hero.hireMe">Hire Me</span></a>
@@ -237,19 +248,41 @@ section{content-visibility:auto;contain-intrinsic-size:auto 700px}
     <div class="sec-head reveal">
       <span class="fig-num" data-i18n="about.fig">Fig. 01 — Profile</span>
       <h2 class="sec-title" data-i18n-html="about.title">Python &amp; Frontend Developer <span class="accent">Building Practical Tools</span></h2>
-      <p class="sec-desc" data-i18n="about.subtitle">I build automation scripts, command-line tools, and responsive web interfaces using Python, HTML, CSS, JavaScript, and Bash.</p>
+      <p class="sec-desc" data-i18n="about.subtitle">I build software tools, command-line applications, and responsive web interfaces, with Python as my strongest programming language.</p>
     </div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p data-i18n-html="about.p1">I'm a developer and technology enthusiast who enjoys learning, experimenting, and building projects. I specialize in <strong>Python</strong> for scripting and automation, and <strong>HTML/CSS/JavaScript</strong> for building clean, responsive front-end interfaces. I also write <strong>Bash</strong> scripts for Linux and Termux environments.</p>
-        <p data-i18n="about.p2">I like solving problems, finding practical solutions, and improving ideas that already exist. I'm most interested in useful websites and software, new technologies, and combining AI capabilities with digital products.</p>
+        <p data-i18n-html="about.p1">I'm a developer and technology enthusiast who enjoys learning by building real projects. I'm highly proficient in <strong>Python</strong> and have completed Python training with a certificate. I have a strong foundation in <strong>HTML and CSS</strong>, and I'm currently learning <strong>JavaScript</strong> to expand my frontend skills. I also use <strong>Bash</strong> and <strong>Docker</strong> in practical projects.</p>
+        <p data-i18n="about.p2">I enjoy turning ideas into working tools, exploring existing solutions, and combining technologies to build useful projects. I also use AI development tools when they help me research, compare approaches, or speed up implementation.</p>
       </div>
       <div class="spec-sheet reveal">
-        <div class="spec-sheet-title" data-i18n="about.journey">Journey</div>
-        <div class="spec-row"><span class="yr">2022</span><div><h4 data-i18n="about.t1title">Started Building Tools</h4><p data-i18n="about.t1desc">Began developing Python utilities for security and networking.</p></div></div>
-        <div class="spec-row"><span class="yr">2023</span><div><h4 data-i18n="about.t2title">First Public Repositories</h4><p data-i18n="about.t2desc">Released downwib and AyhanX-Fredom-Scanner.</p></div></div>
-        <div class="spec-row"><span class="yr">2024</span><div><h4 data-i18n="about.t3title">Building &amp; Improving</h4><p data-i18n="about.t3desc">Continuing to develop and refine tools with a focus on performance and UI.</p></div></div>
+        <div class="spec-sheet-title" data-i18n="about.journey">How I Work</div>
+        <div class="spec-row"><span class="yr">01</span><div><h4 data-i18n="about.t1title">Build</h4><p data-i18n="about.t1desc">Turn ideas into practical projects and working prototypes.</p></div></div>
+        <div class="spec-row"><span class="yr">02</span><div><h4 data-i18n="about.t2title">Research</h4><p data-i18n="about.t2desc">Compare documentation, examples, and existing solutions.</p></div></div>
+        <div class="spec-row"><span class="yr">03</span><div><h4 data-i18n="about.t3title">Improve</h4><p data-i18n="about.t3desc">Test, refine, and keep learning through hands-on development.</p></div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="reg" aria-label="Skills section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="fig-num" data-i18n="skills.fig">Fig. 03 — Toolkit</span>
+      <h2 class="sec-title" data-i18n-html="skills.title">Skills &amp; <span class="accent">Technologies</span></h2>
+      <p class="sec-desc" data-i18n="skills.subtitle">Technologies I use, practice, and continue to learn.</p>
+    </div>
+    <div class="skills-grid reveal">
+      <article class="skill-card"><span class="skill-level">CORE</span><h3>Python</h3><p data-i18n="skills.python">Strong proficiency · Certificate</p></article>
+      <article class="skill-card"><span class="skill-level">CORE</span><h3>HTML &amp; CSS</h3><p data-i18n="skills.web">Strong foundation in frontend structure and styling</p></article>
+      <article class="skill-card"><span class="skill-level">LEARNING</span><h3>JavaScript</h3><p data-i18n="skills.js">Currently learning and building with JavaScript</p></article>
+      <article class="skill-card"><span class="skill-level">PRACTICAL</span><h3>Bash / Shell</h3><p data-i18n="skills.bash">Used for scripting and command-line workflows</p></article>
+      <article class="skill-card"><span class="skill-level">PRACTICAL</span><h3>Docker</h3><p data-i18n="skills.docker">Used in project setup and deployment workflows</p></article>
+      <article class="skill-card"><span class="skill-level">BASIC</span><h3>Linux</h3><p data-i18n="skills.linux">Basic hands-on experience, including Kali Linux on WSL</p></article>
+      <article class="skill-card"><span class="skill-level">TOOLS</span><h3>Git &amp; GitHub</h3><p data-i18n="skills.git">Version control and publishing open-source projects</p></article>
+      <article class="skill-card"><span class="skill-level">WORKFLOW</span><h3>AI Development Tools</h3><p data-i18n="skills.ai">Use AI tools for research, iteration, and selected implementation tasks</p></article>
     </div>
   </div>
 </section>
@@ -264,37 +297,53 @@ section{content-visibility:auto;contain-intrinsic-size:auto 700px}
     </div>
     <div class="proj-grid">
       <article class="proj reveal">
-        <span class="proj-tag">Deployment</span>
-        <h3>3X-Ui-on-railway</h3>
-        <p>A project designed to make it easier to deploy an Xray-core based panel on Railway without requiring a traditional server setup.</p>
-        <div class="proj-tech"><span>Railway</span><span>Docker</span><span>Xray-core</span></div>
-        <div class="proj-links"><a href="https://github.com/AyhanMansur/3X-Ui-on-railway" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
+        <span class="proj-tag">AI · CLI Tool</span>
+        <h3>AyhanX-Agent</h3>
+        <p data-i18n="project.agent">An AI-powered terminal agent with streaming responses, multiple model-provider options, conversation history, and built-in tools for everyday terminal tasks. Developed primarily by me, with AI-assisted implementation of local-model support.</p>
+        <div class="proj-tech"><span>Python</span><span>Shell</span><span>AI APIs</span><span>CLI</span></div>
+        <div class="proj-links"><a href="https://github.com/AyhanMansur/AyhanX-Agent" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
       </article>
       <article class="proj reveal">
-        <span class="proj-tag">Scanner</span>
+        <span class="proj-tag">Panel Integration · Fork</span>
+        <h3>AyhanX-Direct</h3>
+        <p data-i18n="project.direct">A multi-panel configuration tool for 3x-ui, Pasarguard, and Marzban. Integrates my earlier scanner project with panel-management and configuration workflows. Based on pdnczone/3x-ui-pro-configs, with additional integration and modifications.</p>
+        <div class="proj-tech"><span>Python</span><span>Bash</span><span>3x-ui</span><span>Pasarguard</span><span>Marzban</span></div>
+        <div class="proj-links"><a href="https://github.com/AyhanMansur/AyhanX-Direct" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
+      </article>
+      <article class="proj reveal">
+        <span class="proj-tag">Python · Scanner</span>
         <h3>AyhanX-Fredom-Scanner</h3>
-        <p>A high-performance Python utility for scanning IP ranges from Cloudflare and ArvanCloud. Optimized for Termux and Linux with zero dependencies.</p>
-        <div class="proj-tech"><span>Python</span><span>Cloudflare</span><span>Termux</span><span>Linux</span></div>
+        <p data-i18n="project.scanner">A Python utility for scanning IP ranges and checking candidate endpoints, designed for practical use in Linux and Termux environments.</p>
+        <div class="proj-tech"><span>Python</span><span>IP scanning</span><span>Termux</span><span>Linux</span></div>
         <div class="proj-links"><a href="https://github.com/AyhanMansur/AyhanX-Fredom-Scanner" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
       </article>
       <article class="proj reveal">
-        <span class="proj-tag">Platform</span>
+        <span class="proj-tag">Deployment</span>
+        <h3>3X-Ui-on-railway</h3>
+        <p data-i18n="project.railway">A project exploring deployment of a 3x-ui / Xray-core-based panel on Railway without managing a traditional VPS, using Docker and shell scripts.</p>
+        <div class="proj-tech"><span>Railway</span><span>Docker</span><span>Shell</span><span>Xray-core</span></div>
+        <div class="proj-links"><a href="https://github.com/AyhanMansur/3X-Ui-on-railway" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
+      </article>
+      <article class="proj reveal">
+        <span class="proj-tag">Web · Shell Resources</span>
+        <h3>miror.ayhanmansur</h3>
+        <p data-i18n="project.mirror">A GitHub Pages website that organizes and presents shell-script resources collected from different public repositories, using HTML, CSS, and JavaScript.</p>
+        <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/AyhanMansur/miror.ayhanmansur" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a>
+          <a href="https://ayhanmansur.github.io/miror.ayhanmansur/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Live Demo</a>
+        </div>
+      </article>
+      <article class="proj reveal">
+        <span class="proj-tag">Web Platform</span>
         <h3>downwib</h3>
-        <p>A comprehensive app download platform for Android, Windows, Mac, and Linux. Provides fast, secure, and ad-free direct download links.</p>
+        <p data-i18n="project.downwib">A web platform project for presenting software downloads across desktop and mobile operating systems.</p>
         <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
         <div class="proj-links">
           <a href="https://github.com/AyhanMansur/downwib" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a>
           <a href="https://ayhanmansur.github.io/downwib/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Live Demo</a>
         </div>
       </article>
-      <article class="proj reveal">
-        <span class="proj-tag">App</span>
-        <h3>AyhanX-Chat</h3>
-        <p>My chat application.</p>
-        <div class="proj-tech"><span>Chat app</span></div>
-        <div class="proj-links"><a href="https://github.com/AyhanMansur/AyhanX-Chat" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
-      </article>
-    </div>
   </div>
 </section>
 
@@ -339,7 +388,7 @@ section{content-visibility:auto;contain-intrinsic-size:auto 700px}
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav();});
 
   const typingText=document.getElementById('typingText');
-  const rolesByLang={en:['Python Developer','Frontend Developer','Bash Automation','Tool Builder'],fa:['توسعه‌دهنده پایتون','توسعه‌دهنده فرانت‌اند','اتوماسیون Bash','سازنده ابزار']};
+  const rolesByLang={en:['Python Developer','Frontend Developer','Software Builder','AI Tool Enthusiast'],fa:['توسعه‌دهنده پایتون','توسعه‌دهنده فرانت‌اند','سازنده نرم‌افزار','علاقه‌مند به ابزارهای هوش مصنوعی']};
   let roles=rolesByLang.en,roleIndex=0,charIndex=0,isDeleting=false,typingTimeout=null;
   const typeSpeed=isMobile?95:75,deleteSpeed=isMobile?48:38,pause=isMobile?1800:1600;
   function typeEffect(){
@@ -372,20 +421,29 @@ section{content-visibility:auto;contain-intrinsic-size:auto 700px}
 
   const translations={
     en:{
-      'nav.about':'About','nav.projects':'Projects','nav.contact':'Contact',
+      'nav.about':'About','nav.skills':'Skills','nav.projects':'Projects','nav.contact':'Contact',
       'hero.badge':'Developer Profile — Rev. 03',
-      'hero.description':'Building practical tools and clean web interfaces with Python, HTML, CSS, JavaScript, and Bash. Focused on automation, cross-platform utilities, and interfaces people actually enjoy using.',
-      'hero.viewProjects':'View Projects','hero.hireMe':'Hire Me',
+      'hero.description':'I build practical software projects with Python and web technologies, from automation tools and terminal applications to responsive websites and AI-powered utilities.',
+      'hero.viewProjects':'View Projects','hero.hireMe':'Contact Me',
       'about.fig':'Fig. 01 — Profile',
       'about.title':'Python &amp; Frontend Developer <span class="accent">Building Practical Tools</span>',
-      'about.subtitle':'I build automation scripts, command-line tools, and responsive web interfaces using Python, HTML, CSS, JavaScript, and Bash.',
-      'about.p1':'I\'m a developer and technology enthusiast who enjoys learning, experimenting, and building projects. I specialize in <strong>Python</strong> for scripting and automation, and <strong>HTML/CSS/JavaScript</strong> for building clean, responsive front-end interfaces. I also write <strong>Bash</strong> scripts for Linux and Termux environments.',
-      'about.p2':'I like solving problems, finding practical solutions, and improving ideas that already exist. I\'m most interested in useful websites and software, new technologies, and combining AI capabilities with digital products.',
-      'about.journey':'Journey',
-      'about.t1title':'Started Building Tools','about.t1desc':'Began developing Python utilities for security and networking.',
-      'about.t2title':'First Public Repositories','about.t2desc':'Released downwib and AyhanX-Fredom-Scanner.',
-      'about.t3title':'Building &amp; Improving','about.t3desc':'Continuing to develop and refine tools with a focus on performance and UI.',
-      'projects.fig':'Fig. 04 — Repositories',
+      'about.subtitle':'I build software tools, command-line applications, and responsive web interfaces, with Python as my strongest programming language.',
+      'about.p1':'I\'m a developer and technology enthusiast who enjoys learning by building real projects. I\'m highly proficient in <strong>Python</strong> and have completed Python training with a certificate. I have a strong foundation in <strong>HTML and CSS</strong>, and I\'m currently learning <strong>JavaScript</strong> to expand my frontend skills. I also use <strong>Bash</strong> and <strong>Docker</strong> in practical projects.',
+      'about.p2':'I enjoy turning ideas into working tools, exploring existing solutions, and combining technologies to build useful projects. I also use AI development tools when they help me research, compare approaches, or speed up implementation.',
+      'about.journey':'How I Work',
+      'about.t1title':'Build','about.t1desc':'Turn ideas into practical projects and working prototypes.',
+      'about.t2title':'Research','about.t2desc':'Compare documentation, examples, and existing solutions.',
+      'about.t3title':'Improve','about.t3desc':'Test, refine, and keep learning through hands-on development.',
+      'skills.fig':'Fig. 03 — Toolkit','skills.title':'Skills &amp; <span class="accent">Technologies</span>','skills.subtitle':'Technologies I use, practice, and continue to learn.',
+       'skills.python':'Strong proficiency · Certificate','skills.web':'Strong foundation in frontend structure and styling','skills.js':'Currently learning and building with JavaScript','skills.bash':'Used for scripting and command-line workflows','skills.docker':'Used in project setup and deployment workflows','skills.linux':'Basic hands-on experience, including Kali Linux on WSL','skills.git':'Version control and publishing open-source projects','skills.ai':'Use AI tools for research, iteration, and selected implementation tasks',
+       'project.agent':'An AI-powered terminal agent with streaming responses, multiple model-provider options, conversation history, and built-in tools for everyday terminal tasks. Developed primarily by me, with AI-assisted implementation of local-model support.',
+       'project.direct':'A multi-panel configuration tool for 3x-ui, Pasarguard, and Marzban. Integrates my earlier scanner project with panel-management and configuration workflows. Based on pdnczone/3x-ui-pro-configs, with additional integration and modifications.',
+       'project.scanner':'A Python utility for scanning IP ranges and checking candidate endpoints, designed for practical use in Linux and Termux environments.',
+       'project.railway':'A project exploring deployment of a 3x-ui / Xray-core-based panel on Railway without managing a traditional VPS, using Docker and shell scripts.',
+       'project.mirror':'A GitHub Pages website that organizes and presents shell-script resources collected from different public repositories, using HTML, CSS, and JavaScript.',
+       'project.downwib':'A web platform project for presenting software downloads across desktop and mobile operating systems.',
+       'project.chat':'A chat application project. Explore the repository for its current implementation and features.',
+       'projects.fig':'Fig. 04 — Repositories',
       'projects.title':'My <span class="accent">Projects</span>',
       'projects.subtitle':'Tools and utilities I\'ve built, from scanners to chat and web apps.',
       'contact.fig':'Fig. 05 — Contact','contact.title':'Let\'s <span class="accent">Connect</span>','contact.subtitle':'Reach out via any of the channels below.','contact.email':'Email',
@@ -393,20 +451,29 @@ section{content-visibility:auto;contain-intrinsic-size:auto 700px}
       'meta.title':'Ayhan Mansur | Python Developer &amp; Frontend Developer (HTML/CSS/JS/Bash)'
     },
     fa:{
-      'nav.about':'درباره','nav.projects':'پروژه‌ها','nav.contact':'تماس',
+      'nav.about':'درباره','nav.skills':'مهارت‌ها','nav.projects':'پروژه‌ها','nav.contact':'تماس',
       'hero.badge':'پروفایل توسعه‌دهنده — نسخه ۰۳',
-      'hero.description':'ابزارهای کاربردی و رابط‌های وب تمیز با Python، HTML، CSS، JavaScript و Bash می‌سازم. تمرکزم روی اتوماسیون، ابزارهای چندسکویی و رابط‌های کاربرپسنده.',
-      'hero.viewProjects':'مشاهده پروژه‌ها','hero.hireMe':'استخدامم کن',
+      'hero.description':'با Python و فناوری‌های وب پروژه‌های کاربردی می‌سازم؛ از ابزارهای اتوماسیون و برنامه‌های ترمینالی تا وب‌سایت‌های واکنش‌گرا و ابزارهای مجهز به هوش مصنوعی.',
+      'hero.viewProjects':'مشاهده پروژه‌ها','hero.hireMe':'ارتباط با من',
       'about.fig':'شکل ۰۱ — پروفایل',
       'about.title':'توسعه‌دهنده Python و فرانت‌اند <span class="accent">که ابزارهای کاربردی می‌سازد</span>',
-      'about.subtitle':'اسکریپت‌های اتوماسیون، ابزارهای خط فرمان و رابط‌های وب واکنش‌گرا با Python، HTML، CSS، JavaScript و Bash می‌سازم.',
-      'about.p1':'من یک توسعه‌دهنده و علاقه‌مند به تکنولوژی هستم که از یادگیری، آزمایش و ساخت پروژه لذت می‌برم. در <strong>Python</strong> برای اسکریپت‌نویسی و اتوماسیون، و در <strong>HTML/CSS/JavaScript</strong> برای ساخت رابط‌های فرانت‌اند تمیز و واکنش‌گرا تخصص دارم. همچنین اسکریپت‌های <strong>Bash</strong> برای لینوکس و ترموکس می‌نویسم.',
-      'about.p2':'من از حل مسئله، پیدا کردن راه‌حل‌های کاربردی و بهبود ایده‌های موجود لذت می‌برم. بیشتر به وب‌سایت‌ها و نرم‌افزارهای کاربردی، تکنولوژی‌های جدید و ترکیب هوش مصنوعی با محصولات دیجیتال علاقه دارم.',
-      'about.journey':'مسیر',
-      'about.t1title':'شروع ساخت ابزارها','about.t1desc':'شروع توسعه ابزارهای پایتون برای امنیت و شبکه.',
-      'about.t2title':'اولین مخزن‌های عمومی','about.t2desc':'انتشار downwib و AyhanX-Fredom-Scanner.',
-      'about.t3title':'ساخت و بهبود','about.t3desc':'ادامه توسعه و بهبود ابزارها با تمرکز روی کارایی و رابط کاربری.',
-      'projects.fig':'شکل ۰۴ — مخزن‌ها',
+      'about.subtitle':'ابزارهای نرم‌افزاری، برنامه‌های خط فرمان و رابط‌های وب واکنش‌گرا می‌سازم و زبان اصلی برنامه‌نویسی من Python است.',
+      'about.p1':'من توسعه‌دهنده‌ای علاقه‌مند به فناوری هستم و از یادگیری از طریق ساخت پروژه‌های واقعی لذت می‌برم. در <strong>Python</strong> مهارت بالایی دارم و گواهی آموزش پایتون دریافت کرده‌ام. در <strong>HTML و CSS</strong> پایهٔ قوی دارم و در حال یادگیری <strong>JavaScript</strong> هستم. همچنین در پروژه‌های عملی از <strong>Bash</strong> و <strong>Docker</strong> استفاده می‌کنم.',
+      'about.p2':'از تبدیل ایده‌ها به ابزارهای قابل استفاده، بررسی راه‌حل‌های موجود و ترکیب فناوری‌ها برای ساخت پروژه‌های مفید لذت می‌برم. همچنین هرجا مفید باشد از ابزارهای هوش مصنوعی برای تحقیق، مقایسهٔ راه‌حل‌ها و سرعت‌دادن به پیاده‌سازی کمک می‌گیرم.',
+      'about.journey':'روش کار من',
+      'about.t1title':'ساختن','about.t1desc':'تبدیل ایده‌ها به پروژه‌های کاربردی و نمونه‌های قابل اجرا.',
+      'about.t2title':'تحقیق','about.t2desc':'بررسی مستندات، نمونه‌کدها و راه‌حل‌های موجود.',
+      'about.t3title':'بهبود','about.t3desc':'آزمایش، اصلاح و ادامهٔ یادگیری از طریق توسعهٔ عملی.',
+      'skills.fig':'شکل ۰۳ — ابزارها','skills.title':'مهارت‌ها و <span class="accent">فناوری‌ها</span>','skills.subtitle':'فناوری‌هایی که استفاده می‌کنم، تمرین می‌کنم و همچنان در حال یادگیری آن‌ها هستم.',
+       'skills.python':'تسلط بالا · دارای گواهی پایتون','skills.web':'پایهٔ قوی در ساختار و طراحی رابط کاربری وب','skills.js':'در حال یادگیری و ساخت پروژه با JavaScript','skills.bash':'استفاده در اسکریپت‌نویسی و کارهای خط فرمان','skills.docker':'استفاده در راه‌اندازی و استقرار پروژه‌ها','skills.linux':'تجربهٔ عملی پایه، از جمله Kali Linux روی WSL','skills.git':'کنترل نسخه و انتشار پروژه‌های متن‌باز','skills.ai':'استفاده از ابزارهای هوش مصنوعی برای تحقیق، بهبود و بخشی از پیاده‌سازی‌ها',
+       'project.agent':'یک ایجنت هوش مصنوعی برای ترمینال با پاسخ‌دهی جریانی، پشتیبانی از چند ارائه‌دهندهٔ مدل، تاریخچهٔ گفتگو و ابزارهای داخلی برای کارهای روزمرهٔ ترمینال. توسعهٔ اصلی پروژه توسط من انجام شده و پیاده‌سازی پشتیبانی از مدل محلی با کمک هوش مصنوعی انجام شده است.',
+       'project.direct':'ابزاری برای کار با پنل‌های 3x-ui، Pasarguard و Marzban که اسکنر قبلی من را با روندهای مدیریت پنل و نصب کانفیگ یکپارچه می‌کند. این پروژه بر پایهٔ pdnczone/3x-ui-pro-configs ساخته شده و شامل یکپارچه‌سازی‌ها و تغییرات تکمیلی است.',
+       'project.scanner':'ابزار پایتونی برای اسکن محدوده‌های IP و بررسی آدرس‌های کاندید، با هدف استفادهٔ عملی در محیط‌های لینوکس و ترموکس.',
+       'project.railway':'پروژه‌ای برای بررسی استقرار پنل مبتنی بر 3x-ui و Xray-core روی Railway بدون مدیریت VPS سنتی، با استفاده از Docker و اسکریپت‌های Shell.',
+       'project.mirror':'وب‌سایتی مبتنی بر GitHub Pages برای مرتب‌سازی و نمایش منابع اسکریپت‌های Shell که از مخزن‌های عمومی مختلف گردآوری شده‌اند؛ ساخته‌شده با HTML، CSS و JavaScript.',
+       'project.downwib':'پروژه‌ای تحت وب برای نمایش و ارائهٔ دانلود نرم‌افزارها در سیستم‌عامل‌های دسکتاپ و موبایل.',
+       'project.chat':'پروژهٔ یک اپلیکیشن چت. برای مشاهدهٔ پیاده‌سازی و قابلیت‌های فعلی، مخزن آن را ببینید.',
+       'projects.fig':'شکل ۰۴ — مخزن‌ها',
       'projects.title':'پروژه‌های <span class="accent">من</span>',
       'projects.subtitle':'ابزارهایی که ساختم، از اسکنر تا اپ‌های چت و وب.',
       'contact.fig':'شکل ۰۵ — تماس','contact.title':'بیا <span class="accent">در ارتباط باشیم</span>','contact.subtitle':'از هر کدوم از راه‌های زیر می‌تونی باهام در ارتباط باشی.','contact.email':'ایمیل',
