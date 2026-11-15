@@ -2,12 +2,6 @@
 <h1 align="center"> 🟢 Ayhan_Mansur@root:~$ </h1>
 
 <p align="center">
-  Ayhan Mansur • Python Developer • Docker & Bash Enthusiast
-  <br/>
-  Building practical tools and learning front-end web development.
-</p>
-
-<p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?color=00FF41&size=24&center=true&vCenter=true&width=800&lines=Python+Developer;Docker+%26+Bash+Enthusiast;Learning+Front-End+Development;Building+%26+Sharing+Open-Source+Projects" alt="Python developer, Docker and Bash enthusiast, learning front-end development and building open-source projects" />
 </p>
 
