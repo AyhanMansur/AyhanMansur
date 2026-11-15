@@ -34,7 +34,7 @@ I build practical command-line utilities, experiment with Linux, and publish ope
 
 I like modern, minimal designs with clean layouts and simple, intuitive interfaces. 😎
 
-🌐 Portfolio: [Ayhan Mansur — Projects & Web Development](https://www.ayhandevlopper.kdns.fr/)
+🌐 Portfolio: [Ayhan Mansur — Projects & Web Development](https://digital.ayhandevlopper.kdns.fr/)
 
 📂 Repositories: [Explore my open-source projects on GitHub](https://github.com/AyhanMansur?tab=repositories)
 
@@ -59,7 +59,7 @@ I like modern, minimal designs with clean layouts and simple, intuitive interfac
 * 🐍 **[AyhanX Freedom Scanner](https://github.com/AyhanMansur/AyhanX-Fredom-Scanner)** — a Python terminal tool for scanning Cloudflare IP ranges and related domains.
 * 🐳 **[3X-UI on Railway](https://github.com/AyhanMansur/3X-Ui-on-railway)** — a Docker- and shell-based project for deploying a 3X-UI panel on Railway.
 * 🎨 **[Cyberpunk Terminal Font Generator](https://ayhanmansur.github.io/Font-Generator-CyberpunkTerminal/)** — a font generator web project with a terminal-inspired interface and cyberpunk visual style.
-* 🌐 **[My Portfolio](https://ayhanmansur.github.io/AyhanMansur/)** — my personal website, built while learning front-end development and experimenting with dark, terminal-inspired interfaces.
+* 🌐 **[My Portfolio](https://digital.ayhandevlopper.kdns.fr/)** — my personal website, built while learning front-end development and experimenting with dark, terminal-inspired interfaces.
 * 🧩 🍁 **[AyhanX-Direct](https://github.com/AyhanMansur/AyhanX-Direct)** — an installer that adds anti-censorship configurations to 3X-UI panels, with a built-in scanner.
 * 🧩👾 **[miror.ayhanmansur](https://mirror.ayhandevlopper.kdns.fr/)** — a mirror of VPN and tunnel scripts, created to make those resources easier to download from inside Iran.
 * 🚀 Publishing static websites and web projects with **GitHub Pages** and **Netlify**.
