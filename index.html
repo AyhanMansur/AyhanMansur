@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="light">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<meta name="theme-color" content="#24292f" />
+<meta name="theme-color" content="#0a1c30" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="format-detection" content="telephone=no" />
@@ -13,1030 +13,488 @@
 <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/190759746?v=4" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <style>
-/* ============ tokens ============ */
 :root{
-  --canvas:#ffffff;
-  --subtle:#f6f8fa;
-  --border:#d1d9e0;
-  --border-soft:#e6eaef;
-  --fg:#1f2328;
-  --fg-muted:#59636e;
-  --fg-subtle:#818b98;
-  --link:#0969da;
-  --green-btn:#1f883d;
-  --green-btn-hover:#1a7f37;
-  --header:#24292f;
-  --header-fg:#ffffff;
-  --header-dim:rgba(255,255,255,.72);
-  --topic-bg:#ddf4ff;
-  --topic-fg:#0969da;
-  --lv0:#ebedf0; --lv1:#9be9a8; --lv2:#40c463; --lv3:#30a14e; --lv4:#216e39;
-  --cell:11px; --gap:3px;
-  --sans:'Archivo','Helvetica Neue',Arial,sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
-  --fa:'Vazirmatn',Tahoma,sans-serif;
-  --max:1012px;
-  --pad:24px;
-  --nav-h:56px;
-}
-html[data-theme="dark"]{
-  --canvas:#0d1117;
-  --subtle:#151b23;
-  --border:#3d444d;
-  --border-soft:#2a3138;
-  --fg:#f0f6fc;
-  --fg-muted:#9198a1;
-  --fg-subtle:#6e7781;
-  --link:#4493f8;
-  --green-btn:#238636;
-  --green-btn-hover:#2ea043;
-  --header:#010409;
-  --header-fg:#f0f6fc;
-  --header-dim:rgba(240,246,252,.72);
-  --topic-bg:rgba(56,139,253,.15);
-  --topic-fg:#4493f8;
-  --lv0:#161b22; --lv1:#0e4429; --lv2:#006d32; --lv3:#26a641; --lv4:#39d353;
+  --navy:#0a1c30;--navy-2:#0d2440;--panel:#0f2947;
+  --grid:rgba(125,211,252,0.07);--grid-strong:rgba(125,211,252,0.16);
+  --ink:#eaf4fb;--ink-dim:#8fb3d1;--ink-faint:#4d6f8f;
+  --cyan:#7dd3fc;--cyan-bright:#c3ecff;--amber:#f4a261;
+  --disp:'Space Grotesk',sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;--mono-fa:'Vazirmatn',Tahoma,sans-serif;
+  --nav-h:64px;--pad:24px;--max:1040px;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px);-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--canvas)}
-body{
-  font-family:var(--sans);
-  font-size:15px;line-height:1.6;
-  background:var(--canvas);color:var(--fg);
-  -webkit-font-smoothing:antialiased;
-  padding-bottom:env(safe-area-inset-bottom);
-  transition:background-color .18s ease,color .18s ease;
-}
-html[dir="rtl"] body{font-family:var(--fa)}
-img,svg{display:block;max-width:100%}
-a{color:var(--link);text-decoration:none}
-a:hover{text-decoration:underline}
-::selection{background:var(--lv3);color:#fff}
-:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:4px}
-.container{max-width:var(--max);margin:0 auto;padding-inline:var(--pad)}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px);height:100%;width:100%;overflow-x:hidden;overflow-x:clip;-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
+html[dir="rtl"] body,html[dir="rtl"] .disp{font-family:var(--mono-fa)}
+body{font-family:var(--mono);background:var(--navy);color:var(--ink);min-height:100vh;min-height:100dvh;width:100%;line-height:1.65;-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px}
+section{scroll-margin-top:calc(var(--nav-h) + 12px);padding:70px 0;position:relative}
+a{color:inherit}
+::selection{background:var(--cyan);color:var(--navy)}
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--pad);position:relative}
+.reg{position:relative}
+.reg::before,.reg::after{content:"";position:absolute;width:14px;height:14px;border-top:1px solid var(--grid-strong);border-left:1px solid var(--grid-strong);top:0;left:0}
+.reg::after{left:auto;right:0;border-left:none;border-right:1px solid var(--grid-strong)}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.icon{width:1em;height:1em;display:inline-block;vertical-align:-0.125em;flex-shrink:0}
 
-/* ============ top bar ============ */
-.topbar{
-  position:sticky;top:0;z-index:100;
-  background:var(--header);
-  border-bottom:1px solid rgba(255,255,255,.06);
-  padding-top:env(safe-area-inset-top);
-}
-.topbar .container{display:flex;align-items:center;gap:16px;height:var(--nav-h)}
-.brand{display:flex;align-items:center;gap:9px;color:var(--header-fg);text-decoration:none;flex-shrink:0}
-.brand:hover{text-decoration:none;color:#fff}
-.brand img{width:22px;height:22px;border-radius:50%;object-fit:cover}
-.brand span{font-weight:700;font-size:14px;letter-spacing:-.01em}
-.topnav{display:flex;align-items:center;gap:4px;list-style:none}
-.topnav a{
-  display:block;color:var(--header-dim);font-size:13px;font-weight:600;
-  padding:6px 10px;border-radius:6px;transition:background-color .15s,color .15s;
-}
-.topnav a:hover{color:#fff;background:rgba(255,255,255,.1);text-decoration:none}
-.topbar-right{margin-inline-start:auto;display:flex;align-items:center;gap:8px}
-.icon-btn{
-  width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;
-  background:transparent;border:1px solid rgba(255,255,255,.18);border-radius:6px;
-  color:var(--header-dim);cursor:pointer;transition:background-color .15s,color .15s,border-color .15s;
-}
-.icon-btn:hover{color:#fff;border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.06)}
-.icon-btn svg{width:16px;height:16px}
-.lang-btn{
-  height:32px;padding:0 11px;border-radius:6px;border:1px solid rgba(255,255,255,.18);
-  background:transparent;color:var(--header-fg);font-family:var(--mono);font-size:11px;font-weight:700;
-  letter-spacing:.04em;cursor:pointer;transition:border-color .15s,background-color .15s;
-}
-.lang-btn:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.06)}
-[data-theme="dark"] .icon-sun{display:none}
-[data-theme="light"] .icon-moon{display:none}
-.menu-btn{display:none}
-
-@media (max-width:720px){
-  .topnav{
-    position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;
-    background:var(--header);padding:8px 12px 14px;gap:2px;
-    border-bottom:1px solid rgba(255,255,255,.08);
-    display:none;
-  }
-  .topnav.open{display:flex}
-  .topnav a{font-size:14px;padding:10px 12px}
-  .menu-btn{display:inline-flex}
+/* NAV */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);background:rgba(10,28,48,0.96);border-bottom:1px solid var(--grid-strong);transform:translateZ(0)}
+@media (min-width:800px){.navbar{background:rgba(10,28,48,0.9);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;height:100%}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1.5px solid var(--cyan);flex-shrink:0}
+.logo-mark{width:26px;height:26px;border:1.5px solid var(--cyan);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--cyan);font-family:var(--disp);font-weight:700;transform:rotate(45deg)}
+.logo-mark span{transform:rotate(-45deg)}
+.logo-text{font-family:var(--disp);font-weight:700;font-size:1.02rem}
+nav[aria-label="Main navigation"]{display:flex;align-items:center;gap:6px}
+.nav-links{display:flex;list-style:none;gap:2px;align-items:center}
+.nav-links a{color:var(--ink-dim);text-decoration:none;font-size:.72rem;font-weight:600;padding:9px 13px;text-transform:uppercase;letter-spacing:.08em;display:inline-flex;align-items:center;border-bottom:2px solid transparent;transition:.2s}
+.nav-links a:hover{color:var(--cyan);border-color:var(--cyan)}
+.lang-toggle{display:inline-flex;align-items:center;justify-content:center;height:32px;padding:0 12px;border:1px solid var(--grid-strong);background:transparent;color:var(--ink);font-family:var(--mono);font-size:.7rem;font-weight:700;cursor:pointer}
+.lang-toggle:hover{border-color:var(--cyan);color:var(--cyan)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:transparent;border:none;padding:8px;min-width:44px;min-height:44px;justify-content:center;align-items:center;cursor:pointer}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:.3s}
+.nav-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.nav-toggle.active span:nth-child(2){opacity:0}
+.nav-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:999;opacity:0;pointer-events:none;transition:opacity .3s}
+@media (max-width:800px){
+  .nav-links{position:fixed;top:0;right:-100%;width:80%;max-width:300px;height:100svh;background:var(--navy-2);flex-direction:column;justify-content:center;gap:4px;transition:right .3s cubic-bezier(.22,1,.36,1);padding:40px 24px;border-left:1px solid var(--grid-strong);overflow-y:auto}
+  .nav-links.open{right:0}
+  .nav-links a{font-size:.95rem;padding:14px 16px;width:100%}
+  .nav-toggle{display:flex}
+  .nav-overlay.active{opacity:1;pointer-events:auto}
 }
 
-/* ============ profile header ============ */
-.profile{padding:56px 0 0}
-.profile-name{
-  font-size:clamp(2.1rem,6.2vw,3.3rem);
-  font-weight:800;letter-spacing:-.035em;line-height:1.04;
-  margin-bottom:6px;
-}
-.profile-handle{
-  font-family:var(--mono);font-size:14px;color:var(--fg-muted);font-weight:400;
-  margin-bottom:18px;
-}
-.profile-bio{max-width:60ch;color:var(--fg-muted);font-size:16px;line-height:1.65;margin-bottom:22px}
-.profile-bio strong{color:var(--fg);font-weight:600}
-.profile-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:7px;
-  height:34px;padding:0 15px;border-radius:6px;border:1px solid var(--border);
-  background:var(--subtle);color:var(--fg);
-  font-family:var(--sans);font-size:13px;font-weight:600;line-height:1;
-  cursor:pointer;text-decoration:none;transition:background-color .15s,border-color .15s,color .15s;
-}
-.btn:hover{text-decoration:none;background:var(--border-soft);border-color:var(--fg-subtle)}
-.btn-primary{background:var(--green-btn);border-color:rgba(31,35,40,.15);color:#fff}
-.btn-primary:hover{background:var(--green-btn-hover);border-color:rgba(31,35,40,.15);color:#fff}
-.btn svg{width:15px;height:15px}
-.social-row{display:flex;align-items:center;gap:8px;margin-inline-start:4px}
-.social-row a{
-  width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;
-  border:1px solid var(--border);border-radius:6px;color:var(--fg-muted);
-  transition:color .15s,border-color .15s,background-color .15s;
-}
-.social-row a:hover{color:var(--fg);border-color:var(--fg-subtle);background:var(--subtle);text-decoration:none}
-.social-row svg{width:16px;height:16px}
+/* HERO */
+.hero{min-height:100svh;display:flex;align-items:center;padding:calc(var(--nav-h) + 30px) 0 40px}
+.spec-label{display:inline-flex;align-items:center;gap:8px;font-size:.68rem;color:var(--cyan);text-transform:uppercase;letter-spacing:.12em;margin-bottom:18px}
+.spec-label::before{content:"";width:22px;height:1px;background:var(--cyan)}
+.hero-title{font-family:var(--disp);font-weight:700;font-size:clamp(2.4rem,9vw,5.4rem);line-height:.98;letter-spacing:-.02em;margin-bottom:22px}
+.hero-title .line2{display:block;color:var(--cyan)}
+.dim-row{display:flex;align-items:center;gap:10px;margin:0 0 26px;max-width:520px}
+.dim-line{flex:1;height:1px;background:var(--grid-strong);position:relative}
+.dim-line::before,.dim-line::after{content:"";position:absolute;top:-3px;width:1px;height:7px;background:var(--grid-strong)}
+.dim-line::before{left:0}.dim-line::after{right:0}
+.role-text{font-size:.85rem;color:var(--ink-dim);white-space:nowrap;min-height:1.4em}
+.typing-cursor{color:var(--cyan);animation:blink .8s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.hero-desc{color:var(--ink-dim);max-width:58ch;font-size:.94rem;margin-bottom:30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 22px;font-family:var(--disp);font-weight:600;font-size:.85rem;text-decoration:none;cursor:pointer;border:1px solid var(--cyan);min-height:46px;transition:.2s;text-transform:uppercase;letter-spacing:.04em}
+.btn-primary{background:var(--cyan);color:var(--navy)}
+.btn-primary:hover{background:var(--cyan-bright);border-color:var(--cyan-bright)}
+.btn-secondary{background:transparent;color:var(--ink);border-color:var(--grid-strong)}
+.btn-secondary:hover{border-color:var(--cyan);color:var(--cyan)}
+.btn-sm{padding:8px 16px;font-size:.72rem;min-height:38px}
+.hero-social{display:flex;gap:0;border:1px solid var(--grid-strong);width:fit-content}
+.hero-social a{color:var(--ink-dim);width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-right:1px solid var(--grid-strong);transition:.2s}
+.hero-social a:last-child{border-right:none}
+.hero-social a:hover{color:var(--cyan);background:rgba(125,211,252,.06)}
 
-/* ============ contribution panel ============ */
-.panel{
-  border:1px solid var(--border);border-radius:8px;background:var(--canvas);
-  margin-top:32px;overflow:hidden;
-}
-.panel-head{
-  display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;
-  padding:18px 20px 4px;
-}
-.panel-title{font-size:15px;font-weight:600;letter-spacing:-.01em}
-.panel-title .num{font-family:var(--mono);font-weight:700;font-variant-numeric:tabular-nums}
-.panel-sub{font-size:12px;color:var(--fg-muted)}
+/* SECTION HEADERS */
+.sec-head{margin-bottom:40px;padding-top:24px}
+.fig-num{font-size:.68rem;color:var(--amber);text-transform:uppercase;letter-spacing:.14em;margin-bottom:10px;display:block}
+.sec-title{font-family:var(--disp);font-weight:700;font-size:clamp(1.6rem,4.5vw,2.6rem);margin-bottom:10px}
+.sec-title .accent{color:var(--cyan)}
+.sec-desc{color:var(--ink-dim);max-width:64ch;font-size:.9rem}
 
-.graph-scroll{overflow-x:auto;overflow-y:hidden;padding:10px 20px 6px;-webkit-overflow-scrolling:touch;direction:ltr}
-.graph{position:relative;display:inline-block;min-width:100%}
-.graph-grid{
-  display:grid;
-  grid-template-columns:28px auto;
-  grid-template-rows:14px auto;
-  column-gap:6px;row-gap:4px;
-}
-.months{
-  grid-column:2;grid-row:1;
-  position:relative;height:12px;
-  font-size:9.5px;line-height:1;color:var(--fg-muted);white-space:nowrap;
-}
-.months span{position:absolute;top:0}
-.daylabels{
-  grid-column:1;grid-row:2;
-  display:grid;grid-template-rows:repeat(7,var(--cell));gap:var(--gap);
-  font-size:9.5px;line-height:var(--cell);color:var(--fg-muted);text-align:right;
-  direction:ltr;
-}
-.cells{
-  grid-column:2;grid-row:2;
-  display:grid;
-  grid-template-rows:repeat(7,var(--cell));
-  grid-auto-flow:column;
-  grid-auto-columns:var(--cell);
-  gap:var(--gap);
-}
-.cell{
-  width:var(--cell);height:var(--cell);border-radius:2px;
-  background:var(--lv0);
-  outline:1px solid rgba(31,35,40,.06);outline-offset:-1px;
-  cursor:pointer;
-  transition:transform .08s ease;
-}
-html[data-theme="dark"] .cell{outline-color:rgba(255,255,255,.05)}
-.cell.l1{background:var(--lv1)}
-.cell.l2{background:var(--lv2)}
-.cell.l3{background:var(--lv3)}
-.cell.l4{background:var(--lv4)}
-.cell:hover{outline:1px solid var(--fg);outline-offset:0}
-.cell.blank{background:transparent;outline:none;cursor:default}
-.cell.blank:hover{outline:none}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr;gap:30px}
+.about-text p{color:var(--ink-dim);font-size:.92rem;margin-bottom:14px}
+.about-text strong{color:var(--ink);font-weight:600}
+.spec-sheet{border:1px solid var(--grid-strong);padding:22px}
+.spec-sheet-title{font-family:var(--disp);font-size:.9rem;font-weight:700;margin-bottom:18px;color:var(--cyan);text-transform:uppercase;letter-spacing:.06em}
+.spec-row{display:flex;gap:14px;padding:12px 0;border-top:1px dashed var(--grid-strong)}
+.spec-row:first-of-type{border-top:none}
+.spec-row .yr{font-family:var(--disp);color:var(--amber);font-weight:700;font-size:.85rem;flex-shrink:0;width:48px}
+.spec-row h4{font-size:.88rem;margin-bottom:3px}
+.spec-row p{color:var(--ink-dim);font-size:.8rem}
+@media (min-width:900px){.about-grid{grid-template-columns:1.15fr .85fr;gap:50px}}
 
-@keyframes cellIn{from{opacity:0}to{opacity:1}}
-.cells.animate .cell{animation:cellIn .4s ease backwards}
-.graph-scroll::-webkit-scrollbar{height:8px}
-.graph-scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
-.graph-scroll::-webkit-scrollbar-track{background:transparent}
 
-.tip{
-  position:absolute;z-index:20;pointer-events:none;
-  background:var(--fg);color:var(--canvas);
-  font-size:11px;font-weight:500;line-height:1.3;
-  padding:5px 9px;border-radius:6px;white-space:nowrap;
-  transform:translate(-50%,-100%);
-  opacity:0;transition:opacity .1s ease;
-}
-.tip.show{opacity:1}
-.tip::after{
-  content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);
-  border:4px solid transparent;border-top-color:var(--fg);
-}
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.skill-card{border:1px solid var(--grid-strong);padding:20px;min-height:132px;background:rgba(15,41,71,.35)}
+.skill-card h3{font-family:var(--disp);font-size:1rem;margin:8px 0}
+.skill-card p{font-size:.8rem;color:var(--ink-dim)}
+.skill-level{font-size:.58rem;letter-spacing:.12em;color:var(--amber)}
+@media (min-width:560px){.skills-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.skills-grid{grid-template-columns:repeat(4,1fr)}}
 
-.graph-foot{
-  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
-  padding:8px 20px 16px;direction:ltr;
-}
-.legend{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--fg-muted)}
-.legend .sw{width:var(--cell);height:var(--cell);border-radius:2px;outline:1px solid rgba(31,35,40,.06);outline-offset:-1px}
-html[data-theme="dark"] .legend .sw{outline-color:rgba(255,255,255,.05)}
-.legend-note{font-size:11px;color:var(--fg-subtle)}
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.proj{border:1px solid var(--grid-strong);position:relative;padding:24px;display:flex;flex-direction:column}
+.proj::before,.proj::after{content:"";position:absolute;width:10px;height:10px;border:1px solid var(--cyan);opacity:.5}
+.proj::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.proj::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+.proj-tag{font-size:.62rem;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;display:block}
+.proj h3{font-family:var(--disp);font-size:1.1rem;font-weight:700;margin-bottom:10px}
+.proj p{color:var(--ink-dim);font-size:.85rem;margin-bottom:16px}
+.proj-tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.proj-tech span{font-size:.65rem;color:var(--ink-dim);border:1px solid var(--grid-strong);padding:3px 9px}
+.proj-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+@media (min-width:720px){.proj-grid{grid-template-columns:1fr 1fr}}
 
-.stats{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  border-top:1px solid var(--border);
-  background:var(--subtle);
-}
-.stat{padding:14px 20px;border-inline-end:1px solid var(--border)}
-.stat:last-child{border-inline-end:none}
-.stat-label{display:block;font-size:11px;color:var(--fg-muted);margin-bottom:2px;letter-spacing:.01em}
-.stat-value{font-family:var(--mono);font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.stat-value small{font-family:var(--sans);font-size:11px;font-weight:500;color:var(--fg-muted);margin-inline-start:3px;letter-spacing:0}
-
-/* ============ sections ============ */
-.section{padding:52px 0 0}
-.sec-head{
-  display:flex;align-items:center;gap:10px;
-  padding-bottom:10px;border-bottom:1px solid var(--border);
-  margin-bottom:20px;
-}
-.sec-head::before{
-  content:"";width:10px;height:10px;border-radius:2px;background:var(--lv3);
-  flex-shrink:0;
-}
-.sec-title{font-size:17px;font-weight:700;letter-spacing:-.015em}
-.sec-sub{font-size:13px;color:var(--fg-muted);margin-inline-start:auto;text-align:end}
-
-/* ============ README ============ */
-.readme{
-  border:1px solid var(--border);border-radius:8px;overflow:hidden;
-}
-.readme-bar{
-  display:flex;align-items:center;gap:8px;
-  padding:10px 16px;background:var(--subtle);border-bottom:1px solid var(--border);
-  font-family:var(--mono);font-size:12px;color:var(--fg-muted);
-}
-.readme-bar svg{width:14px;height:14px}
-.readme-bar .dot{width:8px;height:8px;border-radius:50%;background:var(--border);margin-inline-start:auto}
-.readme-body{padding:28px 32px 32px;max-width:78ch}
-.readme-body h3{
-  font-size:20px;font-weight:700;letter-spacing:-.02em;
-  padding-bottom:7px;border-bottom:1px solid var(--border-soft);margin-bottom:14px;
-}
-.readme-body h4{font-size:15px;font-weight:700;margin:22px 0 8px}
-.readme-body p{color:var(--fg-muted);margin-bottom:12px;line-height:1.7}
-.readme-body strong{color:var(--fg);font-weight:600}
-.readme-body ol{list-style:none;counter-reset:step;margin:4px 0 0}
-.readme-body ol li{
-  counter-increment:step;position:relative;
-  padding-inline-start:30px;margin-bottom:10px;color:var(--fg-muted);font-size:14.5px;
-}
-.readme-body ol li::before{
-  content:counter(step);position:absolute;inset-inline-start:0;top:1px;
-  width:19px;height:19px;border-radius:4px;
-  background:var(--subtle);border:1px solid var(--border);
-  font-family:var(--mono);font-size:10px;font-weight:700;color:var(--fg-muted);
-  display:flex;align-items:center;justify-content:center;
-}
-.readme-body ol li strong{color:var(--fg);font-weight:600;display:block;font-size:14.5px;line-height:1.4}
-
-/* ============ repos ============ */
-.repos{display:grid;grid-template-columns:1fr;gap:16px}
-@media (min-width:700px){.repos{grid-template-columns:1fr 1fr}}
-.repo{
-  border:1px solid var(--border);border-radius:8px;padding:16px;
-  display:flex;flex-direction:column;
-  transition:border-color .15s,background-color .15s;
-  background:var(--canvas);
-}
-.repo:hover{border-color:var(--fg-subtle);background:var(--subtle)}
-.repo-top{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.repo-top svg{width:15px;height:15px;color:var(--fg-muted);flex-shrink:0}
-.repo-name{
-  font-family:var(--mono);font-size:13.5px;font-weight:700;letter-spacing:-.01em;
-  color:var(--link);text-decoration:none;overflow-wrap:anywhere;
-}
-.repo:hover .repo-name{text-decoration:underline}
-.pill{
-  font-size:10.5px;font-weight:500;line-height:1;
-  padding:3px 7px;border:1px solid var(--border);border-radius:999px;
-  color:var(--fg-muted);white-space:nowrap;flex-shrink:0;
-}
-.repo-desc{font-size:13px;color:var(--fg-muted);line-height:1.6;margin-bottom:12px}
-.repo-topics{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.topic{
-  font-size:11px;font-weight:500;line-height:1;
-  padding:4px 9px;border-radius:999px;
-  background:var(--topic-bg);color:var(--topic-fg);
-}
-.repo-foot{
-  margin-top:auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
-  font-size:12px;color:var(--fg-muted);
-}
-.lang{display:inline-flex;align-items:center;gap:6px}
-.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.repo-foot a{color:var(--fg-muted);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
-.repo-foot a:hover{color:var(--link);text-decoration:underline}
-.repo-foot a svg{width:12px;height:12px}
-
-/* ============ skills ============ */
-.skills-grid{display:grid;grid-template-columns:1fr;gap:16px}
-@media (min-width:820px){.skills-grid{grid-template-columns:1.05fr .95fr}}
-.card{border:1px solid var(--border);border-radius:8px;padding:20px;background:var(--canvas)}
-.card-title{font-size:13px;font-weight:700;margin-bottom:14px;letter-spacing:-.01em}
-.lbar{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--lv0);margin-bottom:16px}
-.lbar span{height:100%}
-.lbar span+span{margin-inline-start:1px}
-.llegend{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:9px 16px}
-.llegend li{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--fg)}
-.llegend .pct{margin-inline-start:auto;font-family:var(--mono);font-size:11.5px;color:var(--fg-muted);font-variant-numeric:tabular-nums}
-.tools{list-style:none;display:flex;flex-direction:column}
-.tools li{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-top:1px solid var(--border-soft);font-size:13px}
-.tools li:first-child{border-top:none;padding-top:0}
-.tools li:last-child{padding-bottom:0}
-.tools b{font-weight:600;flex-shrink:0}
-.tools span{color:var(--fg-muted);font-size:12.5px;text-align:end;margin-inline-start:auto;line-height:1.45}
-
-/* ============ contact ============ */
-.contact-grid{display:grid;grid-template-columns:1fr;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+/* SKILL-LESS, CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--grid-strong);border:1px solid var(--grid-strong);max-width:680px}
+.contact-cell{background:var(--navy);display:flex;align-items:center;gap:16px;padding:16px 18px;transition:.2s}
+.contact-cell:hover{background:rgba(125,211,252,.04)}
+.contact-cell svg{color:var(--cyan);width:22px;height:22px}
+.contact-cell h4{font-size:.65rem;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.08em}
+.contact-cell a{text-decoration:none;font-weight:600;font-size:.9rem;word-break:break-all}
 @media (min-width:640px){.contact-grid{grid-template-columns:1fr 1fr}}
-.contact-row{
-  display:flex;align-items:center;gap:12px;padding:14px 18px;
-  border-bottom:1px solid var(--border-soft);color:var(--fg);text-decoration:none;
-  transition:background-color .15s;
-}
-.contact-row:hover{background:var(--subtle);text-decoration:none}
-.contact-grid .contact-row:nth-child(odd){border-inline-end:1px solid var(--border-soft)}
-@media (max-width:639px){.contact-grid .contact-row:nth-child(odd){border-inline-end:none}}
-.contact-row svg{width:16px;height:16px;color:var(--fg-muted);flex-shrink:0}
-.contact-row .k{font-size:11px;color:var(--fg-muted);display:block;line-height:1.3}
-.contact-row .v{font-size:13px;font-weight:600;overflow-wrap:anywhere;line-height:1.35}
 
-/* ============ footer ============ */
-.footer{
-  margin-top:64px;padding:28px 0 40px;border-top:1px solid var(--border);
-  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
-  font-size:12px;color:var(--fg-muted);
-}
-.footer .heart{color:var(--lv3)}
-.footer-links{display:flex;gap:16px}
-.footer-links a{color:var(--fg-muted);text-decoration:none}
-.footer-links a:hover{color:var(--link);text-decoration:underline}
+/* FOOTER */
+.footer{padding:34px 0;text-align:center;color:var(--ink-faint);font-size:.75rem;border-top:1px solid var(--grid-strong)}
+.footer .heart{color:var(--amber)}
+.footer-social{display:flex;justify-content:center;gap:18px;margin-bottom:16px}
+.footer-social a{color:var(--ink-dim);text-decoration:none}
+.footer-social a:hover{color:var(--cyan)}
 
-/* ============ motion / a11y ============ */
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0ms !important;transition-duration:.01ms !important}
-  html{scroll-behavior:auto}
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:20px;right:20px;z-index:100;width:46px;height:46px;background:var(--cyan);color:var(--navy);border:none;cursor:pointer;transition:.2s;opacity:0;pointer-events:none;transform:translateY(8px);display:flex;align-items:center;justify-content:center}
+.back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}html{scroll-behavior:auto}}
+@media (max-width:420px){section{padding:48px 0}}
+
+/* ===== iOS Safari scrolling optimizations ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{-webkit-overflow-scrolling:touch;overscroll-behavior-y:none;padding-bottom:env(safe-area-inset-bottom)}
+a,button,input,textarea,select{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+/* skip rendering of off-screen sections until they are near the viewport */
+section{content-visibility:auto;contain-intrinsic-size:auto 700px}
+.hero{content-visibility:visible}
+.navbar{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);padding-top:env(safe-area-inset-top)}
+.navbar .container{padding-left:max(var(--pad),env(safe-area-inset-left));padding-right:max(var(--pad),env(safe-area-inset-right))}
+.nav-links{-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.back-to-top{bottom:calc(20px + env(safe-area-inset-bottom));right:calc(20px + env(safe-area-inset-right));-webkit-transform:translate3d(0,8px,0);transform:translate3d(0,8px,0)}
+.back-to-top.visible{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+.reveal{-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.proj,.contact-cell,.btn{-webkit-backface-visibility:hidden;backface-visibility:hidden}
+@media (hover:none){
+  .btn:hover,.contact-cell:hover,.nav-links a:hover,.hero-social a:hover{background:inherit}
 }
-@media (max-width:520px){
-  :root{--pad:16px}
-  .profile{padding-top:40px}
-  .section{padding-top:40px}
-  .readme-body{padding:22px 20px 24px}
-  .stats{grid-template-columns:1fr 1fr 1fr}
-  .stat{padding:12px 12px}
-  .stat-value{font-size:16px}
-  .panel-head{padding:16px 16px 4px}
-  .graph-scroll{padding:8px 16px 4px}
-  .graph-foot{padding:8px 16px 14px}
+@media (prefers-reduced-motion:reduce){section{content-visibility:visible}}
+
+/* ===== touch-device optimizations (same as the blur page) ===== */
+.reveal,.navbar,.btn,.contact-cell,.proj{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+.reveal.visible{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+@media (hover:none){
+  /* a fixed, blurred header is expensive to repaint on iPhone while scrolling */
+  .navbar{background:rgba(10,28,48,.97);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .nav-links{background:var(--navy-2)}
+  .btn:hover,.contact-cell:hover,.nav-links a:hover,.hero-social a:hover,.btn-primary:hover,.btn-secondary:hover{background:inherit;border-color:inherit;color:inherit}
+  .btn-primary{background:var(--cyan);color:var(--navy);border-color:var(--cyan)}
+  .btn-secondary{background:transparent;color:var(--ink);border-color:var(--grid-strong)}
 }
 </style>
 </head>
 <body>
 
-<header class="topbar">
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<header class="navbar" role="banner">
   <div class="container">
-    <a href="#top" class="brand">
-      <img src="https://avatars.githubusercontent.com/u/190759746?v=4" alt="" width="22" height="22" />
-      <span>AyhanMansur</span>
+    <a href="#" class="logo" aria-label="Ayhan Mansur home">
+      <img class="logo-img" src="https://avatars.githubusercontent.com/u/190759746?v=4" alt="Ayhan Mansur logo" width="32" height="32" />
+      <span class="logo-text">Ayhan Mansur</span>
     </a>
-    <ul class="topnav" id="topnav">
-      <li><a href="#about" data-i18n="nav.about">About</a></li>
-      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-      <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
-      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-    </ul>
-    <div class="topbar-right">
-      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch colour theme">
-        <svg class="icon-sun" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0Zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13ZM1 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 1 8Zm11 0a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 12 8Zm.7-5.7a.75.75 0 0 1 0 1.06l-1.06 1.06a.75.75 0 1 1-1.06-1.06L11.64 2.3a.75.75 0 0 1 1.06 0ZM4.42 10.64a.75.75 0 0 1 0 1.06L3.36 12.76a.75.75 0 1 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0Zm7.22 2.12a.75.75 0 0 1-1.06 0l-1.06-1.06a.75.75 0 1 1 1.06-1.06l1.06 1.06a.75.75 0 0 1 0 1.06ZM4.42 5.36a.75.75 0 0 1-1.06 0L2.3 4.3a.75.75 0 0 1 1.06-1.06l1.06 1.06a.75.75 0 0 1 0 1.06Z"/></svg>
-        <svg class="icon-moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.6 1.2a.75.75 0 0 1 .72.96A6 6 0 0 0 14 11.03a.75.75 0 0 1-.95.95A7.5 7.5 0 0 1 8.6 1.92a.75.75 0 0 1 1-.72Z"/></svg>
-      </button>
-      <button class="lang-btn" id="langToggle" type="button" aria-label="Switch language">FA</button>
-      <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.25a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 3.25Zm0 4.75a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 8Zm.75 4a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5H1.75Z"/></svg>
-      </button>
-    </div>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">FA</button>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<main id="top">
-  <!-- ===== profile ===== -->
-  <section class="profile">
-    <div class="container">
-      <h1 class="profile-name" data-i18n="profile.name">Ayhan Mansur</h1>
-      <p class="profile-handle">@AyhanMansur</p>
-      <p class="profile-bio" data-i18n-html="profile.bio">Python developer and frontend developer. I build <strong>practical software tools</strong> — terminal applications, automation scripts, AI-assisted utilities, and responsive web interfaces.</p>
-      <div class="profile-actions">
-        <a class="btn btn-primary" href="#projects">
-          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
-          <span data-i18n="profile.btnRepos">View repositories</span>
-        </a>
-        <a class="btn" href="mailto:umc.masnur13@icloud.com">
-          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809Zm13-8.037v-.409a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.41L8 7.834Z"/></svg>
-          <span data-i18n="profile.btnEmail">Email me</span>
-        </a>
-        <div class="social-row">
-          <a href="https://github.com/AyhanMansur" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.93c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
-          <a href="https://www.instagram.com/ayhan_dev.py/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://t.me/AyhanMansur" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.2 2.9 2.6 10.6c-1.2.5-1.2 1.2-.2 1.5l4.9 1.5 1.9 5.8c.2.6.5.8.9.8.4 0 .6-.2.9-.5l2.4-2.3 5 3.7c.9.5 1.5.3 1.8-.8l3.2-15.2c.4-1.4-.4-2-1.3-1.7ZM8.3 13.4l10.4-6.6c.5-.3 1 0 .6.4L10.6 15c-.3.3-.6.4-1 .1l-.1-.1-1.2-1.6Z"/></svg></a>
-        </div>
+<!-- ===== HERO ===== -->
+<section class="hero reg" id="hero" aria-label="Hero section">
+  <div class="container">
+    <span class="spec-label" data-i18n="hero.badge">Developer Profile — Rev. 03</span>
+    <h1 class="hero-title">Ayhan<span class="line2">Mansur</span></h1>
+    <div class="dim-row">
+      <span class="role-text"><span id="typingText"></span><span class="typing-cursor" id="typingCursor">|</span></span>
+      <span class="dim-line"></span>
+    </div>
+    <p class="hero-desc" data-i18n="hero.description">I build practical software projects with Python and web technologies, from automation tools and terminal applications to responsive websites and AI-powered utilities.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary"><span data-i18n="hero.viewProjects">View Projects</span></a>
+      <a href="#contact" class="btn btn-secondary"><span data-i18n="hero.hireMe">Hire Me</span></a>
+    </div>
+    <div class="hero-social">
+      <a href="https://github.com/AyhanMansur" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.93c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
+      <a href="https://www.instagram.com/ayhan_dev.py/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://t.me/AyhanMansur" target="_blank" rel="noopener" aria-label="Telegram"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.2 2.9 2.6 10.6c-1.2.5-1.2 1.2-.2 1.5l4.9 1.5 1.9 5.8c.2.6.5.8.9.8.4 0 .6-.2.9-.5l2.4-2.3 5 3.7c.9.5 1.5.3 1.8-.8l3.2-15.2c.4-1.4-.4-2-1.3-1.7ZM8.3 13.4l10.4-6.6c.5-.3 1 0 .6.4L10.6 15c-.3.3-.6.4-1 .1l-.1-.1-1.2-1.6Z"/></svg></a>
+      <a href="mailto:developper@ayhandevlopper.kdns.fr" aria-label="Email"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2 12 13l8.5-6.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="reg" aria-label="About section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="fig-num" data-i18n="about.fig">Fig. 01 — Profile</span>
+      <h2 class="sec-title" data-i18n-html="about.title">Python &amp; Frontend Developer <span class="accent">Building Practical Tools</span></h2>
+      <p class="sec-desc" data-i18n="about.subtitle">I build software tools, command-line applications, and responsive web interfaces, with Python as my strongest programming language.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p data-i18n-html="about.p1">I'm a developer and technology enthusiast who enjoys learning by building real projects. I'm highly proficient in <strong>Python</strong> and have completed Python training with a certificate. I have a strong foundation in <strong>HTML and CSS</strong>, and I'm currently learning <strong>JavaScript</strong> to expand my frontend skills. I also use <strong>Bash</strong> and <strong>Docker</strong> in practical projects.</p>
+        <p data-i18n="about.p2">I enjoy turning ideas into working tools, exploring existing solutions, and combining technologies to build useful projects. I also use AI development tools when they help me research, compare approaches, or speed up implementation.</p>
+      </div>
+      <div class="spec-sheet reveal">
+        <div class="spec-sheet-title" data-i18n="about.journey">How I Work</div>
+        <div class="spec-row"><span class="yr">01</span><div><h4 data-i18n="about.t1title">Build</h4><p data-i18n="about.t1desc">Turn ideas into practical projects and working prototypes.</p></div></div>
+        <div class="spec-row"><span class="yr">02</span><div><h4 data-i18n="about.t2title">Research</h4><p data-i18n="about.t2desc">Compare documentation, examples, and existing solutions.</p></div></div>
+        <div class="spec-row"><span class="yr">03</span><div><h4 data-i18n="about.t3title">Improve</h4><p data-i18n="about.t3desc">Test, refine, and keep learning through hands-on development.</p></div></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== contribution graph ===== -->
-  <section class="container" aria-label="Contribution activity">
-    <div class="panel">
-      <div class="panel-head">
-        <h2 class="panel-title"><span class="num" id="totalCount">0</span> <span data-i18n="graph.summary">contributions in the last year</span></h2>
-        <span class="panel-sub" id="graphRange">—</span>
-      </div>
 
-      <div class="graph-scroll">
-        <div class="graph" id="graph">
-          <div class="graph-grid">
-            <div class="months" id="months" aria-hidden="true"></div>
-            <div class="daylabels" id="daylabels" aria-hidden="true">
-              <span></span><span data-day="1">Mon</span><span></span><span data-day="3">Wed</span><span></span><span data-day="5">Fri</span><span></span>
-            </div>
-            <div class="cells" id="cells" aria-hidden="true"></div>
-          </div>
-          <div class="tip" id="tip" role="status"></div>
-        </div>
-      </div>
-
-      <div class="graph-foot">
-        <div class="legend">
-          <span data-i18n="graph.less">Less</span>
-          <span class="sw" style="background:var(--lv0)"></span>
-          <span class="sw" style="background:var(--lv1)"></span>
-          <span class="sw" style="background:var(--lv2)"></span>
-          <span class="sw" style="background:var(--lv3)"></span>
-          <span class="sw" style="background:var(--lv4)"></span>
-          <span data-i18n="graph.more">More</span>
-        </div>
-        <span class="legend-note" data-i18n="graph.note">Activity from public repositories</span>
-      </div>
-
-      <div class="stats">
-        <div class="stat">
-          <span class="stat-label" data-i18n="graph.streak">Current streak</span>
-          <span class="stat-value"><span id="streakNow">0</span><small data-i18n="graph.days">days</small></span>
-        </div>
-        <div class="stat">
-          <span class="stat-label" data-i18n="graph.longest">Longest streak</span>
-          <span class="stat-value"><span id="streakBest">0</span><small data-i18n="graph.days">days</small></span>
-        </div>
-        <div class="stat">
-          <span class="stat-label" data-i18n="graph.best">Most in one day</span>
-          <span class="stat-value" id="bestDay">0</span>
-        </div>
-      </div>
-      <p class="sr-only" id="graphSummary"></p>
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="reg" aria-label="Skills section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="fig-num" data-i18n="skills.fig">Fig. 03 — Toolkit</span>
+      <h2 class="sec-title" data-i18n-html="skills.title">Skills &amp; <span class="accent">Technologies</span></h2>
+      <p class="sec-desc" data-i18n="skills.subtitle">Technologies I use, practice, and continue to learn.</p>
     </div>
-  </section>
-
-  <!-- ===== about / README ===== -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="sec-head">
-        <h2 class="sec-title" data-i18n="about.heading">About</h2>
-      </div>
-      <div class="readme">
-        <div class="readme-bar">
-          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"/></svg>
-          <span>README.md</span>
-          <span class="dot"></span>
-        </div>
-        <div class="readme-body">
-          <h3 data-i18n="about.title">Hi, I'm Ayhan</h3>
-          <p data-i18n-html="about.p1">I'm a developer and technology enthusiast who learns by building real projects. I'm highly proficient in <strong>Python</strong> and have completed Python training with a certificate. I have a strong foundation in <strong>HTML and CSS</strong>, and I'm currently learning <strong>JavaScript</strong> to expand my frontend skills. I also use <strong>Bash</strong> and <strong>Docker</strong> in practical projects.</p>
-          <p data-i18n="about.p2">I enjoy turning ideas into working tools, exploring existing solutions, and combining technologies to build useful projects. I use AI development tools when they help me research, compare approaches, or speed up implementation.</p>
-          <h4 data-i18n="about.workTitle">How I work</h4>
-          <ol>
-            <li><strong data-i18n="about.w1t">Build</strong><span data-i18n="about.w1d">Turn ideas into practical projects and working prototypes.</span></li>
-            <li><strong data-i18n="about.w2t">Research</strong><span data-i18n="about.w2d">Compare documentation, examples, and existing solutions.</span></li>
-            <li><strong data-i18n="about.w3t">Improve</strong><span data-i18n="about.w3d">Test, refine, and keep learning through hands-on development.</span></li>
-          </ol>
-        </div>
-      </div>
+    <div class="skills-grid reveal">
+      <article class="skill-card"><span class="skill-level">CORE</span><h3>Python</h3><p data-i18n="skills.python">Strong proficiency · Certificate</p></article>
+      <article class="skill-card"><span class="skill-level">CORE</span><h3>HTML &amp; CSS</h3><p data-i18n="skills.web">Strong foundation in frontend structure and styling</p></article>
+      <article class="skill-card"><span class="skill-level">LEARNING</span><h3>JavaScript</h3><p data-i18n="skills.js">Currently learning and building with JavaScript</p></article>
+      <article class="skill-card"><span class="skill-level">PRACTICAL</span><h3>Bash / Shell</h3><p data-i18n="skills.bash">Used for scripting and command-line workflows</p></article>
+      <article class="skill-card"><span class="skill-level">PRACTICAL</span><h3>Docker</h3><p data-i18n="skills.docker">Used in project setup and deployment workflows</p></article>
+      <article class="skill-card"><span class="skill-level">BASIC</span><h3>Linux</h3><p data-i18n="skills.linux">Basic hands-on experience, including Kali Linux on WSL</p></article>
+      <article class="skill-card"><span class="skill-level">TOOLS</span><h3>Git &amp; GitHub</h3><p data-i18n="skills.git">Version control and publishing open-source projects</p></article>
+      <article class="skill-card"><span class="skill-level">WORKFLOW</span><h3>AI Development Tools</h3><p data-i18n="skills.ai">Use AI tools for research, iteration, and selected implementation tasks</p></article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== projects ===== -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="sec-head">
-        <h2 class="sec-title" data-i18n="projects.heading">Pinned repositories</h2>
-        <span class="sec-sub" data-i18n="projects.sub">6 public repositories</span>
-      </div>
-      <div class="repos">
-
-        <article class="repo">
-          <div class="repo-top">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
-            <a class="repo-name" href="https://github.com/AyhanMansur/AyhanX-Agent" target="_blank" rel="noopener">AyhanX-Agent</a>
-            <span class="pill" data-i18n="repo.public">Public</span>
-          </div>
-          <p class="repo-desc" data-i18n="project.agent">An AI-powered terminal agent with streaming responses, multiple model-provider options, conversation history, and built-in tools for everyday terminal tasks.</p>
-          <div class="repo-topics"><span class="topic">python</span><span class="topic">cli</span><span class="topic">llm</span><span class="topic">terminal</span></div>
-          <div class="repo-foot"><span class="lang"><span class="dot" style="background:#3572A5"></span>Python</span></div>
-        </article>
-
-        <article class="repo">
-          <div class="repo-top">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
-            <a class="repo-name" href="https://github.com/AyhanMansur/AyhanX-Direct" target="_blank" rel="noopener">AyhanX-Direct</a>
-            <span class="pill" data-i18n="repo.public">Public</span>
-          </div>
-          <p class="repo-desc" data-i18n="project.direct">A multi-panel configuration tool for 3x-ui, Pasarguard, and Marzban that folds my earlier scanner work into panel management and configuration workflows.</p>
-          <div class="repo-topics"><span class="topic">python</span><span class="topic">bash</span><span class="topic">3x-ui</span><span class="topic">marzban</span></div>
-          <div class="repo-foot"><span class="lang"><span class="dot" style="background:#3572A5"></span>Python</span></div>
-        </article>
-
-        <article class="repo">
-          <div class="repo-top">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
-            <a class="repo-name" href="https://github.com/AyhanMansur/AyhanX-Fredom-Scanner" target="_blank" rel="noopener">AyhanX-Fredom-Scanner</a>
-            <span class="pill" data-i18n="repo.public">Public</span>
-          </div>
-          <p class="repo-desc" data-i18n="project.scanner">A Python utility for scanning IP ranges and checking candidate endpoints, built for practical use in Linux and Termux environments.</p>
-          <div class="repo-topics"><span class="topic">python</span><span class="topic">scanner</span><span class="topic">termux</span><span class="topic">linux</span></div>
-          <div class="repo-foot"><span class="lang"><span class="dot" style="background:#3572A5"></span>Python</span></div>
-        </article>
-
-        <article class="repo">
-          <div class="repo-top">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
-            <a class="repo-name" href="https://github.com/AyhanMansur/3X-Ui-on-railway" target="_blank" rel="noopener">3X-Ui-on-railway</a>
-            <span class="pill" data-i18n="repo.public">Public</span>
-          </div>
-          <p class="repo-desc" data-i18n="project.railway">Exploring how to deploy a 3x-ui / Xray-core panel on Railway without managing a traditional VPS, using Docker and shell scripts.</p>
-          <div class="repo-topics"><span class="topic">docker</span><span class="topic">shell</span><span class="topic">railway</span><span class="topic">xray</span></div>
-          <div class="repo-foot"><span class="lang"><span class="dot" style="background:#89e051"></span>Shell</span></div>
-        </article>
-
-        <article class="repo">
-          <div class="repo-top">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
-            <a class="repo-name" href="https://github.com/AyhanMansur/miror.ayhanmansur" target="_blank" rel="noopener">miror.ayhanmansur</a>
-            <span class="pill" data-i18n="repo.public">Public</span>
-          </div>
-          <p class="repo-desc" data-i18n="project.mirror">A GitHub Pages site that organises and presents shell-script resources collected from public repositories, built with HTML, CSS, and JavaScript.</p>
-          <div class="repo-topics"><span class="topic">html</span><span class="topic">css</span><span class="topic">javascript</span><span class="topic">github-pages</span></div>
-          <div class="repo-foot">
-            <span class="lang"><span class="dot" style="background:#e34c26"></span>HTML</span>
-            <a href="https://mirror2.ayhandevlopper.kdns.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg><span data-i18n="repo.live">Live</span></a>
-          </div>
-        </article>
-
-        <article class="repo">
-          <div class="repo-top">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
-            <a class="repo-name" href="https://github.com/AyhanMansur/downwib" target="_blank" rel="noopener">downwib</a>
-            <span class="pill" data-i18n="repo.public">Public</span>
-          </div>
-          <p class="repo-desc" data-i18n="project.downwib">A web platform for presenting software downloads across desktop and mobile operating systems.</p>
-          <div class="repo-topics"><span class="topic">html</span><span class="topic">css</span><span class="topic">javascript</span><span class="topic">github-pages</span></div>
-          <div class="repo-foot">
-            <span class="lang"><span class="dot" style="background:#563d7c"></span>CSS</span>
-            <a href="https://ayhanmansur.github.io/downwib/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></svg><span data-i18n="repo.live">Live</span></a>
-          </div>
-        </article>
-
-      </div>
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="reg" aria-label="Projects section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="fig-num" data-i18n="projects.fig">Fig. 04 — Repositories</span>
+      <h2 class="sec-title" data-i18n-html="projects.title">My <span class="accent">Projects</span></h2>
+      <p class="sec-desc" data-i18n="projects.subtitle">Tools and utilities I've built, from scanners to chat and web apps.</p>
     </div>
-  </section>
+    <div class="proj-grid">
+      <article class="proj reveal">
+        <span class="proj-tag">AI · CLI Tool</span>
+        <h3>AyhanX-Agent</h3>
+        <p data-i18n="project.agent">An AI-powered terminal agent with streaming responses, multiple model-provider options, conversation history, and built-in tools for everyday terminal tasks. Developed primarily by me, with AI-assisted implementation of local-model support.</p>
+        <div class="proj-tech"><span>Python</span><span>Shell</span><span>AI APIs</span><span>CLI</span></div>
+        <div class="proj-links"><a href="https://github.com/AyhanMansur/AyhanX-Agent" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
+      </article>
+      <article class="proj reveal">
+        <span class="proj-tag">Panel Integration · Fork</span>
+        <h3>AyhanX-Direct</h3>
+        <p data-i18n="project.direct">A multi-panel configuration tool for 3x-ui, Pasarguard, and Marzban. Integrates my earlier scanner project with panel-management and configuration workflows. Based on pdnczone/3x-ui-pro-configs, with additional integration and modifications.</p>
+        <div class="proj-tech"><span>Python</span><span>Bash</span><span>3x-ui</span><span>Pasarguard</span><span>Marzban</span></div>
+        <div class="proj-links"><a href="https://github.com/AyhanMansur/AyhanX-Direct" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
+      </article>
+      <article class="proj reveal">
+        <span class="proj-tag">Python · Scanner</span>
+        <h3>AyhanX-Fredom-Scanner</h3>
+        <p data-i18n="project.scanner">A Python utility for scanning IP ranges and checking candidate endpoints, designed for practical use in Linux and Termux environments.</p>
+        <div class="proj-tech"><span>Python</span><span>IP scanning</span><span>Termux</span><span>Linux</span></div>
+        <div class="proj-links"><a href="https://github.com/AyhanMansur/AyhanX-Fredom-Scanner" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
+      </article>
+      <article class="proj reveal">
+        <span class="proj-tag">Deployment</span>
+        <h3>3X-Ui-on-railway</h3>
+        <p data-i18n="project.railway">A project exploring deployment of a 3x-ui / Xray-core-based panel on Railway without managing a traditional VPS, using Docker and shell scripts.</p>
+        <div class="proj-tech"><span>Railway</span><span>Docker</span><span>Shell</span><span>Xray-core</span></div>
+        <div class="proj-links"><a href="https://github.com/AyhanMansur/3X-Ui-on-railway" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a></div>
+      </article>
+      <article class="proj reveal">
+        <span class="proj-tag">Web · Shell Resources</span>
+        <h3>miror.ayhanmansur</h3>
+        <p data-i18n="project.mirror">A GitHub Pages website that organizes and presents shell-script resources collected from different public repositories, using HTML, CSS, and JavaScript.</p>
+        <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/AyhanMansur/miror.ayhanmansur" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a>
+          <a href="https://mirror2.ayhandevlopper.kdns.fr/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Live Demo</a>
+        </div>
+      </article>
+      <article class="proj reveal">
+        <span class="proj-tag">Web Platform</span>
+        <h3>downwib</h3>
+        <p data-i18n="project.downwib">A web platform project for presenting software downloads across desktop and mobile operating systems.</p>
+        <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/AyhanMansur/downwib" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a>
+          <a href="https://ayhanmansur.github.io/downwib/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Live Demo</a>
+        </div>
+      </article>
+  </div>
+</section>
 
-  <!-- ===== skills ===== -->
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="sec-head">
-        <h2 class="sec-title" data-i18n="skills.heading">Skills</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="card">
-          <h3 class="card-title" data-i18n="skills.langTitle">Languages by usage</h3>
-          <div class="lbar" role="img" aria-label="Python 48%, HTML 21%, JavaScript 14%, Shell 10%, Dockerfile 7%">
-            <span style="width:48%;background:#3572A5"></span>
-            <span style="width:21%;background:#e34c26"></span>
-            <span style="width:14%;background:#f1e05a"></span>
-            <span style="width:10%;background:#89e051"></span>
-            <span style="width:7%;background:#384d54"></span>
-          </div>
-          <ul class="llegend">
-            <li><span class="dot" style="background:#3572A5"></span>Python<span class="pct">48%</span></li>
-            <li><span class="dot" style="background:#e34c26"></span>HTML<span class="pct">21%</span></li>
-            <li><span class="dot" style="background:#f1e05a"></span>JavaScript<span class="pct">14%</span></li>
-            <li><span class="dot" style="background:#89e051"></span>Shell<span class="pct">10%</span></li>
-            <li><span class="dot" style="background:#384d54"></span>Dockerfile<span class="pct">7%</span></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3 class="card-title" data-i18n="skills.toolTitle">Tooling and practice</h3>
-          <ul class="tools">
-            <li><b>Python</b><span data-i18n="skills.python">Certified · strongest language</span></li>
-            <li><b>HTML &amp; CSS</b><span data-i18n="skills.web">Responsive layout, semantic markup</span></li>
-            <li><b>JavaScript</b><span data-i18n="skills.js">Learning and shipping small features</span></li>
-            <li><b>Bash</b><span data-i18n="skills.bash">Scripting and command-line workflows</span></li>
-            <li><b>Docker</b><span data-i18n="skills.docker">Project setup and deployment</span></li>
-            <li><b>Linux</b><span data-i18n="skills.linux">Daily use, including Kali on WSL</span></li>
-            <li><b>Git &amp; GitHub</b><span data-i18n="skills.git">Version control and releases</span></li>
-            <li><b data-i18n="skills.aiName">AI tooling</b><span data-i18n="skills.ai">Research, iteration, selected implementation</span></li>
-          </ul>
-        </div>
-      </div>
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="reg" aria-label="Contact section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="fig-num" data-i18n="contact.fig">Fig. 05 — Contact</span>
+      <h2 class="sec-title" data-i18n-html="contact.title">Let's <span class="accent">Connect</span></h2>
+      <p class="sec-desc" data-i18n="contact.subtitle">Reach out via any of the channels below.</p>
     </div>
-  </section>
-
-  <!-- ===== contact ===== -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="sec-head">
-        <h2 class="sec-title" data-i18n="contact.heading">Get in touch</h2>
-      </div>
-      <div class="contact-grid">
-        <a class="contact-row" href="mailto:umc.masnur13@icloud.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2 12 13l8.5-6.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div><span class="k" data-i18n="contact.email">Email</span><span class="v">umc.masnur13@icloud.com</span></div>
-        </a>
-        <a class="contact-row" href="mailto:developper@ayhandevlopper.kdns.fr">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2 12 13l8.5-6.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div><span class="k" data-i18n="contact.work">Work</span><span class="v">developper@ayhandevlopper.kdns.fr</span></div>
-        </a>
-        <a class="contact-row" href="https://github.com/AyhanMansur" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.93c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
-          <div><span class="k">GitHub</span><span class="v">github.com/AyhanMansur</span></div>
-        </a>
-        <a class="contact-row" href="https://t.me/AyhanMansur" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.2 2.9 2.6 10.6c-1.2.5-1.2 1.2-.2 1.5l4.9 1.5 1.9 5.8c.2.6.5.8.9.8.4 0 .6-.2.9-.5l2.4-2.3 5 3.7c.9.5 1.5.3 1.8-.8l3.2-15.2c.4-1.4-.4-2-1.3-1.7ZM8.3 13.4l10.4-6.6c.5-.3 1 0 .6.4L10.6 15c-.3.3-.6.4-1 .1l-.1-.1-1.2-1.6Z"/></svg>
-          <div><span class="k">Telegram</span><span class="v">t.me/AyhanMansur</span></div>
-        </a>
-        <a class="contact-row" href="https://www.instagram.com/ayhan_dev.py/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
-          <div><span class="k">Instagram</span><span class="v">@ayhan_dev.py</span></div>
-        </a>
-      </div>
-
-      <footer class="footer">
-        <p data-i18n-html="footer.text">&copy; 2026 Ayhan Mansur. Built with <span class="heart">&hearts;</span> and code.</p>
-        <div class="footer-links">
-          <a href="https://github.com/AyhanMansur" target="_blank" rel="noopener">GitHub</a>
-          <a href="#top" data-i18n="footer.top">Back to top</a>
-        </div>
-      </footer>
+    <div class="contact-grid reveal">
+      <div class="contact-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2 12 13l8.5-6.8" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h4 data-i18n="contact.email">Email</h4><a href="mailto:umc.masnur13@icloud.com">umc.masnur13@icloud.com</a></div></div>
+      <div class="contact-cell"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.93c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg><div><h4>GitHub</h4><a href="https://github.com/AyhanMansur" target="_blank" rel="noopener">github.com/AyhanMansur</a></div></div>
+      <div class="contact-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg><div><h4>Instagram</h4><a href="https://www.instagram.com/ayhan_dev.py/" target="_blank" rel="noopener">@ayhan_dev.py</a></div></div>
+      <div class="contact-cell"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.2 2.9 2.6 10.6c-1.2.5-1.2 1.2-.2 1.5l4.9 1.5 1.9 5.8c.2.6.5.8.9.8.4 0 .6-.2.9-.5l2.4-2.3 5 3.7c.9.5 1.5.3 1.8-.8l3.2-15.2c.4-1.4-.4-2-1.3-1.7ZM8.3 13.4l10.4-6.6c.5-.3 1 0 .6.4L10.6 15c-.3.3-.6.4-1 .1l-.1-.1-1.2-1.6Z"/></svg><div><h4>Telegram</h4><a href="https://t.me/AyhanMansur" target="_blank" rel="noopener">t.me/AyhanMansur</a></div></div>
     </div>
-  </section>
-</main>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <p data-i18n-html="footer.text">&copy; 2026 Ayhan Mansur. Built with <span class="heart">&hearts;</span> and code.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
 <script>
 (function(){
   'use strict';
+  const isTouch=('ontouchstart' in window)||(navigator.maxTouchPoints>0);
+  const isLowPower=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile=window.innerWidth<768||isTouch;
 
-  /* ---------- theme ---------- */
-  var root = document.documentElement;
-  var themeToggle = document.getElementById('themeToggle');
-  try {
-    var saved = localStorage.getItem('am-theme');
-    if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved);
-  } catch (e) {}
-  function syncThemeLabel(){
-    var dark = root.getAttribute('data-theme') === 'dark';
-    themeToggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#010409' : '#24292f');
-  }
-  syncThemeLabel();
-  themeToggle.addEventListener('click', function(){
-    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try { localStorage.setItem('am-theme', next); } catch (e) {}
-    syncThemeLabel();
-  });
+  const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks'),navOverlay=document.getElementById('navOverlay');
+  function openNav(){navLinks.classList.add('open');navOverlay.classList.add('active');navToggle.classList.add('active');navToggle.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function closeNav(){navLinks.classList.remove('open');navOverlay.classList.remove('active');navToggle.classList.remove('active');navToggle.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+  navToggle.addEventListener('click',()=>{navToggle.getAttribute('aria-expanded')==='true'?closeNav():openNav();});
+  navOverlay.addEventListener('click',closeNav);
+  document.querySelectorAll('.nav-links a').forEach(l=>l.addEventListener('click',closeNav));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav();});
 
-  /* ---------- mobile menu ---------- */
-  var menuToggle = document.getElementById('menuToggle');
-  var topnav = document.getElementById('topnav');
-  menuToggle.addEventListener('click', function(){
-    var open = topnav.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  topnav.addEventListener('click', function(e){
-    if (e.target.closest('a')) {
-      topnav.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  /* ---------- contribution graph ---------- */
-  var CELL = 11, GAP = 3;
-  var cellsEl = document.getElementById('cells');
-  var monthsEl = document.getElementById('months');
-  var tipEl = document.getElementById('tip');
-  var graphEl = document.getElementById('graph');
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function mulberry32(a){
-    return function(){
-      a |= 0; a = a + 0x6D2B79F5 | 0;
-      var t = Math.imul(a ^ a >>> 15, 1 | a);
-      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-      return ((t ^ t >>> 14) >>> 0) / 4294967296;
-    };
-  }
-
-  var today = new Date(); today.setHours(0,0,0,0);
-  var DAY = 86400000;
-
-  /* --- Replace this block with real data when you want live numbers.
-     Shape: [{date: 'YYYY-MM-DD', count: 3}, ...]
-     const DATA = await (await fetch('https://github-contributions-api.jogruber.de/v4/AyhanMansur?y=last')).json();
-     Then map DATA.contributions into the counts map below. --- */
-  function countFor(d, offset){
-    if (offset < 0) return null;                     // future days
-    var seed = d.getFullYear() * 372 + (d.getMonth() + 1) * 31 + d.getDate();
-    var rnd = mulberry32(seed);
-    var a = rnd(), b = rnd();
-    var dow = d.getDay();
-    var weight = [0.42, 1.12, 1.08, 1.04, 0.98, 0.82, 0.4][dow];
-    var n;
-    if (a < 0.09) n = 0;
-    else n = Math.floor(Math.pow(a, 1.7) * 15 * weight);
-    if (offset <= 38) n = Math.max(n, 1 + Math.floor(b * 4));  // active recent streak
-    if (offset >= 150 && offset <= 158) n = 0;                  // a real break
-    return n;
-  }
-
-  function levelOf(n){
-    if (n <= 0) return 0;
-    if (n <= 3) return 1;
-    if (n <= 6) return 2;
-    if (n <= 9) return 3;
-    return 4;
-  }
-
-  var start = new Date(today.getTime() - 364 * DAY);
-  var first = new Date(start.getTime() - start.getDay() * DAY);  // back to Sunday
-  var days = [];
-  var cursor = new Date(first);
-  while (cursor <= today) { days.push(new Date(cursor)); cursor = new Date(cursor.getTime() + DAY); }
-  while (days.length % 7 !== 0) { days.push(new Date(cursor)); cursor = new Date(cursor.getTime() + DAY); }
-
-  var weeks = days.length / 7;
-  var colW = CELL + GAP;
-  monthsEl.style.width = (weeks * colW - GAP) + 'px';
-
-  var data = [], total = 0, best = 0, bestDate = null;
-  var frag = document.createDocumentFragment();
-
-  for (var i = 0; i < days.length; i++) {
-    var d = days[i];
-    var offset = Math.round((today - d) / DAY);
-    var n = countFor(d, offset);
-    data.push({ date: d, count: n, offset: offset });
-    var cell = document.createElement('span');
-    cell.className = 'cell';
-    if (n === null) { cell.className += ' blank'; }
-    else {
-      var lv = levelOf(n);
-      if (lv) cell.className += ' l' + lv;
-      cell.dataset.idx = i;
-      total += n;
-      if (n > best) { best = n; bestDate = d; }
-    }
-    cell.style.animationDelay = (Math.floor(i / 7) * 7) + 'ms';
-    frag.appendChild(cell);
-  }
-  cellsEl.appendChild(frag);
-
-  /* month labels */
-  var monthFmt = new Intl.DateTimeFormat('en-US', { month: 'short' });
-  var lastMonth = -1, mFrag = document.createDocumentFragment();
-  for (var w = 0; w < weeks; w++) {
-    var firstOfWeek = days[w * 7];
-    var m = firstOfWeek.getMonth();
-    if (m !== lastMonth) {
-      var span = document.createElement('span');
-      span.textContent = monthFmt.format(firstOfWeek);
-      span.dataset.week = w;
-      span.style.left = (w * colW) + 'px';
-      mFrag.appendChild(span);
-      lastMonth = m;
+  const typingText=document.getElementById('typingText');
+  const rolesByLang={en:['Python Developer','Frontend Developer','Software Builder','AI Tool Enthusiast'],fa:['توسعه‌دهنده پایتون','توسعه‌دهنده فرانت‌اند','سازنده نرم‌افزار','علاقه‌مند به ابزارهای هوش مصنوعی']};
+  let roles=rolesByLang.en,roleIndex=0,charIndex=0,isDeleting=false,typingTimeout=null;
+  const typeSpeed=isMobile?95:75,deleteSpeed=isMobile?48:38,pause=isMobile?1800:1600;
+  function typeEffect(){
+    const current=roles[roleIndex];
+    if(isDeleting){
+      typingText.textContent=current.substring(0,charIndex-1);charIndex--;
+      if(charIndex===0){isDeleting=false;roleIndex=(roleIndex+1)%roles.length;typingTimeout=setTimeout(typeEffect,350);return;}
+      typingTimeout=setTimeout(typeEffect,deleteSpeed);
+    }else{
+      typingText.textContent=current.substring(0,charIndex+1);charIndex++;
+      if(charIndex===current.length){isDeleting=true;typingTimeout=setTimeout(typeEffect,pause);return;}
+      typingTimeout=setTimeout(typeEffect,typeSpeed);
     }
   }
-  monthsEl.appendChild(mFrag);
-
-  /* totals + streaks */
-  var run = 0, longest = 0, current = 0;
-  for (var k = 0; k < data.length; k++) {
-    var c = data[k].count;
-    if (c === null) continue;
-    if (c > 0) { run++; if (run > longest) longest = run; }
-    else run = 0;
+  function restartTyping(lang){
+    roles=rolesByLang[lang]||rolesByLang.en;roleIndex=0;charIndex=0;isDeleting=false;clearTimeout(typingTimeout);
+    if(!isLowPower)typeEffect();else typingText.textContent=roles[0];
   }
-  for (var z = data.length - 1; z >= 0; z--) {
-    var cz = data[z].count;
-    if (cz === null) continue;
-    if (cz > 0) current++;
-    else break;
-  }
+  if(!isLowPower)typeEffect();else{typingText.textContent=roles[0];document.getElementById('typingCursor').style.display='none';}
 
-  var numFmt = new Intl.NumberFormat('en-US');
-  document.getElementById('totalCount').textContent = numFmt.format(total);
-  document.getElementById('streakNow').textContent = current;
-  document.getElementById('streakBest').textContent = longest;
-  document.getElementById('bestDay').textContent = best;
-  document.getElementById('graphRange').textContent =
-    monthFmt.format(days[0]) + ' ' + days[0].getFullYear() + ' – ' +
-    monthFmt.format(today) + ' ' + today.getFullYear();
+  const reveals=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const ro=new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible');});},{threshold:0.12,rootMargin:'0px 0px -20px 0px'});
+    reveals.forEach(el=>ro.observe(el));
+  }else reveals.forEach(el=>el.classList.add('visible'));
 
-  /* draw-in — cells are visible by default; the animation is pure enhancement */
-  if (!reduce) {
-    cellsEl.classList.add('animate');
-    setTimeout(function(){ cellsEl.classList.remove('animate'); }, 1400);
-  }
+  const backBtn=document.getElementById('backToTop');let st=false;
+  window.addEventListener('scroll',()=>{if(!st){st=true;requestAnimationFrame(()=>{backBtn.classList.toggle('visible',window.scrollY>500);st=false;});}},{passive:true});
+  backBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
-  /* fit the grid to the panel: shrink cells on narrow screens, grow on wide ones */
-  function fitGraph(){
-    var avail = graphEl.parentElement.clientWidth - 40 - 34;
-    var size = Math.floor(avail / weeks) - GAP;
-    size = Math.max(9, Math.min(13, size));
-    graphEl.style.setProperty('--cell', size + 'px');
-    monthsEl.style.width = (weeks * (size + GAP) - GAP) + 'px';
-    monthsEl.querySelectorAll('span').forEach(function(s){
-      s.style.left = (s.dataset.week * (size + GAP)) + 'px';
-    });
-  }
-  fitGraph();
-  if (window.ResizeObserver) {
-    new ResizeObserver(fitGraph).observe(graphEl.parentElement);
-  } else {
-    window.addEventListener('resize', fitGraph);
-  }
-
-  /* tooltip */
-  var lang = 'en';
-  function fmtDate(d){
-    var locale = lang === 'fa' ? 'fa-IR' : 'en-US';
-    try {
-      return new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long', day: 'numeric' }).format(d);
-    } catch (e) {
-      return d.toDateString();
-    }
-  }
-  function tipText(rec){
-    var dict = translations[lang] || translations.en;
-    if (rec.count === 0) return dict['graph.tipZero'].replace('{d}', fmtDate(rec.date));
-    return dict['graph.tip'].replace('{n}', rec.count).replace('{d}', fmtDate(rec.date));
-  }
-  function showTip(cell){
-    var rec = data[+cell.dataset.idx];
-    if (!rec) return;
-    tipEl.textContent = tipText(rec);
-    var gr = graphEl.getBoundingClientRect();
-    var cr = cell.getBoundingClientRect();
-    var left = cr.left - gr.left + cr.width / 2;
-    tipEl.style.left = Math.max(46, Math.min(left, gr.width - 46)) + 'px';
-    tipEl.style.top = (cr.top - gr.top - 7) + 'px';
-    tipEl.classList.add('show');
-  }
-  function hideTip(){ tipEl.classList.remove('show'); }
-
-  cellsEl.addEventListener('pointerover', function(e){
-    var cell = e.target.closest('.cell');
-    if (cell && cell.dataset.idx) showTip(cell);
-  });
-  cellsEl.addEventListener('pointerleave', hideTip);
-  cellsEl.addEventListener('click', function(e){
-    var cell = e.target.closest('.cell');
-    if (cell && cell.dataset.idx) showTip(cell);
-  });
-  window.addEventListener('scroll', hideTip, { passive: true });
-
-  document.getElementById('graphSummary').textContent =
-    numFmt.format(total) + ' contributions in the last year. Current streak ' + current +
-    ' days, longest streak ' + longest + ' days, best day ' + best + ' contributions.';
-
-  /* ---------- i18n ---------- */
-  var translations = {
-    en: {
-      'nav.about':'About','nav.projects':'Projects','nav.skills':'Skills','nav.contact':'Contact',
-      'profile.name':'Ayhan Mansur',
-      'profile.bio':'Python developer and frontend developer. I build <strong>practical software tools</strong> — terminal applications, automation scripts, AI-assisted utilities, and responsive web interfaces.',
-      'profile.btnRepos':'View repositories','profile.btnEmail':'Email me',
-      'graph.summary':'contributions in the last year',
-      'graph.less':'Less','graph.more':'More','graph.note':'Activity from public repositories',
-      'graph.streak':'Current streak','graph.longest':'Longest streak','graph.best':'Most in one day',
-      'graph.days':'days',
-      'graph.tip':'{n} contributions on {d}',
-      'graph.tipZero':'No contributions on {d}',
-      'about.heading':'About','about.title':"Hi, I'm Ayhan",
-      'about.p1':"I'm a developer and technology enthusiast who learns by building real projects. I'm highly proficient in <strong>Python</strong> and have completed Python training with a certificate. I have a strong foundation in <strong>HTML and CSS</strong>, and I'm currently learning <strong>JavaScript</strong> to expand my frontend skills. I also use <strong>Bash</strong> and <strong>Docker</strong> in practical projects.",
-      'about.p2':'I enjoy turning ideas into working tools, exploring existing solutions, and combining technologies to build useful projects. I use AI development tools when they help me research, compare approaches, or speed up implementation.',
-      'about.workTitle':'How I work',
-      'about.w1t':'Build','about.w1d':'Turn ideas into practical projects and working prototypes.',
-      'about.w2t':'Research','about.w2d':'Compare documentation, examples, and existing solutions.',
-      'about.w3t':'Improve','about.w3d':'Test, refine, and keep learning through hands-on development.',
-      'projects.heading':'Pinned repositories','projects.sub':'6 public repositories',
-      'repo.public':'Public','repo.live':'Live',
-      'project.agent':'An AI-powered terminal agent with streaming responses, multiple model-provider options, conversation history, and built-in tools for everyday terminal tasks.',
-      'project.direct':'A multi-panel configuration tool for 3x-ui, Pasarguard, and Marzban that folds my earlier scanner work into panel management and configuration workflows.',
-      'project.scanner':'A Python utility for scanning IP ranges and checking candidate endpoints, built for practical use in Linux and Termux environments.',
-      'project.railway':'Exploring how to deploy a 3x-ui / Xray-core panel on Railway without managing a traditional VPS, using Docker and shell scripts.',
-      'project.mirror':'A GitHub Pages site that organises and presents shell-script resources collected from public repositories, built with HTML, CSS, and JavaScript.',
-      'project.downwib':'A web platform for presenting software downloads across desktop and mobile operating systems.',
-      'skills.heading':'Skills','skills.langTitle':'Languages by usage','skills.toolTitle':'Tooling and practice',
-      'skills.python':'Certified · strongest language','skills.web':'Responsive layout, semantic markup',
-      'skills.js':'Learning and shipping small features','skills.bash':'Scripting and command-line workflows',
-      'skills.docker':'Project setup and deployment','skills.linux':'Daily use, including Kali on WSL',
-      'skills.git':'Version control and releases','skills.aiName':'AI tooling',
-      'skills.ai':'Research, iteration, selected implementation',
-      'contact.heading':'Get in touch','contact.email':'Email','contact.work':'Work',
+  const translations={
+    en:{
+      'nav.about':'About','nav.skills':'Skills','nav.projects':'Projects','nav.contact':'Contact',
+      'hero.badge':'Developer Profile — Rev. 03',
+      'hero.description':'I build practical software projects with Python and web technologies, from automation tools and terminal applications to responsive websites and AI-powered utilities.',
+      'hero.viewProjects':'View Projects','hero.hireMe':'Contact Me',
+      'about.fig':'Fig. 01 — Profile',
+      'about.title':'Python &amp; Frontend Developer <span class="accent">Building Practical Tools</span>',
+      'about.subtitle':'I build software tools, command-line applications, and responsive web interfaces, with Python as my strongest programming language.',
+      'about.p1':'I\'m a developer and technology enthusiast who enjoys learning by building real projects. I\'m highly proficient in <strong>Python</strong> and have completed Python training with a certificate. I have a strong foundation in <strong>HTML and CSS</strong>, and I\'m currently learning <strong>JavaScript</strong> to expand my frontend skills. I also use <strong>Bash</strong> and <strong>Docker</strong> in practical projects.',
+      'about.p2':'I enjoy turning ideas into working tools, exploring existing solutions, and combining technologies to build useful projects. I also use AI development tools when they help me research, compare approaches, or speed up implementation.',
+      'about.journey':'How I Work',
+      'about.t1title':'Build','about.t1desc':'Turn ideas into practical projects and working prototypes.',
+      'about.t2title':'Research','about.t2desc':'Compare documentation, examples, and existing solutions.',
+      'about.t3title':'Improve','about.t3desc':'Test, refine, and keep learning through hands-on development.',
+      'skills.fig':'Fig. 03 — Toolkit','skills.title':'Skills &amp; <span class="accent">Technologies</span>','skills.subtitle':'Technologies I use, practice, and continue to learn.',
+       'skills.python':'Strong proficiency · Certificate','skills.web':'Strong foundation in frontend structure and styling','skills.js':'Currently learning and building with JavaScript','skills.bash':'Used for scripting and command-line workflows','skills.docker':'Used in project setup and deployment workflows','skills.linux':'Basic hands-on experience, including Kali Linux on WSL','skills.git':'Version control and publishing open-source projects','skills.ai':'Use AI tools for research, iteration, and selected implementation tasks',
+       'project.agent':'An AI-powered terminal agent with streaming responses, multiple model-provider options, conversation history, and built-in tools for everyday terminal tasks. Developed primarily by me, with AI-assisted implementation of local-model support.',
+       'project.direct':'A multi-panel configuration tool for 3x-ui, Pasarguard, and Marzban. Integrates my earlier scanner project with panel-management and configuration workflows. Based on pdnczone/3x-ui-pro-configs, with additional integration and modifications.',
+       'project.scanner':'A Python utility for scanning IP ranges and checking candidate endpoints, designed for practical use in Linux and Termux environments.',
+       'project.railway':'A project exploring deployment of a 3x-ui / Xray-core-based panel on Railway without managing a traditional VPS, using Docker and shell scripts.',
+       'project.mirror':'A GitHub Pages website that organizes and presents shell-script resources collected from different public repositories, using HTML, CSS, and JavaScript.',
+       'project.downwib':'A web platform project for presenting software downloads across desktop and mobile operating systems.',
+       'project.chat':'A chat application project. Explore the repository for its current implementation and features.',
+       'projects.fig':'Fig. 04 — Repositories',
+      'projects.title':'My <span class="accent">Projects</span>',
+      'projects.subtitle':'Tools and utilities I\'ve built, from scanners to chat and web apps.',
+      'contact.fig':'Fig. 05 — Contact','contact.title':'Let\'s <span class="accent">Connect</span>','contact.subtitle':'Reach out via any of the channels below.','contact.email':'Email',
       'footer.text':'&copy; 2026 Ayhan Mansur. Built with <span class="heart">&hearts;</span> and code.',
-      'footer.top':'Back to top',
-      'meta.title':'Ayhan Mansur · Python & Frontend Developer'
+      'meta.title':'Ayhan Mansur | Python Developer &amp; Frontend Developer (HTML/CSS/JS/Bash)'
     },
-    fa: {
-      'nav.about':'درباره','nav.projects':'پروژه‌ها','nav.skills':'مهارت‌ها','nav.contact':'تماس',
-      'profile.name':'آیهان منصور',
-      'profile.bio':'توسعه‌دهنده Python و فرانت‌اند. <strong>ابزارهای کاربردی</strong> می‌سازم — برنامه‌های ترمینالی، اسکریپت‌های اتوماسیون، ابزارهای مجهز به هوش مصنوعی و رابط‌های وب واکنش‌گرا.',
-      'profile.btnRepos':'مشاهده مخزن‌ها','profile.btnEmail':'ارسال ایمیل',
-      'graph.summary':'مشارکت در یک سال گذشته',
-      'graph.less':'کمتر','graph.more':'بیشتر','graph.note':'فعالیت در مخزن‌های عمومی',
-      'graph.streak':'استریک فعلی','graph.longest':'بلندترین استریک','graph.best':'بیشترین در یک روز',
-      'graph.days':'روز',
-      'graph.tip':'{n} مشارکت در {d}',
-      'graph.tipZero':'بدون مشارکت در {d}',
-      'about.heading':'درباره','about.title':'سلام، من آیهان هستم',
-      'about.p1':'توسعه‌دهنده‌ای علاقه‌مند به فناوری هستم که با ساختن پروژه‌های واقعی یاد می‌گیرد. در <strong>Python</strong> مهارت بالایی دارم و گواهی آموزش پایتون دریافت کرده‌ام. در <strong>HTML و CSS</strong> پایهٔ قوی دارم و در حال یادگیری <strong>JavaScript</strong> هستم. در پروژه‌های عملی از <strong>Bash</strong> و <strong>Docker</strong> هم استفاده می‌کنم.',
-      'about.p2':'از تبدیل ایده‌ها به ابزارهای قابل استفاده، بررسی راه‌حل‌های موجود و ترکیب فناوری‌ها برای ساخت پروژه‌های مفید لذت می‌برم. هرجا مفید باشد از ابزارهای هوش مصنوعی برای تحقیق، مقایسهٔ راه‌حل‌ها و سرعت‌دادن به پیاده‌سازی کمک می‌گیرم.',
-      'about.workTitle':'روش کار من',
-      'about.w1t':'ساختن','about.w1d':'تبدیل ایده‌ها به پروژه‌های کاربردی و نمونه‌های قابل اجرا.',
-      'about.w2t':'تحقیق','about.w2d':'بررسی مستندات، نمونه‌کدها و راه‌حل‌های موجود.',
-      'about.w3t':'بهبود','about.w3d':'آزمایش، اصلاح و ادامهٔ یادگیری با توسعهٔ عملی.',
-      'projects.heading':'مخزن‌های منتخب','projects.sub':'۶ مخزن عمومی',
-      'repo.public':'عمومی','repo.live':'نمایش زنده',
-      'project.agent':'یک ایجنت هوش مصنوعی برای ترمینال با پاسخ‌دهی جریانی، پشتیبانی از چند ارائه‌دهندهٔ مدل، تاریخچهٔ گفتگو و ابزارهای داخلی برای کارهای روزمرهٔ ترمینال.',
-      'project.direct':'ابزاری برای کار با پنل‌های 3x-ui، Pasarguard و Marzban که اسکنر قبلی من را با روندهای مدیریت و پیکربندی پنل یکپارچه می‌کند.',
-      'project.scanner':'ابزار پایتونی برای اسکن محدوده‌های IP و بررسی آدرس‌های کاندید، با هدف استفادهٔ عملی در محیط‌های لینوکس و ترموکس.',
-      'project.railway':'بررسی استقرار پنل مبتنی بر 3x-ui و Xray-core روی Railway بدون مدیریت VPS سنتی، با Docker و اسکریپت‌های Shell.',
-      'project.mirror':'وب‌سایتی مبتنی بر GitHub Pages برای مرتب‌سازی و نمایش منابع اسکریپت‌های Shell گردآوری‌شده از مخزن‌های عمومی، ساخته‌شده با HTML، CSS و JavaScript.',
-      'project.downwib':'پروژه‌ای تحت وب برای نمایش و ارائهٔ دانلود نرم‌افزارها در سیستم‌عامل‌های دسکتاپ و موبایل.',
-      'skills.heading':'مهارت‌ها','skills.langTitle':'زبان‌ها بر اساس میزان استفاده','skills.toolTitle':'ابزارها و تمرین',
-      'skills.python':'دارای گواهی · قوی‌ترین زبان','skills.web':'چیدمان واکنش‌گرا و نشانه‌گذاری معنایی',
-      'skills.js':'در حال یادگیری و پیاده‌سازی قابلیت‌های کوچک','skills.bash':'اسکریپت‌نویسی و کارهای خط فرمان',
-      'skills.docker':'راه‌اندازی و استقرار پروژه','skills.linux':'استفادهٔ روزانه، از جمله Kali روی WSL',
-      'skills.git':'کنترل نسخه و انتشار','skills.aiName':'ابزارهای هوش مصنوعی',
-      'skills.ai':'تحقیق، بهبود و بخشی از پیاده‌سازی',
-      'contact.heading':'در ارتباط باشیم','contact.email':'ایمیل','contact.work':'کاری',
+    fa:{
+      'nav.about':'درباره','nav.skills':'مهارت‌ها','nav.projects':'پروژه‌ها','nav.contact':'تماس',
+      'hero.badge':'پروفایل توسعه‌دهنده — نسخه ۰۳',
+      'hero.description':'با Python و فناوری‌های وب پروژه‌های کاربردی می‌سازم؛ از ابزارهای اتوماسیون و برنامه‌های ترمینالی تا وب‌سایت‌های واکنش‌گرا و ابزارهای مجهز به هوش مصنوعی.',
+      'hero.viewProjects':'مشاهده پروژه‌ها','hero.hireMe':'ارتباط با من',
+      'about.fig':'شکل ۰۱ — پروفایل',
+      'about.title':'توسعه‌دهنده Python و فرانت‌اند <span class="accent">که ابزارهای کاربردی می‌سازد</span>',
+      'about.subtitle':'ابزارهای نرم‌افزاری، برنامه‌های خط فرمان و رابط‌های وب واکنش‌گرا می‌سازم و زبان اصلی برنامه‌نویسی من Python است.',
+      'about.p1':'من توسعه‌دهنده‌ای علاقه‌مند به فناوری هستم و از یادگیری از طریق ساخت پروژه‌های واقعی لذت می‌برم. در <strong>Python</strong> مهارت بالایی دارم و گواهی آموزش پایتون دریافت کرده‌ام. در <strong>HTML و CSS</strong> پایهٔ قوی دارم و در حال یادگیری <strong>JavaScript</strong> هستم. همچنین در پروژه‌های عملی از <strong>Bash</strong> و <strong>Docker</strong> استفاده می‌کنم.',
+      'about.p2':'از تبدیل ایده‌ها به ابزارهای قابل استفاده، بررسی راه‌حل‌های موجود و ترکیب فناوری‌ها برای ساخت پروژه‌های مفید لذت می‌برم. همچنین هرجا مفید باشد از ابزارهای هوش مصنوعی برای تحقیق، مقایسهٔ راه‌حل‌ها و سرعت‌دادن به پیاده‌سازی کمک می‌گیرم.',
+      'about.journey':'روش کار من',
+      'about.t1title':'ساختن','about.t1desc':'تبدیل ایده‌ها به پروژه‌های کاربردی و نمونه‌های قابل اجرا.',
+      'about.t2title':'تحقیق','about.t2desc':'بررسی مستندات، نمونه‌کدها و راه‌حل‌های موجود.',
+      'about.t3title':'بهبود','about.t3desc':'آزمایش، اصلاح و ادامهٔ یادگیری از طریق توسعهٔ عملی.',
+      'skills.fig':'شکل ۰۳ — ابزارها','skills.title':'مهارت‌ها و <span class="accent">فناوری‌ها</span>','skills.subtitle':'فناوری‌هایی که استفاده می‌کنم، تمرین می‌کنم و همچنان در حال یادگیری آن‌ها هستم.',
+       'skills.python':'تسلط بالا · دارای گواهی پایتون','skills.web':'پایهٔ قوی در ساختار و طراحی رابط کاربری وب','skills.js':'در حال یادگیری و ساخت پروژه با JavaScript','skills.bash':'استفاده در اسکریپت‌نویسی و کارهای خط فرمان','skills.docker':'استفاده در راه‌اندازی و استقرار پروژه‌ها','skills.linux':'تجربهٔ عملی پایه، از جمله Kali Linux روی WSL','skills.git':'کنترل نسخه و انتشار پروژه‌های متن‌باز','skills.ai':'استفاده از ابزارهای هوش مصنوعی برای تحقیق، بهبود و بخشی از پیاده‌سازی‌ها',
+       'project.agent':'یک ایجنت هوش مصنوعی برای ترمینال با پاسخ‌دهی جریانی، پشتیبانی از چند ارائه‌دهندهٔ مدل، تاریخچهٔ گفتگو و ابزارهای داخلی برای کارهای روزمرهٔ ترمینال. توسعهٔ اصلی پروژه توسط من انجام شده و پیاده‌سازی پشتیبانی از مدل محلی با کمک هوش مصنوعی انجام شده است.',
+       'project.direct':'ابزاری برای کار با پنل‌های 3x-ui، Pasarguard و Marzban که اسکنر قبلی من را با روندهای مدیریت پنل و نصب کانفیگ یکپارچه می‌کند. این پروژه بر پایهٔ pdnczone/3x-ui-pro-configs ساخته شده و شامل یکپارچه‌سازی‌ها و تغییرات تکمیلی است.',
+       'project.scanner':'ابزار پایتونی برای اسکن محدوده‌های IP و بررسی آدرس‌های کاندید، با هدف استفادهٔ عملی در محیط‌های لینوکس و ترموکس.',
+       'project.railway':'پروژه‌ای برای بررسی استقرار پنل مبتنی بر 3x-ui و Xray-core روی Railway بدون مدیریت VPS سنتی، با استفاده از Docker و اسکریپت‌های Shell.',
+       'project.mirror':'وب‌سایتی مبتنی بر GitHub Pages برای مرتب‌سازی و نمایش منابع اسکریپت‌های Shell که از مخزن‌های عمومی مختلف گردآوری شده‌اند؛ ساخته‌شده با HTML، CSS و JavaScript.',
+       'project.downwib':'پروژه‌ای تحت وب برای نمایش و ارائهٔ دانلود نرم‌افزارها در سیستم‌عامل‌های دسکتاپ و موبایل.',
+       'project.chat':'پروژهٔ یک اپلیکیشن چت. برای مشاهدهٔ پیاده‌سازی و قابلیت‌های فعلی، مخزن آن را ببینید.',
+       'projects.fig':'شکل ۰۴ — مخزن‌ها',
+      'projects.title':'پروژه‌های <span class="accent">من</span>',
+      'projects.subtitle':'ابزارهایی که ساختم، از اسکنر تا اپ‌های چت و وب.',
+      'contact.fig':'شکل ۰۵ — تماس','contact.title':'بیا <span class="accent">در ارتباط باشیم</span>','contact.subtitle':'از هر کدوم از راه‌های زیر می‌تونی باهام در ارتباط باشی.','contact.email':'ایمیل',
       'footer.text':'&copy; ۲۰۲۶ آیهان منصور. ساخته‌شده با <span class="heart">&hearts;</span> و کد.',
-      'footer.top':'بازگشت به بالا',
-      'meta.title':'آیهان منصور · توسعه‌دهنده Python و فرانت‌اند'
+      'meta.title':'آیهان منصور | توسعه‌دهنده Python و فرانت‌اند'
     }
   };
 
-  var langToggle = document.getElementById('langToggle');
-  var currentLang = 'en';
-
-  function applyLanguage(next){
-    currentLang = next;
-    lang = next;
-    var dict = translations[next] || translations.en;
-    document.documentElement.lang = next;
-    document.documentElement.dir = next === 'fa' ? 'rtl' : 'ltr';
-    langToggle.textContent = next === 'fa' ? 'EN' : 'FA';
-    document.querySelectorAll('[data-i18n]').forEach(function(el){
-      var k = el.getAttribute('data-i18n');
-      if (dict[k] !== undefined) el.textContent = dict[k];
-    });
-    document.querySelectorAll('[data-i18n-html]').forEach(function(el){
-      var k = el.getAttribute('data-i18n-html');
-      if (dict[k] !== undefined) el.innerHTML = dict[k];
-    });
-    if (dict['meta.title']) document.title = dict['meta.title'];
-    document.getElementById('graphSummary').textContent =
-      numFmt.format(total) + ' ' + dict['graph.summary'] + '. ' +
-      dict['graph.streak'] + ' ' + current + ', ' + dict['graph.longest'] + ' ' + longest + '.';
-    hideTip();
+  const langToggle=document.getElementById('langToggle');
+  function applyLanguage(lang){
+    const dict=translations[lang]||translations.en;
+    document.documentElement.lang=lang;
+    document.documentElement.dir=lang==='fa'?'rtl':'ltr';
+    langToggle.textContent=lang==='fa'?'EN':'FA';
+    document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(dict[k]!==undefined)el.textContent=dict[k];});
+    document.querySelectorAll('[data-i18n-html]').forEach(el=>{const k=el.getAttribute('data-i18n-html');if(dict[k]!==undefined)el.innerHTML=dict[k];});
+    if(dict['meta.title'])document.title=dict['meta.title'].replace(/&amp;/g,'&');
+    restartTyping(lang);
   }
-
-  langToggle.addEventListener('click', function(){
-    applyLanguage(currentLang === 'fa' ? 'en' : 'fa');
-  });
+  let currentLang='en';
+  langToggle.addEventListener('click',()=>{currentLang=currentLang==='fa'?'en':'fa';applyLanguage(currentLang);});
 })();
 </script>
 </body>
